@@ -1,0 +1,81 @@
+{
+  "sensorDefinitions": [
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_right_Perception",
+      "modality": "camera",
+      "description": "",
+      "firstCaptureFrame": 0.0,
+      "captureTriggerMode": "Manual",
+      "simulationDeltaTime": 0.0166,
+      "framesBetweenCaptures": 0,
+      "manualSensorsAffectTiming": false
+    },
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_right_Perception_0",
+      "modality": "camera",
+      "description": null,
+      "firstCaptureFrame": 0.0,
+      "captureTriggerMode": "Manual",
+      "simulationDeltaTime": 0.0166,
+      "framesBetweenCaptures": 0,
+      "manualSensorsAffectTiming": false
+    },
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_left_Perception",
+      "modality": "camera",
+      "description": null,
+      "firstCaptureFrame": 0.0,
+      "captureTriggerMode": "Manual",
+      "simulationDeltaTime": 0.0166,
+      "framesBetweenCaptures": 0,
+      "manualSensorsAffectTiming": false
+    },
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_down_Perception",
+      "modality": "camera",
+      "description": null,
+      "firstCaptureFrame": 0.0,
+      "captureTriggerMode": "Manual",
+      "simulationDeltaTime": 0.0166,
+      "framesBetweenCaptures": 0,
+      "manualSensorsAffectTiming": false
+    },
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_up_Perception",
+      "modality": "camera",
+      "description": null,
+      "firstCaptureFrame": 0.0,
+      "captureTriggerMode": "Manual",
+      "simulationDeltaTime": 0.0166,
+      "framesBetweenCaptures": 0,
+      "manualSensorsAffectTiming": false
+    },
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_front_Perception",
+      "modality": "camera",
+      "description": null,
+      "firstCaptureFrame": 0.0,
+      "captureTriggerMode": "Manual",
+      "simulationDeltaTime": 0.0166,
+      "framesBetweenCaptures": 0,
+      "manualSensorsAffectTiming": false
+    },
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_back_Perception",
+      "modality": "camera",
+      "description": null,
+      "firstCaptureFrame": 0.0,
+      "captureTriggerMode": "Manual",
+      "simulationDeltaTime": 0.0166,
+      "framesBetweenCaptures": 0,
+      "manualSensorsAffectTiming": false
+    }
+  ]
+}

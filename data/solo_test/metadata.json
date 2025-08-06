@@ -1,0 +1,189 @@
+{
+  "unityVersion": "6000.0.40f1",
+  "perceptionVersion": "1.0.0-preview.1",
+  "renderPipeline": "HDRP",
+  "simulationStartTime": "2025/7/31 11:43:15",
+  "totalFrames": 7,
+  "totalSequences": 1,
+  "sensors": [
+    "PanoCamera_down_Perception",
+    "PanoCamera_right_Perception",
+    "PanoCamera_up_Perception",
+    "PanoCamera_right_Perception_0",
+    "PanoCamera_left_Perception",
+    "PanoCamera_front_Perception",
+    "PanoCamera_back_Perception"
+  ],
+  "metricCollectors": [],
+  "simulationEndTime": "2025/7/31 11:44:23",
+  "annotators": [
+    {
+      "name": "bounding box 3D",
+      "type": "type.unity.com/unity.solo.BoundingBox3DAnnotation"
+    },
+    {
+      "name": "bounding box",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    },
+    {
+      "name": "instance segmentation",
+      "type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation"
+    },
+    {
+      "name": "semantic segmentation",
+      "type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation"
+    },
+    {
+      "name": "Depth",
+      "type": "type.unity.com/unity.solo.DepthAnnotation"
+    },
+    {
+      "name": "Normal",
+      "type": "type.unity.com/unity.solo.NormalAnnotation"
+    },
+    {
+      "name": "bounding box 3D_0",
+      "type": "type.unity.com/unity.solo.BoundingBox3DAnnotation"
+    },
+    {
+      "name": "bounding box_0",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    },
+    {
+      "name": "instance segmentation_0",
+      "type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation"
+    },
+    {
+      "name": "semantic segmentation_0",
+      "type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation"
+    },
+    {
+      "name": "Depth_0",
+      "type": "type.unity.com/unity.solo.DepthAnnotation"
+    },
+    {
+      "name": "Normal_0",
+      "type": "type.unity.com/unity.solo.NormalAnnotation"
+    },
+    {
+      "name": "bounding box 3D_1",
+      "type": "type.unity.com/unity.solo.BoundingBox3DAnnotation"
+    },
+    {
+      "name": "bounding box_1",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    },
+    {
+      "name": "instance segmentation_1",
+      "type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation"
+    },
+    {
+      "name": "semantic segmentation_1",
+      "type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation"
+    },
+    {
+      "name": "Depth_1",
+      "type": "type.unity.com/unity.solo.DepthAnnotation"
+    },
+    {
+      "name": "Normal_1",
+      "type": "type.unity.com/unity.solo.NormalAnnotation"
+    },
+    {
+      "name": "bounding box 3D_2",
+      "type": "type.unity.com/unity.solo.BoundingBox3DAnnotation"
+    },
+    {
+      "name": "bounding box_2",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    },
+    {
+      "name": "instance segmentation_2",
+      "type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation"
+    },
+    {
+      "name": "semantic segmentation_2",
+      "type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation"
+    },
+    {
+      "name": "Depth_2",
+      "type": "type.unity.com/unity.solo.DepthAnnotation"
+    },
+    {
+      "name": "Normal_2",
+      "type": "type.unity.com/unity.solo.NormalAnnotation"
+    },
+    {
+      "name": "bounding box 3D_3",
+      "type": "type.unity.com/unity.solo.BoundingBox3DAnnotation"
+    },
+    {
+      "name": "bounding box_3",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    },
+    {
+      "name": "instance segmentation_3",
+      "type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation"
+    },
+    {
+      "name": "semantic segmentation_3",
+      "type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation"
+    },
+    {
+      "name": "Depth_3",
+      "type": "type.unity.com/unity.solo.DepthAnnotation"
+    },
+    {
+      "name": "Normal_3",
+      "type": "type.unity.com/unity.solo.NormalAnnotation"
+    },
+    {
+      "name": "bounding box 3D_4",
+      "type": "type.unity.com/unity.solo.BoundingBox3DAnnotation"
+    },
+    {
+      "name": "bounding box_4",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    },
+    {
+      "name": "instance segmentation_4",
+      "type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation"
+    },
+    {
+      "name": "semantic segmentation_4",
+      "type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation"
+    },
+    {
+      "name": "Depth_4",
+      "type": "type.unity.com/unity.solo.DepthAnnotation"
+    },
+    {
+      "name": "Normal_4",
+      "type": "type.unity.com/unity.solo.NormalAnnotation"
+    },
+    {
+      "name": "bounding box 3D_5",
+      "type": "type.unity.com/unity.solo.BoundingBox3DAnnotation"
+    },
+    {
+      "name": "bounding box_5",
+      "type": "type.unity.com/unity.solo.BoundingBox2DAnnotation"
+    },
+    {
+      "name": "instance segmentation_5",
+      "type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation"
+    },
+    {
+      "name": "semantic segmentation_5",
+      "type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation"
+    },
+    {
+      "name": "Depth_5",
+      "type": "type.unity.com/unity.solo.DepthAnnotation"
+    },
+    {
+      "name": "Normal_5",
+      "type": "type.unity.com/unity.solo.NormalAnnotation"
+    }
+  ]
+}

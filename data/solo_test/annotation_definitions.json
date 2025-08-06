@@ -1,0 +1,1096 @@
+{
+  "annotationDefinitions": [
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+      "id": "bounding box 3D",
+      "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+      "id": "instance segmentation",
+      "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+      "id": "semantic segmentation",
+      "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.DepthAnnotation",
+      "id": "Depth",
+      "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.NormalAnnotation",
+      "id": "Normal",
+      "description": "Produces an image capturing the vertex normals of objects within the frame."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+      "id": "bounding box 3D_0",
+      "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box_0",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+      "id": "instance segmentation_0",
+      "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+      "id": "semantic segmentation_0",
+      "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.DepthAnnotation",
+      "id": "Depth_0",
+      "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.NormalAnnotation",
+      "id": "Normal_0",
+      "description": "Produces an image capturing the vertex normals of objects within the frame."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+      "id": "bounding box 3D_1",
+      "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box_1",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+      "id": "instance segmentation_1",
+      "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+      "id": "semantic segmentation_1",
+      "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.DepthAnnotation",
+      "id": "Depth_1",
+      "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.NormalAnnotation",
+      "id": "Normal_1",
+      "description": "Produces an image capturing the vertex normals of objects within the frame."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+      "id": "bounding box 3D_2",
+      "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box_2",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+      "id": "instance segmentation_2",
+      "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+      "id": "semantic segmentation_2",
+      "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.DepthAnnotation",
+      "id": "Depth_2",
+      "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.NormalAnnotation",
+      "id": "Normal_2",
+      "description": "Produces an image capturing the vertex normals of objects within the frame."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+      "id": "bounding box 3D_3",
+      "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box_3",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+      "id": "instance segmentation_3",
+      "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+      "id": "semantic segmentation_3",
+      "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.DepthAnnotation",
+      "id": "Depth_3",
+      "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.NormalAnnotation",
+      "id": "Normal_3",
+      "description": "Produces an image capturing the vertex normals of objects within the frame."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+      "id": "bounding box 3D_4",
+      "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box_4",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+      "id": "instance segmentation_4",
+      "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+      "id": "semantic segmentation_4",
+      "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.DepthAnnotation",
+      "id": "Depth_4",
+      "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.NormalAnnotation",
+      "id": "Normal_4",
+      "description": "Produces an image capturing the vertex normals of objects within the frame."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+      "id": "bounding box 3D_5",
+      "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+      "id": "bounding box_5",
+      "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+      "id": "instance segmentation_5",
+      "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+      "spec": [
+        {
+          "label_id": 1,
+          "label_name": "Car"
+        },
+        {
+          "label_id": 2,
+          "label_name": "Human"
+        },
+        {
+          "label_id": 3,
+          "label_name": "Obstacle"
+        },
+        {
+          "label_id": 4,
+          "label_name": "TrafficSign"
+        },
+        {
+          "label_id": 5,
+          "label_name": "Building"
+        },
+        {
+          "label_id": 6,
+          "label_name": "Bicycle"
+        },
+        {
+          "label_id": 7,
+          "label_name": "RoadBlock"
+        },
+        {
+          "label_id": 8,
+          "label_name": "Booth"
+        },
+        {
+          "label_id": 9,
+          "label_name": "Carts"
+        },
+        {
+          "label_id": 10,
+          "label_name": "Advertising"
+        }
+      ]
+    },
+    {
+      "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+      "id": "semantic segmentation_5",
+      "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.DepthAnnotation",
+      "id": "Depth_5",
+      "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene."
+    },
+    {
+      "@type": "type.unity.com/unity.solo.NormalAnnotation",
+      "id": "Normal_5",
+      "description": "Produces an image capturing the vertex normals of objects within the frame."
+    }
+  ]
+}

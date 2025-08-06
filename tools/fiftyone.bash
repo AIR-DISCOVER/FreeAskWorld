@@ -1,0 +1,1 @@
+pysolotools-fiftyone E:\softwares_document\VS_Code_Projects\python_Project\FreeAskWorldSimulator\data\solo_test

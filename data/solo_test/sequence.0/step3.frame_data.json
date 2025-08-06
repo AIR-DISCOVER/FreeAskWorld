@@ -1,0 +1,4438 @@
+{
+  "frame": 53,
+  "sequence": 0,
+  "step": 3,
+  "timestamp": 7.21547461,
+  "captures": [
+    {
+      "@type": "type.unity.com/unity.solo.RGBCamera",
+      "id": "PanoCamera_right_Perception",
+      "description": "",
+      "position": [
+        0.08,
+        11.64,
+        -5.05
+      ],
+      "rotation": [
+        0.264799118,
+        0.0,
+        0.0,
+        0.9643036
+      ],
+      "velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "acceleration": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "filename": "step3.PanoCamera_right_Perception.png",
+      "imageFormat": "Png",
+      "dimension": [
+        1920.0,
+        1080.0
+      ],
+      "projection": "Perspective",
+      "matrix": [
+        0.974278569,
+        0.0,
+        0.0,
+        0.0,
+        1.73205078,
+        0.0,
+        0.0,
+        0.0,
+        -1.0006001
+      ],
+      "annotations": [
+        {
+          "@type": "type.unity.com/unity.solo.DepthAnnotation",
+          "id": "Depth",
+          "sensorId": "PanoCamera_right_Perception",
+          "description": "Generates a 32-bit depth image in EXR format where each pixel contains the actual distance in Unity units (usually meters) from the camera to the object in the scene.",
+          "measurementStrategy": "Depth",
+          "imageFormat": "Exr",
+          "dimension": [
+            1920.0,
+            1080.0
+          ],
+          "filename": "step3.PanoCamera_right_Perception.Depth.exr"
+        },
+        {
+          "@type": "type.unity.com/unity.solo.SemanticSegmentationAnnotation",
+          "id": "semantic segmentation",
+          "sensorId": "PanoCamera_right_Perception",
+          "description": "Generates a semantic segmentation image for each captured frame. Each object is rendered to the semantic segmentation image using the color associated with it based on this labeler's associated semantic segmentation label configuration. Semantic segmentation images are saved to the dataset in PNG format. Please note that only one SemanticSegmentationLabeler can render at once across all cameras.",
+          "imageFormat": "Png",
+          "dimension": [
+            1920.0,
+            1080.0
+          ],
+          "filename": "step3.PanoCamera_right_Perception.semantic segmentation.png",
+          "instances": [
+            {
+              "labelName": "Car",
+              "pixelValue": [
+                0,
+                0,
+                255,
+                255
+              ]
+            },
+            {
+              "labelName": "Human",
+              "pixelValue": [
+                0,
+                255,
+                0,
+                255
+              ]
+            },
+            {
+              "labelName": "SideWalk",
+              "pixelValue": [
+                255,
+                0,
+                0,
+                255
+              ]
+            },
+            {
+              "labelName": "TrafficSign",
+              "pixelValue": [
+                255,
+                235,
+                4,
+                255
+              ]
+            },
+            {
+              "labelName": "Building",
+              "pixelValue": [
+                128,
+                128,
+                128,
+                255
+              ]
+            },
+            {
+              "labelName": "StoreFront",
+              "pixelValue": [
+                255,
+                3,
+                98,
+                255
+              ]
+            },
+            {
+              "labelName": "Bicycle",
+              "pixelValue": [
+                159,
+                255,
+                93,
+                255
+              ]
+            },
+            {
+              "labelName": "Road",
+              "pixelValue": [
+                131,
+                255,
+                77,
+                255
+              ]
+            },
+            {
+              "labelName": "RoadBlock",
+              "pixelValue": [
+                50,
+                255,
+                154,
+                255
+              ]
+            },
+            {
+              "labelName": "Booth",
+              "pixelValue": [
+                141,
+                8,
+                255,
+                255
+              ]
+            },
+            {
+              "labelName": "Carts",
+              "pixelValue": [
+                125,
+                255,
+                252,
+                255
+              ]
+            },
+            {
+              "labelName": "RoadMarking",
+              "pixelValue": [
+                129,
+                255,
+                126,
+                255
+              ]
+            },
+            {
+              "labelName": "CrossWalk",
+              "pixelValue": [
+                30,
+                150,
+                255,
+                255
+              ]
+            },
+            {
+              "labelName": "Parking",
+              "pixelValue": [
+                21,
+                255,
+                73,
+                255
+              ]
+            },
+            {
+              "labelName": "Advertising",
+              "pixelValue": [
+                11,
+                255,
+                116,
+                255
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "type.unity.com/unity.solo.NormalAnnotation",
+          "id": "Normal",
+          "sensorId": "PanoCamera_right_Perception",
+          "description": "Produces an image capturing the vertex normals of objects within the frame.",
+          "imageFormat": "Exr",
+          "dimension": [
+            1920.0,
+            1080.0
+          ],
+          "filename": "step3.PanoCamera_right_Perception.Normal.exr"
+        },
+        {
+          "@type": "type.unity.com/unity.solo.BoundingBox3DAnnotation",
+          "id": "bounding box 3D",
+          "sensorId": "PanoCamera_right_Perception",
+          "description": "Produces 3D bounding box ground truth data for all visible objects that bear a label defined in this labeler's associated label configuration.",
+          "values": [
+            {
+              "instanceId": 3,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "translation": [
+                7.46657944,
+                32.10886,
+                65.8994
+              ],
+              "size": [
+                0.9068413,
+                2.91654086,
+                0.16945219
+              ],
+              "rotation": [
+                -7.53650454E-07,
+                -0.9643036,
+                0.264799118,
+                2.74452532E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 20,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -4.09051752,
+                -4.85683727,
+                13.2108164
+              ],
+              "size": [
+                1.10662746,
+                2.59118819,
+                0.0933711
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 26,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                4.254321,
+                5.748707,
+                31.5739937
+              ],
+              "size": [
+                1.19884026,
+                0.9361756,
+                0.8015455
+              ],
+              "rotation": [
+                -0.210079476,
+                -0.587029934,
+                0.161199242,
+                0.765034258
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 27,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -1.96945524,
+                20.54212,
+                56.3285027
+              ],
+              "size": [
+                2.00238323,
+                1.06950581,
+                0.3492982
+              ],
+              "rotation": [
+                -0.191619009,
+                -0.6655417,
+                0.182758674,
+                0.697807848
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 38,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -1.559,
+                17.45874,
+                51.7095337
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 57,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                4.348902,
+                3.32464743,
+                27.54844
+              ],
+              "size": [
+                1.06354427,
+                0.860889435,
+                0.5813799
+              ],
+              "rotation": [
+                -0.187241465,
+                -0.681864858,
+                0.187241048,
+                0.6818664
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 114,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "translation": [
+                4.75729942,
+                15.7494831,
+                48.0186958
+              ],
+              "size": [
+                0.6934107,
+                2.01302457,
+                1.33071566
+              ],
+              "rotation": [
+                0.494615436,
+                -0.00298872381,
+                0.00525150169,
+                0.869091
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 122,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "translation": [
+                -5.207001,
+                9.483239,
+                31.6515331
+              ],
+              "size": [
+                1.91805243,
+                1.401362,
+                0.1966677
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 126,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -3.85079765,
+                -1.33072317,
+                17.8236065
+              ],
+              "size": [
+                0.658350945,
+                2.59118819,
+                0.2216338
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 133,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -5.300017,
+                22.35344,
+                59.20495
+              ],
+              "size": [
+                2.00238371,
+                1.06950581,
+                0.349298269
+              ],
+              "rotation": [
+                -0.188813478,
+                -0.676091731,
+                0.185655728,
+                0.687591136
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 143,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                4.694034,
+                0.145396456,
+                22.0395031
+              ],
+              "size": [
+                1.00857008,
+                0.272766441,
+                0.7530888
+              ],
+              "rotation": [
+                -0.1399438,
+                -0.224798381,
+                -0.8186352,
+                0.5096252
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 148,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -4.605,
+                16.94825,
+                50.8501167
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 166,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -5.3532443,
+                18.1142731,
+                52.0682259
+              ],
+              "size": [
+                2.00238347,
+                1.06950581,
+                0.3492982
+              ],
+              "rotation": [
+                -0.191072762,
+                -0.667621136,
+                0.1833297,
+                0.6958186
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 188,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -5.39579535,
+                21.2968369,
+                57.426136
+              ],
+              "size": [
+                2.00238252,
+                1.06950581,
+                0.34929812
+              ],
+              "rotation": [
+                -0.184971765,
+                -0.6900313,
+                0.189483553,
+                0.6736009
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 197,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "translation": [
+                -4.61230469,
+                4.51550341,
+                19.3510189
+              ],
+              "size": [
+                3.074482,
+                1.68137479,
+                0.196667671
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 198,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                3.89651561,
+                -1.39069009,
+                17.7204971
+              ],
+              "size": [
+                1.10662782,
+                2.59118819,
+                0.221633941
+              ],
+              "rotation": [
+                -0.187241554,
+                -0.6818646,
+                0.187240973,
+                0.6818667
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 209,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                3.94,
+                28.5782814,
+                70.1522446
+              ],
+              "size": [
+                1.00856972,
+                0.2727664,
+                0.753088951
+              ],
+              "rotation": [
+                0.63333565,
+                0.0,
+                0.0,
+                0.7738773
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 215,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                12.9094915,
+                12.8201685,
+                16.8639412
+              ],
+              "size": [
+                20.0076389,
+                19.9,
+                14.0210781
+              ],
+              "rotation": [
+                -0.187241539,
+                -0.6818646,
+                0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 217,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                -4.85554075,
+                2.84073186,
+                26.4238663
+              ],
+              "size": [
+                1.21937311,
+                0.252624929,
+                0.629354954
+              ],
+              "rotation": [
+                0.8146336,
+                -0.515997469,
+                0.141691357,
+                0.223701566
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 222,
+              "labelId": 8,
+              "labelName": "Booth",
+              "translation": [
+                -7.31989765,
+                1.50622773,
+                22.6438313
+              ],
+              "size": [
+                0.9983427,
+                2.56662488,
+                1.00039852
+              ],
+              "rotation": [
+                -0.187241554,
+                0.68186456,
+                -0.187240958,
+                0.6818667
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 225,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -5.22926331,
+                -0.481283039,
+                19.2926235
+              ],
+              "size": [
+                0.569249153,
+                2.59118819,
+                0.08465527
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 239,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -5.296505,
+                20.1994476,
+                55.5786552
+              ],
+              "size": [
+                2.00238276,
+                1.06950581,
+                0.349298149
+              ],
+              "rotation": [
+                -0.186554492,
+                -0.6843574,
+                0.1879255,
+                0.6793647
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 265,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "translation": [
+                -7.793757,
+                25.2284336,
+                63.78143
+              ],
+              "size": [
+                0.6415255,
+                1.33727753,
+                1.991133
+              ],
+              "rotation": [
+                -7.812711E-07,
+                -0.9643036,
+                0.264799118,
+                2.84510975E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 284,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                5.165517,
+                21.6023331,
+                56.36235
+              ],
+              "size": [
+                0.546092033,
+                2.657999,
+                0.2216338
+              ],
+              "rotation": [
+                -0.187241539,
+                -0.6818646,
+                0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 286,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -1.34,
+                21.6116982,
+                58.7011261
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 325,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                9.86881,
+                19.3377914,
+                31.6548271
+              ],
+              "size": [
+                12.10826,
+                16.0,
+                8.102404
+              ],
+              "rotation": [
+                -0.187241435,
+                -0.681865,
+                0.187241077,
+                0.6818663
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 370,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                4.349202,
+                -0.9221682,
+                18.5114174
+              ],
+              "size": [
+                0.658350945,
+                2.59118819,
+                0.2216338
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 372,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -4.15499973,
+                17.62115,
+                51.258316
+              ],
+              "size": [
+                1.6000061,
+                1.2254411,
+                0.4253019
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 374,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -2.68599868,
+                23.4006653,
+                60.98825
+              ],
+              "size": [
+                1.6000067,
+                1.2254411,
+                0.425302118
+              ],
+              "rotation": [
+                -0.09648988,
+                -0.8980047,
+                0.246593356,
+                0.3513816
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 394,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                4.79237556,
+                18.364254,
+                52.51622
+              ],
+              "size": [
+                1.21937275,
+                0.252624482,
+                0.6293545
+              ],
+              "rotation": [
+                -0.161199868,
+                -0.21007897,
+                -0.7650324,
+                0.5870322
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 399,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -1.9970001,
+                18.6267014,
+                52.9511833
+              ],
+              "size": [
+                1.6000067,
+                1.2254411,
+                0.425302029
+              ],
+              "rotation": [
+                -0.187241554,
+                -0.6818646,
+                0.187240973,
+                0.6818667
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 455,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -2.63600159,
+                17.89386,
+                51.71743
+              ],
+              "size": [
+                1.600006,
+                1.2254411,
+                0.4253019
+              ],
+              "rotation": [
+                -0.246613353,
+                -0.351195335,
+                0.0964387357,
+                0.898077548
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 456,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -1.9970001,
+                22.6381989,
+                59.7046242
+              ],
+              "size": [
+                1.6000067,
+                1.2254411,
+                0.425302029
+              ],
+              "rotation": [
+                -0.187241554,
+                -0.6818646,
+                0.187240973,
+                0.6818667
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 478,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -5.42956638,
+                19.1640911,
+                52.3432426
+              ],
+              "size": [
+                0.9374075,
+                2.57844162,
+                0.09053422
+              ],
+              "rotation": [
+                0.187240437,
+                -0.6818687,
+                0.187242091,
+                -0.681862652
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 480,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -3.48770022,
+                -3.91041684,
+                13.48936
+              ],
+              "size": [
+                0.5722482,
+                2.57148218,
+                0.08019474
+              ],
+              "rotation": [
+                -7.812711E-07,
+                0.9643036,
+                -0.264799118,
+                2.84510975E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 530,
+              "labelId": 8,
+              "labelName": "Booth",
+              "translation": [
+                4.130135,
+                -3.80907416,
+                13.6954126
+              ],
+              "size": [
+                0.998342633,
+                2.56662488,
+                1.00039828
+              ],
+              "rotation": [
+                -0.181446552,
+                0.7023341,
+                -0.192861915,
+                0.6607634
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 533,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                -12.0630217,
+                22.91892,
+                38.8290329
+              ],
+              "size": [
+                11.999999,
+                15.2516623,
+                12.0093784
+              ],
+              "rotation": [
+                -0.1849084,
+                0.68219167,
+                -0.186038226,
+                0.682505
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 536,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -3.77,
+                9.428593,
+                38.19062
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 546,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -2.799,
+                16.94825,
+                50.8501167
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 557,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "translation": [
+                -3.97919369,
+                20.3840313,
+                47.63752
+              ],
+              "size": [
+                4.35561275,
+                0.919234455,
+                0.147040248
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 562,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                9.318517,
+                -4.386624,
+                12.6748238
+              ],
+              "size": [
+                0.30443,
+                2.59118819,
+                0.2216338
+              ],
+              "rotation": [
+                -0.187241539,
+                -0.6818646,
+                0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 564,
+              "labelId": 8,
+              "labelName": "Booth",
+              "translation": [
+                -7.31989765,
+                2.19208884,
+                23.7984924
+              ],
+              "size": [
+                0.9983427,
+                2.56662488,
+                1.00039852
+              ],
+              "rotation": [
+                -0.187241554,
+                0.68186456,
+                -0.187240958,
+                0.6818667
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 576,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                -10.0400839,
+                29.52389,
+                48.8126373
+              ],
+              "size": [
+                12.0100784,
+                16.0095,
+                8.0798
+              ],
+              "rotation": [
+                -0.187241539,
+                0.6818646,
+                -0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 582,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                -4.621048,
+                2.08014846,
+                25.2970333
+              ],
+              "size": [
+                1.15595174,
+                1.01681864,
+                0.5314213
+              ],
+              "rotation": [
+                -0.187241524,
+                -0.6818647,
+                0.187241,
+                0.6818666
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 583,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -5.35757828,
+                19.15758,
+                53.8246536
+              ],
+              "size": [
+                2.00238323,
+                1.06950581,
+                0.3492982
+              ],
+              "rotation": [
+                -0.185382813,
+                -0.6885669,
+                0.18908143,
+                0.6750979
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 606,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                3.31029987,
+                -3.91041684,
+                13.48936
+              ],
+              "size": [
+                0.5722482,
+                2.57148218,
+                0.08019474
+              ],
+              "rotation": [
+                -7.812711E-07,
+                0.9643036,
+                -0.264799118,
+                2.84510975E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 617,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -2.811774,
+                16.340538,
+                49.7102776
+              ],
+              "size": [
+                0.516455531,
+                0.6045455,
+                0.221633777
+              ],
+              "rotation": [
+                -0.062137194,
+                0.937378347,
+                -0.2574054,
+                0.226281419
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 639,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -1.83239126,
+                19.4672661,
+                54.51896
+              ],
+              "size": [
+                2.00238252,
+                1.06950581,
+                0.34929812
+              ],
+              "rotation": [
+                -0.187241524,
+                -0.6818646,
+                0.187240973,
+                0.6818666
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 666,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -1.34,
+                20.26551,
+                56.43479
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 681,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "translation": [
+                6.50432539,
+                9.774678,
+                29.45495
+              ],
+              "size": [
+                3.23135,
+                0.8819496,
+                0.448901534
+              ],
+              "rotation": [
+                -7.812711E-07,
+                -0.9643036,
+                0.264799118,
+                2.84510975E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 683,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "translation": [
+                3.97702575,
+                -1.22878611,
+                19.4354382
+              ],
+              "size": [
+                0.6934107,
+                2.01302457,
+                1.33071566
+              ],
+              "rotation": [
+                0.4639933,
+                0.171357945,
+                -0.301093936,
+                0.8152847
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 722,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                7.322,
+                9.600449,
+                37.575985
+              ],
+              "size": [
+                1.25801754,
+                1.18983734,
+                0.6293545
+              ],
+              "rotation": [
+                -0.187241375,
+                -0.6818652,
+                0.187241137,
+                0.68186605
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 735,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                5.101912,
+                25.9434013,
+                63.78499
+              ],
+              "size": [
+                0.5445118,
+                2.59118819,
+                0.0838979
+              ],
+              "rotation": [
+                -7.89162755E-07,
+                -0.9643036,
+                0.264799118,
+                2.87384819E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 773,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                5.20556641,
+                11.7082214,
+                39.7911339
+              ],
+              "size": [
+                0.937407136,
+                2.57844162,
+                0.09053418
+              ],
+              "rotation": [
+                -0.187241539,
+                -0.6818646,
+                0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 783,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                -10.5799828,
+                16.84402,
+                28.43558
+              ],
+              "size": [
+                12.0000076,
+                15.0,
+                9.000001
+              ],
+              "rotation": [
+                -0.187241539,
+                0.6818646,
+                -0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 796,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                -10.0322437,
+                8.238005,
+                17.2175388
+              ],
+              "size": [
+                16.0798016,
+                12.3403091,
+                8.095472
+              ],
+              "rotation": [
+                -0.187241554,
+                0.6818646,
+                -0.187240973,
+                0.6818667
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 839,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                -0.9823805,
+                40.4828072,
+                67.26951
+              ],
+              "size": [
+                18.01885,
+                16.0169773,
+                7.079815
+              ],
+              "rotation": [
+                -5.247932E-07,
+                -0.9643036,
+                0.264799118,
+                1.91110917E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 877,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                10.8950129,
+                36.5186348,
+                58.621006
+              ],
+              "size": [
+                12.0000153,
+                18.0,
+                10.0500107
+              ],
+              "rotation": [
+                -0.187241539,
+                -0.6818646,
+                0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 879,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -2.03504777,
+                21.5993176,
+                58.1083145
+              ],
+              "size": [
+                2.002384,
+                1.06950581,
+                0.349298328
+              ],
+              "rotation": [
+                -0.172007918,
+                -0.733154535,
+                0.201325268,
+                0.626391232
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 895,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                4.197535,
+                4.72543049,
+                29.8546143
+              ],
+              "size": [
+                1.19884014,
+                0.9361756,
+                0.7992399
+              ],
+              "rotation": [
+                -0.187241539,
+                -0.6818646,
+                0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 896,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -5.40448427,
+                25.21644,
+                62.51414
+              ],
+              "size": [
+                1.10662782,
+                2.59118819,
+                0.221633941
+              ],
+              "rotation": [
+                -0.187241554,
+                -0.6818646,
+                0.187240973,
+                0.6818667
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 905,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "translation": [
+                -4.43943262,
+                27.6885986,
+                61.61324
+              ],
+              "size": [
+                3.57113481,
+                0.948060632,
+                0.205344915
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 908,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                5.37275171,
+                13.950635,
+                43.5459747
+              ],
+              "size": [
+                0.5420321,
+                2.59118819,
+                0.221633792
+              ],
+              "rotation": [
+                0.262533545,
+                -0.125872165,
+                0.03456467,
+                -0.9560532
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 920,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                10.8801289,
+                25.7034531,
+                45.3087273
+              ],
+              "size": [
+                18.0627289,
+                13.000001,
+                10.0798006
+              ],
+              "rotation": [
+                -0.187241539,
+                -0.6818646,
+                0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 944,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -1.681,
+                22.8884315,
+                60.8505325
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 946,
+              "labelId": 5,
+              "labelName": "Building",
+              "translation": [
+                -10.5401535,
+                35.2290154,
+                59.387085
+              ],
+              "size": [
+                12.0000067,
+                15.0,
+                9.079804
+              ],
+              "rotation": [
+                0.187240422,
+                -0.681868732,
+                0.1872421,
+                -0.681862652
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 967,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "translation": [
+                -1.34,
+                18.733429,
+                53.8555031
+              ],
+              "size": [
+                0.246704578,
+                0.485304236,
+                0.246704519
+              ],
+              "rotation": [
+                -0.264799118,
+                0.0,
+                0.0,
+                0.9643036
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 976,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "translation": [
+                -5.404418,
+                23.31027,
+                60.8157921
+              ],
+              "size": [
+                2.00238323,
+                1.06950581,
+                0.3492982
+              ],
+              "rotation": [
+                -0.202883571,
+                -0.619687557,
+                0.170167059,
+                0.7388294
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 987,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "translation": [
+                12.8361549,
+                -0.593355834,
+                12.2850027
+              ],
+              "size": [
+                0.693410754,
+                2.01302457,
+                1.33071566
+              ],
+              "rotation": [
+                0.3497528,
+                0.349751681,
+                -0.6145505,
+                0.614552259
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 1001,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "translation": [
+                -4.871757,
+                5.835793,
+                31.3058376
+              ],
+              "size": [
+                0.6415255,
+                1.33727753,
+                1.991133
+              ],
+              "rotation": [
+                -7.812711E-07,
+                -0.9643036,
+                0.264799118,
+                2.84510975E-06
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 1002,
+              "labelId": 9,
+              "labelName": "Carts",
+              "translation": [
+                -4.65053463,
+                27.20488,
+                67.6483154
+              ],
+              "size": [
+                1.19884014,
+                0.9361756,
+                0.7992399
+              ],
+              "rotation": [
+                -0.187241539,
+                0.6818646,
+                -0.187240973,
+                0.681866646
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 1014,
+              "labelId": 2,
+              "labelName": "Human",
+              "translation": [
+                6.140712,
+                8.188032,
+                33.6006927
+              ],
+              "size": [
+                0.5805902,
+                1.7062782,
+                0.417576849
+              ],
+              "rotation": [
+                -0.232521027,
+                -0.4613912,
+                0.126698673,
+                0.846758366
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 1015,
+              "labelId": 2,
+              "labelName": "Human",
+              "translation": [
+                -8.72316551,
+                -5.082476,
+                12.0648031
+              ],
+              "size": [
+                0.4710054,
+                1.34231222,
+                0.9657412
+              ],
+              "rotation": [
+                -0.187241182,
+                0.6818659,
+                -0.187241331,
+                0.6818654
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 1017,
+              "labelId": 2,
+              "labelName": "Human",
+              "translation": [
+                6.443087,
+                2.81833816,
+                25.32131
+              ],
+              "size": [
+                0.507689238,
+                1.581075,
+                0.357954919
+              ],
+              "rotation": [
+                -0.26248157,
+                -0.127300784,
+                0.034956973,
+                0.955863953
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 1019,
+              "labelId": 2,
+              "labelName": "Human",
+              "translation": [
+                2.53272271,
+                -3.004408,
+                15.7493343
+              ],
+              "size": [
+                0.479861021,
+                1.49386811,
+                0.750238538
+              ],
+              "rotation": [
+                -0.127961963,
+                0.8442353,
+                -0.2318282,
+                0.4659917
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "instanceId": 1022,
+              "labelId": 1,
+              "labelName": "Car",
+              "translation": [
+                2.81718826,
+                25.6135235,
+                64.23481
+              ],
+              "size": [
+                2.069469,
+                1.73603392,
+                4.42182875
+              ],
+              "rotation": [
+                -0.268412858,
+                0.009347759,
+                -0.00251197582,
+                0.963255465
+              ],
+              "velocity": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "acceleration": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "type.unity.com/unity.solo.InstanceSegmentationAnnotation",
+          "id": "instance segmentation",
+          "sensorId": "PanoCamera_right_Perception",
+          "description": "Produces an instance segmentation image for each frame. The image will render the pixels of each labeled object in a distinct color.",
+          "imageFormat": "Png",
+          "dimension": [
+            1920.0,
+            1080.0
+          ],
+          "filename": "step3.PanoCamera_right_Perception.instance segmentation.png",
+          "instances": [
+            {
+              "instanceId": 3,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "color": [
+                149,
+                255,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 20,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                116,
+                0,
+                255,
+                255
+              ]
+            },
+            {
+              "instanceId": 26,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                0,
+                255,
+                180,
+                255
+              ]
+            },
+            {
+              "instanceId": 27,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                255,
+                105,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 38,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                255,
+                0,
+                203,
+                255
+              ]
+            },
+            {
+              "instanceId": 57,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                0,
+                87,
+                255,
+                255
+              ]
+            },
+            {
+              "instanceId": 114,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "color": [
+                72,
+                240,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 122,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "color": [
+                152,
+                240,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 126,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                48,
+                0,
+                240,
+                255
+              ]
+            },
+            {
+              "instanceId": 133,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                0,
+                225,
+                187,
+                255
+              ]
+            },
+            {
+              "instanceId": 143,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                0,
+                19,
+                225,
+                255
+              ]
+            },
+            {
+              "instanceId": 148,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                103,
+                0,
+                225,
+                255
+              ]
+            },
+            {
+              "instanceId": 166,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                225,
+                0,
+                179,
+                255
+              ]
+            },
+            {
+              "instanceId": 188,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                0,
+                225,
+                176,
+                255
+              ]
+            },
+            {
+              "instanceId": 197,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "color": [
+                0,
+                210,
+                175,
+                255
+              ]
+            },
+            {
+              "instanceId": 198,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                210,
+                114,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 209,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                210,
+                0,
+                140,
+                255
+              ]
+            },
+            {
+              "instanceId": 215,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                0,
+                88,
+                210,
+                255
+              ]
+            },
+            {
+              "instanceId": 217,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                209,
+                0,
+                210,
+                255
+              ]
+            },
+            {
+              "instanceId": 222,
+              "labelId": 8,
+              "labelName": "Booth",
+              "color": [
+                210,
+                0,
+                97,
+                255
+              ]
+            },
+            {
+              "instanceId": 225,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                139,
+                0,
+                210,
+                255
+              ]
+            },
+            {
+              "instanceId": 239,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                0,
+                210,
+                121,
+                255
+              ]
+            },
+            {
+              "instanceId": 265,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "color": [
+                195,
+                0,
+                65,
+                255
+              ]
+            },
+            {
+              "instanceId": 284,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                24,
+                0,
+                195,
+                255
+              ]
+            },
+            {
+              "instanceId": 286,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                195,
+                0,
+                90,
+                255
+              ]
+            },
+            {
+              "instanceId": 325,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                0,
+                180,
+                150,
+                255
+              ]
+            },
+            {
+              "instanceId": 370,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                54,
+                180,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 372,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                0,
+                159,
+                180,
+                255
+              ]
+            },
+            {
+              "instanceId": 374,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                96,
+                0,
+                180,
+                255
+              ]
+            },
+            {
+              "instanceId": 394,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                0,
+                103,
+                165,
+                255
+              ]
+            },
+            {
+              "instanceId": 399,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                0,
+                14,
+                165,
+                255
+              ]
+            },
+            {
+              "instanceId": 455,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                37,
+                0,
+                150,
+                255
+              ]
+            },
+            {
+              "instanceId": 456,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                6,
+                150,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 478,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                150,
+                0,
+                69,
+                255
+              ]
+            },
+            {
+              "instanceId": 480,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                150,
+                143,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 530,
+              "labelId": 8,
+              "labelName": "Booth",
+              "color": [
+                0,
+                130,
+                135,
+                255
+              ]
+            },
+            {
+              "instanceId": 533,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                0,
+                135,
+                22,
+                255
+              ]
+            },
+            {
+              "instanceId": 536,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                96,
+                135,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 546,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                0,
+                135,
+                50,
+                255
+              ]
+            },
+            {
+              "instanceId": 557,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "color": [
+                113,
+                135,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 562,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                40,
+                135,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 564,
+              "labelId": 8,
+              "labelName": "Booth",
+              "color": [
+                0,
+                119,
+                135,
+                255
+              ]
+            },
+            {
+              "instanceId": 576,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                135,
+                0,
+                52,
+                255
+              ]
+            },
+            {
+              "instanceId": 582,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                120,
+                65,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 583,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                30,
+                0,
+                120,
+                255
+              ]
+            },
+            {
+              "instanceId": 606,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                120,
+                0,
+                55,
+                255
+              ]
+            },
+            {
+              "instanceId": 617,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                39,
+                0,
+                120,
+                255
+              ]
+            },
+            {
+              "instanceId": 639,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                11,
+                120,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 666,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                0,
+                105,
+                74,
+                255
+              ]
+            },
+            {
+              "instanceId": 681,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "color": [
+                34,
+                0,
+                105,
+                255
+              ]
+            },
+            {
+              "instanceId": 683,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "color": [
+                105,
+                0,
+                27,
+                255
+              ]
+            },
+            {
+              "instanceId": 722,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                0,
+                86,
+                90,
+                255
+              ]
+            },
+            {
+              "instanceId": 735,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                0,
+                68,
+                90,
+                255
+              ]
+            },
+            {
+              "instanceId": 773,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                0,
+                75,
+                62,
+                255
+              ]
+            },
+            {
+              "instanceId": 783,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                0,
+                6,
+                75,
+                255
+              ]
+            },
+            {
+              "instanceId": 796,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                9,
+                0,
+                75,
+                255
+              ]
+            },
+            {
+              "instanceId": 839,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                15,
+                0,
+                60,
+                255
+              ]
+            },
+            {
+              "instanceId": 877,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                50,
+                60,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 879,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                0,
+                60,
+                35,
+                255
+              ]
+            },
+            {
+              "instanceId": 895,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                5,
+                60,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 896,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                60,
+                0,
+                23,
+                255
+              ]
+            },
+            {
+              "instanceId": 905,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "color": [
+                45,
+                0,
+                15,
+                255
+              ]
+            },
+            {
+              "instanceId": 908,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                36,
+                0,
+                45,
+                255
+              ]
+            },
+            {
+              "instanceId": 920,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                32,
+                45,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 944,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                45,
+                13,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 946,
+              "labelId": 5,
+              "labelName": "Building",
+              "color": [
+                13,
+                45,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 967,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "color": [
+                7,
+                0,
+                30,
+                255
+              ]
+            },
+            {
+              "instanceId": 976,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "color": [
+                11,
+                30,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 987,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "color": [
+                30,
+                12,
+                0,
+                255
+              ]
+            },
+            {
+              "instanceId": 1001,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "color": [
+                10,
+                0,
+                30,
+                255
+              ]
+            },
+            {
+              "instanceId": 1002,
+              "labelId": 9,
+              "labelName": "Carts",
+              "color": [
+                0,
+                30,
+                1,
+                255
+              ]
+            },
+            {
+              "instanceId": 1014,
+              "labelId": 2,
+              "labelName": "Human",
+              "color": [
+                16,
+                0,
+                30,
+                255
+              ]
+            },
+            {
+              "instanceId": 1015,
+              "labelId": 2,
+              "labelName": "Human",
+              "color": [
+                0,
+                30,
+                7,
+                255
+              ]
+            },
+            {
+              "instanceId": 1017,
+              "labelId": 2,
+              "labelName": "Human",
+              "color": [
+                0,
+                10,
+                30,
+                255
+              ]
+            },
+            {
+              "instanceId": 1019,
+              "labelId": 2,
+              "labelName": "Human",
+              "color": [
+                30,
+                0,
+                28,
+                255
+              ]
+            },
+            {
+              "instanceId": 1022,
+              "labelId": 1,
+              "labelName": "Car",
+              "color": [
+                0,
+                0,
+                2,
+                254
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "type.unity.com/unity.solo.BoundingBox2DAnnotation",
+          "id": "bounding box",
+          "sensorId": "PanoCamera_right_Perception",
+          "description": "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.",
+          "values": [
+            {
+              "instanceId": 3,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "origin": [
+                1058.0,
+                67.0
+              ],
+              "dimension": [
+                3.0,
+                38.0
+              ]
+            },
+            {
+              "instanceId": 20,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                614.0,
+                818.0
+              ],
+              "dimension": [
+                93.0,
+                97.0
+              ]
+            },
+            {
+              "instanceId": 26,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                1072.0,
+                350.0
+              ],
+              "dimension": [
+                29.0,
+                36.0
+              ]
+            },
+            {
+              "instanceId": 27,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                925.0,
+                187.0
+              ],
+              "dimension": [
+                6.0,
+                18.0
+              ]
+            },
+            {
+              "instanceId": 38,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                930.0,
+                221.0
+              ],
+              "dimension": [
+                4.0,
+                8.0
+              ]
+            },
+            {
+              "instanceId": 57,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                1095.0,
+                407.0
+              ],
+              "dimension": [
+                24.0,
+                39.0
+              ]
+            },
+            {
+              "instanceId": 114,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "origin": [
+                1045.0,
+                221.0
+              ],
+              "dimension": [
+                15.0,
+                29.0
+              ]
+            },
+            {
+              "instanceId": 122,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "origin": [
+                778.0,
+                238.0
+              ],
+              "dimension": [
+                57.0,
+                43.0
+              ]
+            },
+            {
+              "instanceId": 126,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                734.0,
+                551.0
+              ],
+              "dimension": [
+                37.0,
+                116.0
+              ]
+            },
+            {
+              "instanceId": 133,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                873.0,
+                176.0
+              ],
+              "dimension": [
+                7.0,
+                23.0
+              ]
+            },
+            {
+              "instanceId": 143,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                1146.0,
+                511.0
+              ],
+              "dimension": [
+                33.0,
+                50.0
+              ]
+            },
+            {
+              "instanceId": 148,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                873.0,
+                224.0
+              ],
+              "dimension": [
+                5.0,
+                9.0
+              ]
+            },
+            {
+              "instanceId": 166,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                859.0,
+                202.0
+              ],
+              "dimension": [
+                10.0,
+                26.0
+              ]
+            },
+            {
+              "instanceId": 188,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                870.0,
+                181.0
+              ],
+              "dimension": [
+                5.0,
+                17.0
+              ]
+            },
+            {
+              "instanceId": 197,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "origin": [
+                665.0,
+                281.0
+              ],
+              "dimension": [
+                150.0,
+                80.0
+              ]
+            },
+            {
+              "instanceId": 198,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1155.0,
+                542.0
+              ],
+              "dimension": [
+                25.0,
+                143.0
+              ]
+            },
+            {
+              "instanceId": 209,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                1006.0,
+                154.0
+              ],
+              "dimension": [
+                13.0,
+                11.0
+              ]
+            },
+            {
+              "instanceId": 215,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                1203.0,
+                0.0
+              ],
+              "dimension": [
+                717.0,
+                599.0
+              ]
+            },
+            {
+              "instanceId": 217,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                771.0,
+                417.0
+              ],
+              "dimension": [
+                30.0,
+                46.0
+              ]
+            },
+            {
+              "instanceId": 222,
+              "labelId": 8,
+              "labelName": "Booth",
+              "origin": [
+                629.0,
+                423.0
+              ],
+              "dimension": [
+                62.0,
+                111.0
+              ]
+            },
+            {
+              "instanceId": 225,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                686.0,
+                508.0
+              ],
+              "dimension": [
+                31.0,
+                49.0
+              ]
+            },
+            {
+              "instanceId": 239,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                867.0,
+                188.0
+              ],
+              "dimension": [
+                8.0,
+                25.0
+              ]
+            },
+            {
+              "instanceId": 265,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "origin": [
+                842.0,
+                161.0
+              ],
+              "dimension": [
+                3.0,
+                2.0
+              ]
+            },
+            {
+              "instanceId": 284,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1045.0,
+                158.0
+              ],
+              "dimension": [
+                2.0,
+                34.0
+              ]
+            },
+            {
+              "instanceId": 286,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                938.0,
+                192.0
+              ],
+              "dimension": [
+                2.0,
+                7.0
+              ]
+            },
+            {
+              "instanceId": 325,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                1095.0,
+                0.0
+              ],
+              "dimension": [
+                140.0,
+                247.0
+              ]
+            },
+            {
+              "instanceId": 370,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1169.0,
+                530.0
+              ],
+              "dimension": [
+                35.0,
+                113.0
+              ]
+            },
+            {
+              "instanceId": 372,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                869.0,
+                207.0
+              ],
+              "dimension": [
+                30.0,
+                24.0
+              ]
+            },
+            {
+              "instanceId": 374,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                916.0,
+                174.0
+              ],
+              "dimension": [
+                12.0,
+                19.0
+              ]
+            },
+            {
+              "instanceId": 394,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                1041.0,
+                201.0
+              ],
+              "dimension": [
+                10.0,
+                24.0
+              ]
+            },
+            {
+              "instanceId": 399,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                922.0,
+                200.0
+              ],
+              "dimension": [
+                7.0,
+                25.0
+              ]
+            },
+            {
+              "instanceId": 455,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                900.0,
+                206.0
+              ],
+              "dimension": [
+                25.0,
+                24.0
+              ]
+            },
+            {
+              "instanceId": 456,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                926.0,
+                174.0
+              ],
+              "dimension": [
+                6.0,
+                23.0
+              ]
+            },
+            {
+              "instanceId": 478,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                861.0,
+                173.0
+              ],
+              "dimension": [
+                4.0,
+                48.0
+              ]
+            },
+            {
+              "instanceId": 480,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                688.0,
+                743.0
+              ],
+              "dimension": [
+                44.0,
+                130.0
+              ]
+            },
+            {
+              "instanceId": 530,
+              "labelId": 8,
+              "labelName": "Booth",
+              "origin": [
+                1191.0,
+                714.0
+              ],
+              "dimension": [
+                109.0,
+                174.0
+              ]
+            },
+            {
+              "instanceId": 533,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                800.0,
+                156.0
+              ],
+              "dimension": [
+                41.0,
+                52.0
+              ]
+            },
+            {
+              "instanceId": 536,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                865.0,
+                303.0
+              ],
+              "dimension": [
+                6.0,
+                13.0
+              ]
+            },
+            {
+              "instanceId": 546,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                908.0,
+                224.0
+              ],
+              "dimension": [
+                2.0,
+                6.0
+              ]
+            },
+            {
+              "instanceId": 557,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "origin": [
+                840.0,
+                130.0
+              ],
+              "dimension": [
+                85.0,
+                20.0
+              ]
+            },
+            {
+              "instanceId": 562,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1601.0,
+                791.0
+              ],
+              "dimension": [
+                87.0,
+                142.0
+              ]
+            },
+            {
+              "instanceId": 564,
+              "labelId": 8,
+              "labelName": "Booth",
+              "origin": [
+                667.0,
+                401.0
+              ],
+              "dimension": [
+                36.0,
+                106.0
+              ]
+            },
+            {
+              "instanceId": 576,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                787.0,
+                0.0
+              ],
+              "dimension": [
+                75.0,
+                156.0
+              ]
+            },
+            {
+              "instanceId": 582,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                778.0,
+                441.0
+              ],
+              "dimension": [
+                25.0,
+                44.0
+              ]
+            },
+            {
+              "instanceId": 583,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                865.0,
+                194.0
+              ],
+              "dimension": [
+                6.0,
+                19.0
+              ]
+            },
+            {
+              "instanceId": 606,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1177.0,
+                743.0
+              ],
+              "dimension": [
+                42.0,
+                130.0
+              ]
+            },
+            {
+              "instanceId": 617,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                903.0,
+                227.0
+              ],
+              "dimension": [
+                9.0,
+                12.0
+              ]
+            },
+            {
+              "instanceId": 639,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                928.0,
+                194.0
+              ],
+              "dimension": [
+                4.0,
+                25.0
+              ]
+            },
+            {
+              "instanceId": 666,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                936.0,
+                200.0
+              ],
+              "dimension": [
+                4.0,
+                9.0
+              ]
+            },
+            {
+              "instanceId": 681,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "origin": [
+                1113.0,
+                214.0
+              ],
+              "dimension": [
+                98.0,
+                32.0
+              ]
+            },
+            {
+              "instanceId": 683,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "origin": [
+                1124.0,
+                574.0
+              ],
+              "dimension": [
+                47.0,
+                68.0
+              ]
+            },
+            {
+              "instanceId": 722,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                1133.0,
+                282.0
+              ],
+              "dimension": [
+                15.0,
+                37.0
+              ]
+            },
+            {
+              "instanceId": 735,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1031.0,
+                139.0
+              ],
+              "dimension": [
+                8.0,
+                40.0
+              ]
+            },
+            {
+              "instanceId": 773,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1080.0,
+                234.0
+              ],
+              "dimension": [
+                5.0,
+                61.0
+              ]
+            },
+            {
+              "instanceId": 783,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                676.0,
+                0.0
+              ],
+              "dimension": [
+                130.0,
+                257.0
+              ]
+            },
+            {
+              "instanceId": 796,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                0.0,
+                0.0
+              ],
+              "dimension": [
+                715.0,
+                599.0
+              ]
+            },
+            {
+              "instanceId": 839,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                873.0,
+                0.0
+              ],
+              "dimension": [
+                187.0,
+                104.0
+              ]
+            },
+            {
+              "instanceId": 877,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                1048.0,
+                0.0
+              ],
+              "dimension": [
+                16.0,
+                67.0
+              ]
+            },
+            {
+              "instanceId": 879,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                923.0,
+                181.0
+              ],
+              "dimension": [
+                9.0,
+                24.0
+              ]
+            },
+            {
+              "instanceId": 895,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                1077.0,
+                371.0
+              ],
+              "dimension": [
+                28.0,
+                39.0
+              ]
+            },
+            {
+              "instanceId": 896,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                877.0,
+                147.0
+              ],
+              "dimension": [
+                4.0,
+                38.0
+              ]
+            },
+            {
+              "instanceId": 905,
+              "labelId": 10,
+              "labelName": "Advertising",
+              "origin": [
+                871.0,
+                112.0
+              ],
+              "dimension": [
+                49.0,
+                16.0
+              ]
+            },
+            {
+              "instanceId": 908,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                1068.0,
+                211.0
+              ],
+              "dimension": [
+                15.0,
+                58.0
+              ]
+            },
+            {
+              "instanceId": 920,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                1058.0,
+                0.0
+              ],
+              "dimension": [
+                50.0,
+                148.0
+              ]
+            },
+            {
+              "instanceId": 944,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                933.0,
+                185.0
+              ],
+              "dimension": [
+                3.0,
+                7.0
+              ]
+            },
+            {
+              "instanceId": 946,
+              "labelId": 5,
+              "labelName": "Building",
+              "origin": [
+                856.0,
+                1.0
+              ],
+              "dimension": [
+                21.0,
+                123.0
+              ]
+            },
+            {
+              "instanceId": 967,
+              "labelId": 4,
+              "labelName": "TrafficSign",
+              "origin": [
+                935.0,
+                210.0
+              ],
+              "dimension": [
+                4.0,
+                9.0
+              ]
+            },
+            {
+              "instanceId": 976,
+              "labelId": 7,
+              "labelName": "RoadBlock",
+              "origin": [
+                872.0,
+                171.0
+              ],
+              "dimension": [
+                10.0,
+                21.0
+              ]
+            },
+            {
+              "instanceId": 987,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "origin": [
+                1846.0,
+                531.0
+              ],
+              "dimension": [
+                74.0,
+                90.0
+              ]
+            },
+            {
+              "instanceId": 1001,
+              "labelId": 6,
+              "labelName": "Bicycle",
+              "origin": [
+                808.0,
+                343.0
+              ],
+              "dimension": [
+                17.0,
+                49.0
+              ]
+            },
+            {
+              "instanceId": 1002,
+              "labelId": 9,
+              "labelName": "Carts",
+              "origin": [
+                890.0,
+                158.0
+              ],
+              "dimension": [
+                11.0,
+                13.0
+              ]
+            },
+            {
+              "instanceId": 1014,
+              "labelId": 2,
+              "labelName": "Human",
+              "origin": [
+                1123.0,
+                288.0
+              ],
+              "dimension": [
+                13.0,
+                48.0
+              ]
+            },
+            {
+              "instanceId": 1015,
+              "labelId": 2,
+              "labelName": "Human",
+              "origin": [
+                240.0,
+                902.0
+              ],
+              "dimension": [
+                87.0,
+                75.0
+              ]
+            },
+            {
+              "instanceId": 1017,
+              "labelId": 2,
+              "labelName": "Human",
+              "origin": [
+                1187.0,
+                407.0
+              ],
+              "dimension": [
+                21.0,
+                58.0
+              ]
+            },
+            {
+              "instanceId": 1019,
+              "labelId": 2,
+              "labelName": "Human",
+              "origin": [
+                1086.0,
+                683.0
+              ],
+              "dimension": [
+                47.0,
+                68.0
+              ]
+            },
+            {
+              "instanceId": 1022,
+              "labelId": 1,
+              "labelName": "Car",
+              "origin": [
+                986.0,
+                156.0
+              ],
+              "dimension": [
+                30.0,
+                28.0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
