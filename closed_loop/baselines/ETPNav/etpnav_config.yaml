@@ -1,0 +1,7 @@
+use_real_model: true
+checkpoint_path: "/home/wuyou/yizhou/best_model_epoch_5.pth"
+#checkpoint_path: "/home/wuyou/pengyh/FreeAskWorld/baselines/ETPNav/pretrained/ckpt.iter19600.pth"
+config_path: "/home/wuyou/yizhou/ETPNav/run_r2r/iter_train.yaml"
+output_dir: "/home/wuyou/pengyh/FreeAskWorld/test/etpnav_outputs"
+save_results: false
+log_level: "INFO"
