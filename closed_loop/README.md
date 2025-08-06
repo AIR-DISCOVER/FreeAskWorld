@@ -1,6 +1,7 @@
 # Communication with FreeAskWorld Simulator
 
 ## Start
+
 conda create -n FreeAskWorld python=3.10
 conda activate FreeAskWorld
 pip install websockets fastapi uvicorn aiohttp
@@ -23,11 +24,14 @@ FreeAskWorld.sh
 Public network IP can be accessed in terminal with green colour words, like: 检测到公网地址: https://photographers-exotic-completing-holdings.trycloudflare.com
 
 ## Method
-Unity（客户端）—— WebSocket连接 —— 服务器（负责转发、处理消息）
+Communication Flow:
+Unity (client) connects to the server via WebSocket.
 
-Unity 发消息给服务器（用 JsonSender、ImageSender、DepthSender）
+Unity sends messages to the server using JsonSender, ImageSender, and DepthSender.
 
-服务器收到消息，做处理后，回复给 Unity（JsonReceiver 在这里接收）
+The server processes incoming messages and responds back.
+
+Unity receives server replies through JsonReceiver.
 
 ## Run Baselines
 cd path/to/your/FreeAskWorld
