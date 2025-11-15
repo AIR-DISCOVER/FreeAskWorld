@@ -193,17 +193,6 @@ Closed-Loop Navigation Performance (Table 4 from Paper)
 | ETPNav-FT | 33.6 | 0.0 | 0.0 | 31.6 | 1.1 | 27.1 | 0.0 |
 | BEVBert-FT | 18.7 | 0.0 | 0.0 | 30.0 | 0.0 | 28.5 | 0.0 |
 
-## 📜 Citation
-
-If you find FreeAskWorld useful in your research, please cite our paper:
-```bash
-@inproceedings{freeaskworld2026,
-  title={{FreeAskWorld: An Interactive and Closed-Loop Simulator for Human-Centric Embodied AI}},
-  author={Anonymous},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2026}
-}
-```
 
 ## Licence
 FreeAskWorld is licensed under the [Apache 2.0 License](LICENSE).
