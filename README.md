@@ -81,7 +81,7 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/AIR-DISCOVER/FreeAskWorld
+git clone https://github.com/YOUR_USERNAME/FreeAskWorld.git
 cd FreeAskWorld
 
 # Create environment
@@ -91,4 +91,120 @@ conda activate freeaskworld
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+### 2. Download the FreeAskWorld Dataset
+
+Our large-scale benchmark dataset is required for training and open-loop evaluation.
+```bash
+# [TODO: Replace with your dataset download link/command]
+wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
+unzip FreeAskWorld_Dataset.zip -d ./data# [TODO: Replace with your dataset download link/command]
+wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
+unzip FreeAskWorld_Dataset.zip -d ./data
+```
+
+### 3. Download the Simulator Build
+
+Our pre-compiled simulator environment (Linux x86_64) is required for closed-loop simulation.
+```bash
+# [TODO: Replace with your simulator build download link/command]
+wget [LINK_TO_SIMULATOR_BINARY_URL] -O FreeAskWorld_Simulator_Linux.zip
+unzip FreeAskWorld_Simulator_Linux.zip -d ./simulator_build# [TODO: Replace with your dataset download link/command]
+wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
+unzip FreeAskWorld_Dataset.zip -d ./data
+```
+
+## How to Run
+
+### Closed-Loop Simulation (Interactive)
+
+This is the primary mode for interactive evaluation. It launches the simulator and connects an agent script to it in real-time.
+
+**1. Lauch the Simulator:**  Open a terminal and run the simulator binary:
+```bash
+# [TODO: Replace with your dataset download link/command]
+wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
+unzip FreeAskWorld_Dataset.zip -d ./data
+```
+
+**2. Run the Interactive Agent:**  In a separate terminal (with the freeaskworld conda env activated):
+```bash
+# Run an agent (e.g., fine-tuned BEVBert) in closed-loop mode
+python run_closed_loop.py \
+    --model_name BEVBert-FT \
+    --checkpoint_path [PATH_TO_YOUR_CHECKPOINT] \
+    --test_split closed_loop_test
+```
+*The script will connect to the simulator, and the episode will begin.*
+
+### Open-Loop Training & Evaluation
+
+This mode uses the static dataset for standard training and evaluation, similar to other VLN benchmarks.
+
+**Train a Baseline Model:**
+
+```bash
+# Example: Fine-tuning BEVBert on the FreeAskWorld dataset
+python train.py \
+    --config_file ./configs/bevbert_finetune.yaml \
+    --data_dir ./data/FreeAskWorld \
+    --output_dir ./checkpoints/bevbert-ft
+```
+
+
+**Evaluate a Model (Open-Loop):**
+
+```bash
+# Evaluate the fine-tuned model on the open-loop test split
+python evaluate.py \
+    --config_file ./configs/bevbert_finetune.yaml \
+    --model_path ./checkpoints/bevbert-ft/best_model.pth \
+    --data_dir ./data/FreeAskWorld \
+    --split open_loop_test
+```
+
+## 🎥 Demos
+**1. Direction Inquiry Task in Action**
+Agent gets lost, initiates dialogue with a human agent, receives new instructions, and successfully adapts its path.
+
+<p align="center">
+  <!-- [TODO: Replace with a GIF or video of your Direction Inquiry Task] -->
+  <img src="[YOUR_DEMO_GIF_URL_1]" alt="Direction Inquiry Task Demo" width="80%">
+</p>
+
+**2. Navigating Dynamic Environments**
+Agent navigates a busy street, avoiding dynamic pedestrians and vehicles under foggy weather conditions.
+
+<p align="center">
+  <!-- [TODO: Replace with a GIF or video of your dynamic environment] -->
+  <img src="[YOUR_DEMO_GIF_URL_2]" alt="Dynamic Environment Demo" width="80%">
+</p>
+
+## 📊 Key Results
+Models fine-tuned on FreeAskWorld demonstrate enhanced semantic understanding and interaction competency. However, a significant gap to human performance remains, especially in high-level reasoning and social navigation.
+
+Closed-Loop Navigation Performance (Table 4 from Paper)
+| Method | TL (m) | SR (%) | SPL | NE (m) | OSR (%) | ONE (m) | NDI |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Human (no asking) | 47.5 | 40.2 | 38.2 | 18.3 | 41.3 | 11.3 | 0.0 |
+| Human (asking) | 59.9 | 82.6 | 71.2 | 3.49 | 82.6 | 1.63 | 0.78 |
+| ETPNav | 31.2 | 0.0 | 0.0 | 32.9 | 0.0 | 28.7 | 0.0 |
+| BEVBert | 14.6 | 0.0 | 0.0 | 31.0 | 0.0 | 29.0 | 0.0 |
+| ETPNav-FT | 33.6 | 0.0 | 0.0 | 31.6 | 1.1 | 27.1 | 0.0 |
+| BEVBert-FT | 18.7 | 0.0 | 0.0 | 30.0 | 0.0 | 28.5 | 0.0 |
+
+## 📜 Citation
+
+If you find FreeAskWorld useful in your research, please cite our paper:
+```bash
+@inproceedings{freeaskworld2026,
+  title={{FreeAskWorld: An Interactive and Closed-Loop Simulator for Human-Centric Embodied AI}},
+  author={Anonymous},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}
+}
+```
+
+## Licence
+FreeAskWorld is licensed under the [Apache 2.0 License](LICENSE).
 
