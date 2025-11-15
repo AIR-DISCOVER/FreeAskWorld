@@ -11,13 +11,18 @@
   <a href="$$LINK_TO_YOUR_PAPER_PDF$$" target="_blank">
     <img src="https://img.shields.io/badge/Paper-AAAI_2026-B31B1B.svg" alt="Paper PDF">
   </a>
+
   <a href="$$LINK_TO_YOUR_DATASET_PAGE$$" target="_blank">
     <img src="https://img.shields.io/badge/Dataset-FreeAskWorld-blue.svg" alt="Dataset">
-   <a href="LICENSE">
-  <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License">
-    </a>
-  <a href="https://github.com/$$YOUR_USERNAME$$/FreeAskWorld" target="_blank">
-    <img src="https://img.shields.io/github/stars/$$YOUR_USERNAME$$/FreeAskWorld?style=social" alt="Stars">
+  </a>
+
+  <a href="LICENSE" target="_blank">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache License">
+  </a>
+
+  <!-- Stable Stars Badge (No API Rate Limit Issue) -->
+  <a href="https://github.com/YOUR_USERNAME/FreeAskWorld/stargazers" target="_blank">
+    <img src="https://badgen.net/github/stars/YOUR_USERNAME/FreeAskWorld" alt="GitHub Stars">
   </a>
 </p>
 
