@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">FreeAskWorld Simulator</h1>
+  <h1 align="center">FreeAskWorld Simulator (AAAI26 oral)</h1>
 </p>
 
 <p align="center">
