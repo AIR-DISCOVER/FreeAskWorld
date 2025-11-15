@@ -97,10 +97,7 @@ pip install -r requirements.txt
 Our large-scale benchmark dataset is required for training and open-loop evaluation.
 ```bash
 # [TODO: Replace with your dataset download link/command]
-wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
-unzip FreeAskWorld_Dataset.zip -d ./data# [TODO: Replace with your dataset download link/command]
-wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
-unzip FreeAskWorld_Dataset.zip -d ./data
+
 ```
 
 ### 3. Download the Simulator Build
@@ -108,10 +105,7 @@ unzip FreeAskWorld_Dataset.zip -d ./data
 Our pre-compiled simulator environment (Linux x86_64) is required for closed-loop simulation.
 ```bash
 # [TODO: Replace with your simulator build download link/command]
-wget [LINK_TO_SIMULATOR_BINARY_URL] -O FreeAskWorld_Simulator_Linux.zip
-unzip FreeAskWorld_Simulator_Linux.zip -d ./simulator_build# [TODO: Replace with your dataset download link/command]
-wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
-unzip FreeAskWorld_Dataset.zip -d ./data
+
 ```
 
 ## How to Run
@@ -123,8 +117,7 @@ This is the primary mode for interactive evaluation. It launches the simulator a
 **1. Lauch the Simulator:**  Open a terminal and run the simulator binary:
 ```bash
 # [TODO: Replace with your dataset download link/command]
-wget [LINK_TO_DATASET_DOWNLOAD_URL] -O FreeAskWorld_Dataset.zip
-unzip FreeAskWorld_Dataset.zip -d ./data
+
 ```
 
 **2. Run the Interactive Agent:**  In a separate terminal (with the freeaskworld conda env activated):
