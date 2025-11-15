@@ -58,6 +58,7 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 | 🔁 **Closed-Loop Sync** | WebSocket-based state exchange for real-time model interaction |
 | 🧩 **Direction Inquiry Task** | Agents ask for help, interpret human guidance, adapt plans |
 | 📦 **Large-Scale Data** | 6 tasks · 16 object categories · 63,429 frames · 17+ hours |
+| 🔄 **Data Generation Pipeline** | Modular pipeline for generating embodied ai data |
 
 ---
 
