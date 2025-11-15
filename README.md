@@ -63,15 +63,17 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 
 ## 🚧 TODO List
 
-### 📅 **Phases**
+### 📅 **Project Phases**
 
-| Phase | Description | Status |
-|---|---|---|
-| 📝 **Paper Publication** | Finalizing and submitting the AAAI 2026 paper for publication. | ⏳ In Progress |
-| 📊 **Data Processing Code Release** | Releasing the code for data preprocessing and annotations. | ✔ Released |
-| 🛠️ **Simulator Code Release** | Making the simulation code available for developers. | ⏳ Upcoming |
-| 📚 **Usage Tutorial** | Writing detailed instructions for how to use the simulator effectively. | ⏳ Upcoming |
-| 🧑‍💻 **Simulator API Documentation** | Providing comprehensive documentation of the API for developers. | ⏳ Upcoming |
+| Phase                           | Description                                                                    | Status         |
+|----------------------------------|--------------------------------------------------------------------------------|----------------|
+| 📝 **Paper Publication**         | Finalizing and submitting the AAAI 2026 paper for peer review and publication. | ⏳ In Progress  |
+| 📊 **Data Processing Code Release** | Releasing code for preprocessing, data cleaning, and annotation pipelines.    | ✔ Released     |
+| 🛠️ **Simulator Code Release**   | Publishing the core simulation code for developers and external collaborators. | ⏳ Upcoming     |
+| 📚 **Usage Tutorial**            | Creating a comprehensive tutorial on how to use the FreeAskWorld simulator.     | ⏳ Upcoming     |
+| 🧑‍💻 **API Documentation**       | Providing thorough documentation of the simulator’s API for seamless integration. | ⏳ Upcoming     |
+| 🎮 **Steam Release**             | Preparing and publishing the FreeAskWorld simulator on Steam.                  | ⏳ Upcoming     |
+
 
 ## 🚀 Getting Started
 
