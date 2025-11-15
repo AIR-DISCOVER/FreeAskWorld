@@ -29,7 +29,7 @@
 ---
 
 <p align="center">
-  <img src="$$YOUR_TEASER_IMAGE_OR_GIF_URL$$" alt="FreeAskWorld Overview" width="80%">
+  <img src="homepage.png" alt="FreeAskWorld Homepage" width="80%">
 </p>
 
 ---
