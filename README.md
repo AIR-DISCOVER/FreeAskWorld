@@ -13,10 +13,9 @@
   </a>
   <a href="$$LINK_TO_YOUR_DATASET_PAGE$$" target="_blank">
     <img src="https://img.shields.io/badge/Dataset-FreeAskWorld-blue.svg" alt="Dataset">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
-  </a>
+   <a href="LICENSE">
+  <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License">
+    </a>
   <a href="https://github.com/$$YOUR_USERNAME$$/FreeAskWorld" target="_blank">
     <img src="https://img.shields.io/github/stars/$$YOUR_USERNAME$$/FreeAskWorld?style=social" alt="Stars">
   </a>
