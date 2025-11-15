@@ -20,9 +20,9 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache License">
   </a>
 
-  <!-- Stable Stars Badge (No API Rate Limit Issue) -->
+  <!-- 100% Working GitHub Stars Badge -->
   <a href="https://github.com/YOUR_USERNAME/FreeAskWorld/stargazers" target="_blank">
-    <img src="https://badgen.net/github/stars/YOUR_USERNAME/FreeAskWorld" alt="GitHub Stars">
+    <img src="https://img.shields.io/github/stars/YOUR_USERNAME/FreeAskWorld.svg?logo=github&label=Stars" alt="GitHub Stars">
   </a>
 </p>
 
