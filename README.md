@@ -61,12 +61,24 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 
 ---
 
+## 🚧 TODO List
+
+### 📅 **Phases**
+
+| Phase | Description | Status |
+|---|---|---|
+| 📝 **Paper Publication** | Finalizing and submitting the AAAI 2026 paper for publication. | ⏳ In Progress |
+| 📊 **Data Processing Code Release** | Releasing the code for data preprocessing and annotations. | ✔ Released |
+| 🛠️ **Simulator Code Release** | Making the simulation code available for developers. | ⏳ Upcoming |
+| 📚 **Usage Tutorial** | Writing detailed instructions for how to use the simulator effectively. | ⏳ Upcoming |
+| 🧑‍💻 **Simulator API Documentation** | Providing comprehensive documentation of the API for developers. | ⏳ Upcoming |
+
 ## 🚀 Getting Started
 
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/FreeAskWorld.git
+git clone https://github.com/AIR-DISCOVER/FreeAskWorld
 cd FreeAskWorld
 
 # Create environment
@@ -75,3 +87,5 @@ conda activate freeaskworld
 
 # Install dependencies
 pip install -r requirements.txt
+```
+
