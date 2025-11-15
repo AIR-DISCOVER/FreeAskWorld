@@ -20,14 +20,20 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache License">
   </a>
 
-  <!-- 100% Working GitHub Stars Badge -->
-  <a href="https://github.com/YOUR_USERNAME/FreeAskWorld/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/stars/YOUR_USERNAME/FreeAskWorld.svg?logo=github&label=Stars" alt="GitHub Stars">
+  <!-- Stars Badge: 注意这里已经换成你的真实用户名和仓库名 -->
+  <a href="https://github.com/Panpatrick97/FreeAskWorld/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/stars/Panpatrick97/FreeAskWorld.svg?logo=github&label=Stars" alt="GitHub Stars">
   </a>
 </p>
 
 <p align="center">
   FreeAskWorld is an interactive simulation framework that integrates large language models (LLMs) for high-level planning and socially grounded interaction in embodied AI.
+</p>
+
+---
+
+<p align="center">
+  <img src="homepage.png" alt="FreeAskWorld Homepage" width="80%">
 </p>
 
 ---
