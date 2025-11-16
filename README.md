@@ -27,7 +27,7 @@
 
 
 <p align="center">
-  <img src="homepage.png" alt="FreeAskWorld Homepage" width="80%">
+  <img src="HomeIMG.png" alt="FreeAskWorld Homepage" width="80%">
 </p>
 
 
