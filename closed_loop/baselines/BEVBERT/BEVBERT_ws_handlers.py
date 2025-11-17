@@ -31,7 +31,7 @@ def bev_bert_init():
         output_dir="my_bevbert_outputs",
         save_results=True,
         enable_callbacks=True,
-        device="cpu"  # 🔑 重要：添加这个参数避免设备问题
+        device="cpu"  #  重要：添加这个参数避免设备问题
     )
 
     # 创建服务
