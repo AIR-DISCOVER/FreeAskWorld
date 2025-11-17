@@ -24,29 +24,25 @@ bev_bert_service = None
 
 def bev_bert_init():
 
-    # 创建配置
+
     config = BEVBertConfig(
         use_real_model=True,
         checkpoint_path="data/logs/checkpoints/bevbert/best_model.pth",
         output_dir="my_bevbert_outputs",
         save_results=True,
         enable_callbacks=True,
-        device="cpu"  #  重要：添加这个参数避免设备问题
+        device="cpu" 
     )
 
-    # 创建服务
     service = BEVBertInferenceService(config=config)
 
-    # 注册回调
     def on_complete(result):
         print(f"BEVBert推理完成: {result.content}")
 
     service.register_callback('on_inference_complete', on_complete)
 
-    # 启动服务
     service.start_service()
 
-    # 🔑 重要：等待服务完全启动
     time.sleep(2)
     return service
 
@@ -59,9 +55,9 @@ def bev_bert_cleanup():
     if bev_bert_service is not None:
         try:
             print("🧹 正在清理 ETPNav 服务...")
-            bev_bert_service.stop_service()  # 停止服务
-            del bev_bert_service             # 删除变量引用（可选）
-            bev_bert_service = None          # 显式释放
+            bev_bert_service.stop_service()
+            del bev_bert_service             
+            bev_bert_service = None         
             print("✅ ETPNav 服务已清理")
         except Exception as e:
             print(f"⚠️ 清理失败: {e}")
@@ -91,7 +87,7 @@ async def bev_bert_service_handle(websocket, path):
                     bev_bert = bev_bert_init()
                     register_bevbert(bev_bert)  # 注册给 handler
                     shared_state.Init = False
-                # 等待注册完成
+               
                 while bev_bert_service is None:
                     logging.info("等待 etpnav 初始化完成")
                     time.sleep(1)    
@@ -100,12 +96,12 @@ async def bev_bert_service_handle(websocket, path):
                 cur_transform_data = shared_state.transform_data
                 cur_instruction = shared_state.instruction
                 if cur_rgb_array is not None and cur_depth_array is not None and cur_transform_data is not None and cur_instruction is not None:
-                    # 只保留 RGB
+                  
                     if cur_rgb_array.shape[2] > 3:
                         cur_rgb_array = cur_rgb_array[:, :, :3]
                     cur_rgb_array = np.transpose(cur_rgb_array, (2, 0, 1))  # HWC -> CHW
                     cur_rgb_array = np.expand_dims(cur_rgb_array, axis=0)   # -> NCHW
-                    # 发送推理请求
+                  
                     inference_data = {
                         'rgb': cur_rgb_array,
                         'depth': cur_depth_array,
@@ -113,7 +109,7 @@ async def bev_bert_service_handle(websocket, path):
                     }
                     future = bev_bert_service.inference(inference_data)
                     result = future.result()
-                    shared_state.clear_shared_state()   # 使用后清空缓存全局数据
+                    shared_state.clear_shared_state()   
                     if result:
                         navigation_cmd = NavigationCommand.from_dict(result.content)
                         output_response = {
