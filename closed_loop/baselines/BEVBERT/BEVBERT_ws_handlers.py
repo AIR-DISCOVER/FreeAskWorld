@@ -14,7 +14,7 @@ from ws_handlers import *
 import shared_state
 
 import time
-sys.path.append('/home/wuyou/yxy/VLN-BEVBert/bevbert_ce')  # 注意路径是模块目录，而不是模块本身
+sys.path.append('/home/wuyou/yxy/VLN-BEVBert/bevbert_ce')  
 from bevbert_inference_service import BEVBertInferenceService, BEVBertConfig
 import numpy as np
 import time
