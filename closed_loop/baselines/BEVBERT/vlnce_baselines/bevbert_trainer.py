@@ -9,7 +9,6 @@ import numpy as np
 from typing import Dict, Any, Optional, List
 import os
 
-# 导入基础训练器
 try:
     from vlnce_baselines.ss_trainer_ETP import RLTrainer as BaseTrainer
     print("✅ 导入基础训练器成功")
@@ -34,11 +33,9 @@ class BEVBertTrainer(BaseTrainer):
         """加载BEVBert检查点"""
         print(f"🔄 加载BEVBert检查点: {checkpoint_path}")
         
-        # 调用基础加载方法
         if hasattr(super(), 'load_checkpoint'):
             return super().load_checkpoint(checkpoint_path)
         else:
-            # 简单的加载逻辑
             if os.path.exists(checkpoint_path):
                 print("✅ 检查点文件存在")
                 return True
@@ -49,12 +46,10 @@ class BEVBertTrainer(BaseTrainer):
     def inference(self, observations: Dict[str, torch.Tensor] = None) -> int:
         """BEVBert推理"""
         print("🧠 BEVBert推理")
-        
-        # 调用基础推理
+
         if hasattr(super(), 'inference'):
             return super().inference(observations)
         else:
-            # 默认推理逻辑
-            return 1  # 前进
+            return 1  
 
 print("✅ BEVBert训练器模块加载完成")
