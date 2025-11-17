@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BEVBert Trainer - 基于ETPNav训练器修改
+BEVBert Trainer 
 """
 
 import torch
