@@ -37,12 +37,15 @@
   FreeAskWorld is an interactive simulation framework that integrates large language models (LLMs) for high-level planning and socially grounded interaction in embodied AI.
 </p>
 
-
 <p align="center">
-  <img src="HomeIMG.png" alt="FreeAskWorld Homepage" width="80%">
+  <img src="docs/SystemOverview.jpg" alt="System Overview" width="80%">
 </p>
-
-
+<p align="center">
+  <img src="docs/PeopleSimulationFramework.jpg" alt="People Simulation Framework" width="80%">
+</p>
+<p align="center">
+  <img src="docs/Style.jpg" alt="FreeAskWorld Homepage" width="80%">
+</p>
 
 ---
 
