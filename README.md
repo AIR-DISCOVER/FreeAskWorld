@@ -38,13 +38,13 @@
 </p>
 
 <p align="center">
-  <img src="docs/SystemOverview.jpg" alt="System Overview" width="80%">
+  <img src="docs/SystemOverview.jpg" alt="System Overview" width="100%">
 </p>
 <p align="center">
-  <img src="docs/PeopleSimulationFramework.jpg" alt="People Simulation Framework" width="80%">
+  <img src="docs/PeopleSimulationFramework.jpg" alt="People Simulation Framework" width="100%">
 </p>
 <p align="center">
-  <img src="docs/Style.jpg" alt="FreeAskWorld Homepage" width="80%">
+  <img src="docs/Style.jpg" alt="FreeAskWorld Homepage" width="100%">
 </p>
 
 ---
