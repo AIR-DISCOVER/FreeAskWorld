@@ -8,18 +8,30 @@
 
 <p align="center">
   <!-- Badges -->
-  <a href="$$LINK_TO_YOUR_PAPER_PDF$$" target="_blank">
+  <!-- <a href="$$LINK_TO_YOUR_PAPER_PDF$$" target="_blank">
     <img src="https://img.shields.io/badge/Paper-AAAI_2026-B31B1B.svg" alt="Paper PDF">
+  </a> -->
+
+  <a href="https://arxiv.org/abs/2511.13524" target="_blank">
+    <img src="https://img.shields.io/badge/arXiv-2511.13524-b31b1b.svg" alt="arXiv">
   </a>
 
-  <a href="$$LINK_TO_YOUR_DATASET_PAGE$$" target="_blank">
+  <a href="https://huggingface.co/datasets/Astronaut-PENG/FreeAskWorld" target="_blank">
+    <img src="https://img.shields.io/badge/HuggingFace-FreeAskWorld-yellow.svg" alt="HuggingFace Dataset">
+  </a>
+
+  <!-- <a href="$$LINK_TO_YOUR_DATASET_PAGE$$" target="_blank">
     <img src="https://img.shields.io/badge/Dataset-FreeAskWorld-blue.svg" alt="Dataset">
+  </a> -->
+
+  <a href="https://github.com/AIR-DISCOVER/FreeAD" target="_blank">
+    <img src="https://img.shields.io/badge/Related%20Work-FreeAD-blueviolet.svg" alt="FreeAD Project">
   </a>
 
   <a href="LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache License">
   </a>
-
+</p>
 
 <p align="center">
   FreeAskWorld is an interactive simulation framework that integrates large language models (LLMs) for high-level planning and socially grounded interaction in embodied AI.
@@ -66,14 +78,12 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 
 ### 📅 **Project Phases**
 
-| Phase                           | Description                                                                    | Status         |
-|----------------------------------|--------------------------------------------------------------------------------|----------------|
-| 📝 **Paper Publication**         | Finalizing and submitting the AAAI 2026 paper for peer review and publication. | ⏳ In Progress  |
-| 📊 **Data Processing Code Release** | Releasing code for preprocessing, data cleaning, and annotation pipelines.    | ✔ Released     |
-| 🛠️ **Simulator Code Release**   | Publishing the core simulation code for developers and external collaborators. | ⏳ Upcoming     |
-| 📚 **Usage Tutorial**            | Creating a comprehensive tutorial on how to use the FreeAskWorld simulator.     | ⏳ Upcoming     |
-| 🧑‍💻 **API Documentation**       | Providing thorough documentation of the simulator’s API for seamless integration. | ⏳ Upcoming     |
-| 🎮 **Steam Release**             | Preparing and publishing the FreeAskWorld simulator on Steam.                  | ⏳ Upcoming     |
+- [ ] 📝 **Paper Publication**: Finalizing and submitting the AAAI 2026 paper for peer review and publication.
+- [√] 📊 **Data Processing Code Release**: Releasing code for preprocessing, data cleaning, and annotation pipelines.
+- [ ] 🛠️ **Simulator Code Release**: Publishing the core simulation code for developers and external collaborators.
+- [ ] 📚 **Usage Tutorial**: Creating a comprehensive tutorial on how to use the FreeAskWorld simulator.
+- [ ] 🧑‍💻 **API Documentation**: Providing thorough documentation of the simulator’s API for seamless integration.
+- [ ] 🎮 **Steam Release**: Preparing and publishing the FreeAskWorld simulator on Steam.
 
 
 ## 🚀 Getting Started
@@ -95,18 +105,26 @@ pip install -r requirements.txt
 ### 2. Download the FreeAskWorld Dataset
 
 Our large-scale benchmark dataset is required for training and open-loop evaluation.
-```bash
-# [TODO: Replace with your dataset download link/command]
 
+**Option 1: Download from Hugging Face**
+
+You can directly download or browse the dataset on Hugging Face:
+- [FreeAskWorld on Hugging Face 🤗](https://huggingface.co/datasets/Astronaut-PENG/FreeAskWorld)
+
+Or use the `datasets` library:
+```python
+from datasets import load_dataset
+ds = load_dataset("Astronaut-PENG/FreeAskWorld")
 ```
 
-### 3. Download the Simulator Build
+**Option 2: Clone the Dataset API Repository**
 
-Our pre-compiled simulator environment (Linux x86_64) is required for closed-loop simulation.
+For nuScenes-like API access and advanced data loading, clone the dataset API repo:
 ```bash
-# [TODO: Replace with your simulator build download link/command]
-
+git clone https://github.com/doraemonaaaa/FreeAskWorldDataset
 ```
+This provides Python APIs for efficient data access and manipulation.
+
 
 ## How to Run
 
@@ -185,6 +203,8 @@ Closed-Loop Navigation Performance (Table 4 from Paper)
 | BEVBert | 14.6 | 0.0 | 0.0 | 31.0 | 0.0 | 29.0 | 0.0 |
 | ETPNav-FT | 33.6 | 0.0 | 0.0 | 31.6 | 1.1 | 27.1 | 0.0 |
 | BEVBert-FT | 18.7 | 0.0 | 0.0 | 30.0 | 0.0 | 28.5 | 0.0 |
+
+<!-- ## Citation -->
 
 
 ## Licence
