@@ -81,7 +81,7 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 
 ### 📅 **Project Phases**
 
-- [ ] 📝 **Paper Publication**: Finalizing and submitting the AAAI 2026 paper for peer review and publication.
+- [x] 📝 **Paper Publication**: Paper publication.
 - [x] 📊 **Data Processing Code Release**: Releasing code for preprocessing, data cleaning, and annotation pipelines.
 - [ ] 🛠️ **Simulator Code Release**: Publishing the core simulation code for developers and external collaborators.
 - [ ] 📚 **Usage Tutorial**: Creating a comprehensive tutorial on how to use the FreeAskWorld simulator.
