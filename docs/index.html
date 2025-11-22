@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="FreeAskWorld is an interactive and closed-loop simulator for human-centric embodied AI, supporting direction-inquiry style navigation tasks in complex urban scenes.">
+  <meta name="keywords" content="FreeAskWorld, Embodied AI, Vision-and-Language Navigation, Direction Inquiry, Simulator">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeAskWorld: An Interactive and Closed-Loop Simulator for Human-Centric Embodied AI</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- 如不需要统计，可删除以下整段脚本 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/AIR-DISCOVER/FreeAskWorld">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+        <span>GitHub</span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Links
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://arxiv.org/pdf/2511.13524">
+            Paper (arXiv)
+          </a>
+          <a class="navbar-item" href="https://huggingface.co/datasets/Astronaut-PENG/FreeAskWorld/tree/main">
+            Dataset (HuggingFace)
+          </a>
+          <a class="navbar-item" href="https://github.com/AIR-DISCOVER/FreeAskWorld">
+            Code (GitHub)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- 顶部标题区 -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            FreeAskWorld: An Interactive and Closed-Loop Simulator for Human-Centric Embodied AI
+          </h1>
+
+          <h2 class="subtitle is-5" style="margin-top: 0.5rem; color: #777;">
+            AAAI 2026 · Oral
+          </h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Yuhang Peng<sup>1*</sup>,</span>
+            <span class="author-block">Yizhou Pan<sup>1*</sup>,</span>
+            <span class="author-block">Xinning He<sup>1*</sup>,</span>
+            <span class="author-block">Jihaoyu Yang<sup>1</sup>,</span>
+            <span class="author-block">Xinyu Yin<sup>1</sup>,</span>
+            <span class="author-block">Han Wang<sup>1</sup>,</span>
+            <span class="author-block">Xiaoji Zheng<sup>1</sup>,</span>
+            <span class="author-block">Chao Gao<sup>1</sup>,</span>
+            <span class="author-block">Jiangtao Gong<sup>1†</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Institute for AI Industry Research, Tsinghua University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2511.13524"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- arXiv abstract -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2511.13524"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="https://github.com/AIR-DISCOVER/FreeAskWorld"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- Dataset Link -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Astronaut-PENG/FreeAskWorld/tree/main"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div> <!-- /.publication-links -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Abstract 区块 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            FreeAskWorld is a large-scale simulation framework for <em>human-centric embodied AI</em>.
+            Instead of evaluating navigation agents in static, maze-like maps, we construct realistic
+            interactive street scenes populated with pedestrians, vehicles, shops and landmarks, where
+            agents must constantly reason about both the physical world and other agents.
+          </p>
+          <p>
+            On top of this framework, we extend classical Vision-and-Language Navigation (VLN) into a
+            <strong>Direction Inquiry</strong> setting: an agent can actively ask local people for directions,
+            interpret high-level verbal guidance, and update its route plan in a closed loop.
+            FreeAskWorld provides reconstructed environments, diverse human avatars, multiple weather
+            and time-of-day settings, and rich multimodal annotations including panoramas, trajectories,
+            2D/3D bounding boxes and instructions.
+          </p>
+          <p>
+            We benchmark strong VLN and BEV-based navigation baselines, as well as human participants,
+            under both open-loop and closed-loop protocols. Models fine-tuned on FreeAskWorld show clear
+            gains in semantic understanding and interaction ability, yet still lag behind humans on
+            socially grounded navigation. This highlights interaction as a new, complementary modality
+            for embodied AI, and demonstrates FreeAskWorld as a general testbed for studying ask-and-navigate
+            behaviors in complex real-world scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<!-- System Overview & Figures -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Overview &amp; Key Figures</h2>
+        <div class="content has-text-justified">
+          <p>
+            The following figures provide a high-level overview of the FreeAskWorld framework,
+            including the data generation pipeline, the visual style of our urban scenes, and
+            the people simulation framework that supports rich human–agent interactions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Figure 1: System Overview -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <figure class="image">
+          <img src="./static/images/System%20Overview%20from%20FreeAskWorld.jpeg"
+               alt="System overview of the FreeAskWorld data generation pipeline">
+        </figure>
+        <p class="has-text-centered is-size-6" style="margin-top: 0.75rem;">
+          <strong>Figure 1.</strong> FreeAskWorld data generation pipeline. The scene randomizer
+          configures world information (weather, traffic and human profiles), then a rule-based
+          player, world information module and an LLM collaboratively generate raw and human-like
+          instructions, while the simulation manager runs the loop to collect trajectories,
+          instructions and multimodal annotations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Figure 2 & 3: Style + People Simulation -->
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="./static/images/Style%20from%20FreeAskWorld.jpeg"
+               alt="Visual style comparison and environment examples from FreeAskWorld">
+        </figure>
+        <p class="has-text-centered is-size-6" style="margin-top: 0.75rem;">
+          <strong>Figure 2.</strong> Example urban scenes in FreeAskWorld, showing both
+          simulated environments and their photorealistic counterparts. The simulator
+          supports controllable lighting, weather and traffic for diverse navigation scenarios.
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <figure class="image">
+          <img src="./static/images/People%20Simulation%20Framework.jpg"
+               alt="People simulation framework in FreeAskWorld">
+        </figure>
+        <p class="has-text-centered is-size-6" style="margin-top: 0.75rem;">
+          <strong>Figure 3.</strong> People simulation framework. A hierarchical controller
+          coordinates world information, schedule &amp; profile generation, high-level activity
+          planning, mid-level subtask selection and low-level motion controllers to produce
+          realistic human behaviors and interactions with embodied agents.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Highlights / 功能展示 -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Simulator Features -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Simulator Features</h2>
+          <p>
+            FreeAskWorld supports rich interaction patterns between agents and the environment.
+            Instead of passively following a fixed instruction, agents can proactively engage with
+            human avatars, obtain clarification, and reason about long-horizon navigation.
+          </p>
+          <ul>
+            <li>Large-scale Unity-based city environments with realistic layouts.</li>
+            <li>Configurable traffic, pedestrians and weather conditions.</li>
+            <li>LLM-driven dialogue agents that answer navigation-related questions.</li>
+            <li>Support for both panoramic and BEV-style observations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Direction Inquiry -->
+      <div class="column">
+        <h2 class="title is-3">Direction Inquiry Task</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              The Direction Inquiry Task extends VLN by allowing the agent to ask for help when it is
+              uncertain or off-route. The agent must decide <em>when</em> to ask, understand natural
+              language responses, and integrate them into its navigation policy.
+            </p>
+            <p>
+              We design multiple sub-tasks including one-turn direction queries, multi-turn clarification,
+              and long-range goal finding under noisy or ambiguous answers, providing a principled benchmark
+              for interactive navigation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/ 上半部分 -->
+
+    <!-- Evaluation / Benchmarks -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Benchmarks &amp; Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate several navigation baselines (including BEVBert-style planners and ETPNav-like
+            VLN agents) in FreeAskWorld, under both open-loop and closed-loop settings.
+            Metrics include TL, NE, SR, SPL, OSR and navigation dialogue indices.
+          </p>
+          <p>
+            Fine-tuning on FreeAskWorld substantially improves route success and robustness in the presence
+            of dynamic obstacles and ambiguous instructions, but there remains a large gap compared to
+            human performance, especially in long-horizon and socially constrained scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{peng2026freeaskworld,
+  author    = {Peng, Yuhang and Pan, Yizhou and He, Xinning and Yang, Jihaoyu and Yin, Xinyu and Wang, Han and Zheng, Xiaoji and Gao, Chao and Gong, Jiangtao},
+  title     = {FreeAskWorld: An Interactive and Closed-Loop Simulator for Human-Centric Embodied AI},
+  journal   = {AAAI},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2511.13524">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/AIR-DISCOVER/FreeAskWorld" class="external-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is adapted from the
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>,
+            licensed under a
+            <a rel="license"
+               href="http://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
