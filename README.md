@@ -31,6 +31,11 @@
   <a href="LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache License">
   </a>
+
+  <!-- Baseline Closed-Loop Repo -->
+  <a href="https://github.com/doraemonaaaa/FreeAskWorldConnector" target="_blank">
+    <img src="https://img.shields.io/badge/Baseline-Closed--Loop%20Framework%20-0a7cff.svg" alt="Closed-Loop Framework">
+  </a>
 </p>
 
 <p align="center">
@@ -46,6 +51,18 @@
 <p align="center">
   <img src="docs/Style.jpg" alt="FreeAskWorld Homepage" width="100%">
 </p>
+
+---
+
+# Project Milestones
+
+- [x] 📝 **Paper Publication**: Published the main research paper describing FreeAskWorld.
+- [x] 📊 **Data Processing Code Release**: Released code for preprocessing, data cleaning, and annotation pipelines.
+- [ ] 🎥 **Presentation Video**: Released project presentation video.
+- [ ] 🛠️ **Simulator Code Release**: Publish the core simulation code for developers and external collaborators.
+- [ ] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
+- [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
+- [ ] 🎮 **Steam Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
 
 ---
 
@@ -76,17 +93,6 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 | 🔄 **Data Generation Pipeline** | Modular pipeline for generating embodied ai data |
 
 ---
-
-## 🚧 TODO List
-
-### 📅 **Project Phases**
-
-- [x] 📝 **Paper Publication**: Paper publication.
-- [x] 📊 **Data Processing Code Release**: Releasing code for preprocessing, data cleaning, and annotation pipelines.
-- [ ] 🛠️ **Simulator Code Release**: Publishing the core simulation code for developers and external collaborators.
-- [ ] 📚 **Usage Tutorial**: Creating a comprehensive tutorial on how to use the FreeAskWorld simulator.
-- [ ] 🧑‍💻 **API Documentation**: Providing thorough documentation of the simulator’s API for seamless integration.
-- [ ] 🎮 **Steam Release**: Preparing and publishing the FreeAskWorld simulator on Steam.
 
 ## 🚀 Getting Started
 
