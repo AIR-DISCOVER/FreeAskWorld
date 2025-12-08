@@ -66,6 +66,23 @@
 
 ---
 
+## 🎥 Demos
+**1. People Schedule Tool Demo**
+Demonstrates efficient generation of diverse human simulation behaviors at scale.
+<p align="center">
+  <!-- [TODO: Replace with a GIF or video of your Direction Inquiry Task] -->
+  <video src="docs/PeopleSimulationAIGCTools_presentation.mp4" alt="People Schedule Tool Demo" width="80%" controls></video>
+</p>
+
+**2. Navigating Dynamic Environments**
+Agent navigates a busy street, avoiding dynamic pedestrians and vehicles under foggy weather conditions.
+
+<p align="center">
+  <!-- [TODO: Replace with a GIF or video of your dynamic environment] -->
+  <video src="docs/People_car_simulation_compressed.mp4" alt="Dynamic Environment Demo" width="80%" controls></video>
+</p>
+
+
 ## 📌 Introduction
 
 As embodied intelligence progresses, simulation platforms must evolve beyond low-level physics toward **human-centric, socially interactive environments**.  
@@ -181,23 +198,6 @@ python evaluate.py \
     --data_dir ./data/FreeAskWorld \
     --split open_loop_test
 ```
-
-## 🎥 Demos
-**1. Direction Inquiry Task in Action**
-Agent gets lost, initiates dialogue with a human agent, receives new instructions, and successfully adapts its path.
-
-<p align="center">
-  <!-- [TODO: Replace with a GIF or video of your Direction Inquiry Task] -->
-  <img src="[YOUR_DEMO_GIF_URL_1]" alt="Direction Inquiry Task Demo" width="80%">
-</p>
-
-**2. Navigating Dynamic Environments**
-Agent navigates a busy street, avoiding dynamic pedestrians and vehicles under foggy weather conditions.
-
-<p align="center">
-  <!-- [TODO: Replace with a GIF or video of your dynamic environment] -->
-  <img src="[YOUR_DEMO_GIF_URL_2]" alt="Dynamic Environment Demo" width="80%">
-</p>
 
 ## 📊 Key Results
 Models fine-tuned on FreeAskWorld demonstrate enhanced semantic understanding and interaction competency. However, a significant gap to human performance remains, especially in high-level reasoning and social navigation.
