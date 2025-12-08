@@ -69,17 +69,17 @@
 ## 🎥 Demos
 **1. People Schedule Tool Demo**
 Demonstrates efficient generation of diverse human simulation behaviors at scale.
+
 <p align="center">
-  <!-- [TODO: Replace with a GIF or video of your Direction Inquiry Task] -->
-  <video src="docs/PeopleSimulationAIGCTools_presentation.mp4" alt="People Schedule Tool Demo" width="80%" controls></video>
+  <a href="docs/PeopleSimulationAIGCTools_presentation.mp4">📥 Download/Watch Demo Video (PeopleSimulationAIGCTools_presentation.mp4)</a>
 </p>
 
 **2. Navigating Dynamic Environments**
 Agent navigates a busy street, avoiding dynamic pedestrians and vehicles under foggy weather conditions.
 
+
 <p align="center">
-  <!-- [TODO: Replace with a GIF or video of your dynamic environment] -->
-  <video src="docs/People_car_simulation_compressed.mp4" alt="Dynamic Environment Demo" width="80%" controls></video>
+  <a href="docs/People_car_simulation_compressed.mp4">📥 Download/Watch Demo Video (People_car_simulation_compressed.mp4)</a>
 </p>
 
 
