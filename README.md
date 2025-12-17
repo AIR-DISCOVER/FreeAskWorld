@@ -111,6 +111,31 @@ This repo contains **simulator code** and **baseline models** from our AAAI 2026
 
 ---
 
+## Synthetic Data Generation
+docs/OccupancyMapGenerationContrast.jpg
+docs/SyhteticDataPic.jpg
+
+We used Unity Perception (Borkman et al. 2021) to build a rich and diverse synthetic dataset that includes multiple annotation types and data modalities. The dataset is designed to support a wide range of vision, navigation, and human–computer interaction tasks, and contains both dense per-frame annotations and global scene-level metadata. The main components are:
+
+- **2D and 3D bounding boxes:** for object localization in image space and world coordinates.
+- **Instance segmentation masks:** pixel-level instance annotations for object-level understanding and tracking.
+- **Semantic segmentation maps:** category-level scene parsing for semantic understanding.
+- **Surface normal maps:** provide geometric orientation information useful for geometry reasoning and reconstruction.
+- **Depth maps:** capture scene geometry and spatial structure for 3D perception and distance estimation.
+- **Panoramic RGB and six 90° perspective images:** provide full-environment perception as well as multiple perspective views for different modeling needs.
+- **Human–computer interaction (HCI) data:** includes natural language instructions, dialog histories, and agent trajectories to support interactive tasks and language-guided navigation.
+- **2D occupancy heatmaps:** represent spatial accessibility and the distribution of static objects, facilitating mapping and localization tasks.
+- **Environment metadata:** contains map-level specifications such as spatial boundaries, semantic region definitions, and other contextual information for the virtual environment.
+
+The dataset covers 16 common object categories (e.g., vehicles, pedestrians, street furniture). By combining 2D occupancy heatmaps (encoding static layout) with 3D bounding boxes (capturing dynamic entity positions) and the provided world coordinates, we can accurately reconstruct simulated scenes to create a comprehensive digital twin. This reconstructed environment supports open-loop evaluations similar to nuScenes (Caesar et al. 2020), and is particularly suited for unstructured environments as in FreeAD (Peng et al. 2025). The dataset enables a broad spectrum of downstream tasks including navigation planning, behavior prediction, and human–computer interaction studies.
+
+The figures below illustrate occupancy map generation and sample synthetic data:
+
+![Occupancy Map Generation Contrast](docs/OccupancyMapGenerationContrast.jpg)
+
+![Synthetic Data Examples](docs/SyhteticDataPic.jpg)
+
+
 ## 🚀 Getting Started
 
 ### 1. Clone & Install
