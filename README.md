@@ -117,15 +117,12 @@ docs/SyhteticDataPic.jpg
 
 We used Unity Perception (Borkman et al. 2021) to build a rich and diverse synthetic dataset that includes multiple annotation types and data modalities. The dataset is designed to support a wide range of vision, navigation, and human–computer interaction tasks, and contains both dense per-frame annotations and global scene-level metadata. The main components are:
 
-- **2D and 3D bounding boxes:** for object localization in image space and world coordinates.
-- **Instance segmentation masks:** pixel-level instance annotations for object-level understanding and tracking.
-- **Semantic segmentation maps:** category-level scene parsing for semantic understanding.
-- **Surface normal maps:** provide geometric orientation information useful for geometry reasoning and reconstruction.
-- **Depth maps:** capture scene geometry and spatial structure for 3D perception and distance estimation.
-- **Panoramic RGB and six 90° perspective images:** provide full-environment perception as well as multiple perspective views for different modeling needs.
-- **Human–computer interaction (HCI) data:** includes natural language instructions, dialog histories, and agent trajectories to support interactive tasks and language-guided navigation.
-- **2D occupancy heatmaps:** represent spatial accessibility and the distribution of static objects, facilitating mapping and localization tasks.
-- **Environment metadata:** contains map-level specifications such as spatial boundaries, semantic region definitions, and other contextual information for the virtual environment.
+- **Visual annotations:** 2D/3D bounding boxes, instance segmentation, and semantic segmentation.  
+- **Geometric annotations:** depth maps and surface normal maps for scene geometry.  
+- **Visual observations:** panoramic RGB images and six 90° perspective views.  
+- **Interaction data:** natural language instructions, dialog histories, and agent trajectories.  
+- **Spatial representations:** 2D occupancy heatmaps for mapping and localization.  
+- **Environment metadata:** map boundaries, semantic regions, and other contextual information.
 
 The dataset covers 16 common object categories (e.g., vehicles, pedestrians, street furniture). By combining 2D occupancy heatmaps (encoding static layout) with 3D bounding boxes (capturing dynamic entity positions) and the provided world coordinates, we can accurately reconstruct simulated scenes to create a comprehensive digital twin. This reconstructed environment supports open-loop evaluations similar to nuScenes (Caesar et al. 2020), and is particularly suited for unstructured environments as in FreeAD (Peng et al. 2025). The dataset enables a broad spectrum of downstream tasks including navigation planning, behavior prediction, and human–computer interaction studies.
 
@@ -138,7 +135,7 @@ The figures below illustrate occupancy map generation and sample synthetic data:
 
 ## 🚀 Getting Started
 
-### 1. Clone & Install
+<!-- ### 1. Clone & Install
 
 ```bash
 git clone https://github.com/AIR-DISCOVER/FreeAskWorld
@@ -173,12 +170,12 @@ For nuScenes-like API access and advanced data loading, clone the dataset API re
 ```bash
 git clone https://github.com/doraemonaaaa/FreeAskWorldDataset
 ```
-This provides Python APIs for efficient data access and manipulation.
+This provides Python APIs for efficient data access and manipulation. -->
 
 
 ## How to Run
 
-### Closed-Loop Simulation (Interactive)
+<!-- ### Closed-Loop Simulation (Interactive)
 
 This is the primary mode for interactive evaluation. It launches the simulator and connects an agent script to it in real-time.
 
@@ -222,9 +219,9 @@ python evaluate.py \
     --model_path ./checkpoints/bevbert-ft/best_model.pth \
     --data_dir ./data/FreeAskWorld \
     --split open_loop_test
-```
+``` -->
 
-## 📊 Key Results
+## 📊 Proactive VLN Results
 Models fine-tuned on FreeAskWorld demonstrate enhanced semantic understanding and interaction competency. However, a significant gap to human performance remains, especially in high-level reasoning and social navigation.
 
 Closed-Loop Navigation Performance (Table 4 from Paper)
