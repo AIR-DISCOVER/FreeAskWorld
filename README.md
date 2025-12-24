@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="docs/FreeAskWorldLOGO.png" alt="FreeAskWorld Logo" width="320">
+</p>
+
+<p align="center">
   <h1 align="center">FreeAskWorld Simulator (AAAI26 Oral)</h1>
 </p>
 
