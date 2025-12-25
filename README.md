@@ -81,7 +81,7 @@ Demonstrates the main functions of this simulator.
     你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
   </video>
   <br>
-  <a href="docs/Presentation.mp4">📥 Download Demo Video (PeopleSimulationAIGCTools_presentation.mp4)</a>
+  <a href="docs/Presentation.mp4">📥 Download Demo Video</a>
 </p>
 
 
