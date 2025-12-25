@@ -71,19 +71,17 @@
 ---
 
 ## 🎥 Demos
-**1. People Schedule Tool Demo**
-Demonstrates efficient generation of diverse human simulation behaviors at scale.
+**Simulator Presentation**
+Demonstrates the main functions of this simulator.
 
 <p align="center">
-  <a href="docs/PeopleSimulationAIGCTools_presentation.mp4">📥 Download/Watch Demo Video (PeopleSimulationAIGCTools_presentation.mp4)</a>
-</p>
-
-**2. Navigating Dynamic Environments**
-Agent navigates a busy street, avoiding dynamic pedestrians and vehicles under foggy weather conditions.
-
-
-<p align="center">
-  <a href="docs/People_car_simulation_compressed.mp4">📥 Download/Watch Demo Video (People_car_simulation_compressed.mp4)</a>
+  <!-- 直接展示视频 + 保留下载链接 -->
+  <video width="800" controls>
+    <source src="docs/Presentation.mp4" type="video/mp4">
+    你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
+  </video>
+  <br>
+  <a href="docs/Presentation.mp4">📥 Download Demo Video (PeopleSimulationAIGCTools_presentation.mp4)</a>
 </p>
 
 
