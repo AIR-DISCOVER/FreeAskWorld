@@ -93,7 +93,7 @@ Demonstrates the ROS2 RGBD SLAM in our simulator.
     你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
   </video>
   <br>
-  <a href="docs/PresentRGBD SLAM Presentationation.mp4">📥 Download Demo Video</a>
+  <a href="docs/RGBD SLAM Presentation.mp4">📥 Download Demo Video</a>
 </p>
 
 
