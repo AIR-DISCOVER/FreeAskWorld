@@ -84,6 +84,19 @@ Demonstrates the main functions of this simulator.
   <a href="docs/Presentation.mp4">📥 Download Demo Video</a>
 </p>
 
+**Simulator Presentation**
+Demonstrates the ROS2 RGBD SLAM in our simulator.
+<p align="center">
+  <!-- 直接展示视频 + 保留下载链接 -->
+  <video width="800" controls>
+    <source src="docs/RGBD SLAM Presentation.mp4" type="video/mp4">
+    你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
+  </video>
+  <br>
+  <a href="docs/PresentRGBD SLAM Presentationation.mp4">📥 Download Demo Video</a>
+</p>
+
+
 
 ## 📌 Introduction
 
