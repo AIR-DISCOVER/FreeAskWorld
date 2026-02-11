@@ -28,10 +28,6 @@
     <img src="https://img.shields.io/badge/Dataset-FreeAskWorld-blue.svg" alt="Dataset">
   </a> -->
 
-  <a href="https://github.com/AIR-DISCOVER/FreeAD" target="_blank">
-    <img src="https://img.shields.io/badge/Related%20Work-FreeAD-blueviolet.svg" alt="FreeAD Project">
-  </a>
-
   <a href="LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache License">
   </a>
@@ -40,6 +36,16 @@
   <a href="https://github.com/doraemonaaaa/FreeAskWorldConnector" target="_blank">
     <img src="https://img.shields.io/badge/Baseline-Closed--Loop%20Framework%20-0a7cff.svg" alt="Closed-Loop Framework">
   </a>
+
+  <a href="https://github.com/AIR-DISCOVER/FreeAD" target="_blank">
+    <img src="https://img.shields.io/badge/Related%20Work-FreeAD-blueviolet.svg" alt="FreeAD Project">
+  </a>
+
+  <a href="https://github.com/doraemonaaaa/FreeAskAgent" target="_blank">
+    <img src="https://img.shields.io/badge/Related%20Work-FreeAskAgent-blueviolet.svg" alt="FreeAskAgent Project">
+  </a>
+
+
 </p>
 
 <p align="center">
@@ -62,7 +68,7 @@
 
 - [x] 📝 **Paper Publication**: Published the main research paper describing FreeAskWorld.
 - [x] 📊 **Data Processing Code Release**: Released code for preprocessing, data cleaning, and annotation pipelines.
-- [ ] 🎥 **Presentation Video**: Released project presentation video.
+- [x] 🎥 **Presentation Video**: Released project presentation video.
 - [ ] 🛠️ **Simulator Code Release**: Publish the core simulation code for developers and external collaborators.
 - [ ] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
 - [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
