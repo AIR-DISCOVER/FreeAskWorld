@@ -87,10 +87,23 @@ Demonstrates the main functions of this simulator.
     你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
   </video>
   <br>
-  <a href="docs/Presentation.mp4">📥 Download Demo Video</a>
+  <a href="docs/Presentation.mp4">📥 Download Simulator Presentation Video</a>
 </p>
 
-**Simulator Presentation**
+**Simulator APP Presentation**
+Demonstrates the main functions of this simulator.
+
+<p align="center">
+  <!-- 直接展示视频 + 保留下载链接 -->
+  <video width="800" controls>
+    <source src="docs/APP Presentation.mp4" type="video/mp4">
+    你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
+  </video>
+  <br>
+  <a href="docs/APP Presentation.mp4">📥 Download APP Presentation Video</a>
+</p>
+
+**ROS2 Example**
 Demonstrates the ROS2 RGBD SLAM in our simulator.
 <p align="center">
   <!-- 直接展示视频 + 保留下载链接 -->
@@ -99,7 +112,7 @@ Demonstrates the ROS2 RGBD SLAM in our simulator.
     你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
   </video>
   <br>
-  <a href="docs/RGBD SLAM Presentation.mp4">📥 Download Demo Video</a>
+  <a href="docs/RGBD SLAM Presentation.mp4">📥 Download ROS2 Example Video</a>
 </p>
 
 
