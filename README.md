@@ -70,6 +70,7 @@
 - [x] 📊 **Data Processing Code Release**: Released code for preprocessing, data cleaning, and annotation pipelines.
 - [x] 🎥 **Presentation Video**: Released project presentation video.
 - [ ] 🛠️ **Simulator Code Release**: Publish the core simulation code for developers and external collaborators.
+- [ ] 🤖 **OpenClaw Robot Integration**: Integrate OpenClaw to access and interact with robots inside the FreeAskWorld simulation environment.
 - [ ] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
 - [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
 - [ ] 🎮 **Steam Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
