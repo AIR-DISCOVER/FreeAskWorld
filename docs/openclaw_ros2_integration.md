@@ -114,12 +114,44 @@ scripts/openclaw_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-
 scripts/openclaw_ros2_cli.sh --ros2-live ask-human "Where is the target?" --output-json
 ```
 
-For live mode, the wrapper script is the recommended entrypoint because it sources:
+For live mode, the wrapper script is the recommended entrypoint because it activates repo-local `.ros2_venv` first if present, then sources:
 
 - `/opt/ros/humble/setup.bash`
 - `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash`
 
-That avoids the common failure mode where `python3 -m integrations.openclaw_ros2.cli --ros2-live ...` is launched from an unsourced conda or base shell and `rclpy` fails due to Python ABI/environment mismatch.
+That avoids the common failure mode where `python3 -m integrations.openclaw_ros2.cli --ros2-live ...` is launched from `(base)` or another mismatched Python environment and `rclpy` fails due to Python ABI mismatch.
+
+## Python environment setup for ROS2 live mode
+
+ROS Humble Python bindings are often built against the system Python ABI. If you launch live mode from conda `base` or another mismatched environment, `rclpy` can fail even when the ROS setup files are sourced correctly.
+
+Recommended pattern:
+
+- create a repo-local `.ros2_venv`, or use another ROS-compatible Python environment
+- let `scripts/openclaw_ros2_cli.sh` auto-activate `.ros2_venv` when it exists
+- if `.ros2_venv` is absent, the wrapper still continues, but live ROS2 mode may later fail with a clear `rclpy` import/init error
+
+Example setup:
+
+```bash
+cd ~/research/FreeAskWorld
+python3.10 -m venv .ros2_venv
+source .ros2_venv/bin/activate
+source /opt/ros/humble/setup.bash
+source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash
+python -c "import rclpy, std_msgs.msg, sensor_msgs.msg, nav_msgs.msg"
+```
+
+Validate the wrapper path:
+
+```bash
+bash scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
+```
+
+Common failure mode:
+
+- running from `(base)` or another incompatible Python environment can produce `rclpy._rclpy_pybind11` import failures
+- if that happens, deactivate the mismatched environment, activate `.ros2_venv` or another ROS-compatible environment, then retry through the wrapper
 
 The `--wait-seconds` option is intended for short-lived live processes where ROS2 subscription callbacks need a moment to populate RGB, depth, and odometry before printing the observation snapshot.
 
@@ -134,6 +166,7 @@ Status output remains honest about three cases:
 Live mode still depends on runtime pieces outside this repository:
 
 - ROS2 installed and sourced in the shell that launches the CLI/Python process
+- a ROS-compatible Python environment when the current shell Python does not match ROS Humble's ABI
 - `rclpy`
 - standard ROS2 message packages: `std_msgs`, `sensor_msgs`, `nav_msgs`
 - a simulator-side ROS2 graph or ROS TCP endpoint already running for the Unity setup configured at `127.0.0.1:10000`

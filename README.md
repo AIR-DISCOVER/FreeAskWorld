@@ -75,6 +75,8 @@
 - [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
 - [ ] 🎮 **Steam Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
 
+OpenClaw integration note: the current recommended local path is ROS2-first, because the local Unity simulator is configured in ROS2 mode on `127.0.0.1:10000`. See [docs/openclaw_ros2_integration.md](/home/wyabz/research/FreeAskWorld/docs/openclaw_ros2_integration.md). The ROS2 path now includes a live-capable `rclpy` transport when external ROS2 runtime dependencies are present, while still preserving scaffold-only fallback behavior. For live ROS2 usage, a repo-local `.ros2_venv` or equivalent ROS-compatible Python environment may be needed to avoid ROS Humble `rclpy` ABI mismatch, and the wrapper at `scripts/openclaw_ros2_cli.sh` now auto-activates `.ros2_venv` when present. The additive `closed_loop` websocket OpenClaw bridge remains available, but for this Unity setup it should be treated as experimental and future-facing rather than the primary runtime path.
+
 ---
 
 ## 🎥 Demos
@@ -169,6 +171,8 @@ The figures below illustrate occupancy map generation and sample synthetic data:
 
 
 ## 🚀 Getting Started
+
+For the current local Unity configuration, use the ROS2-first OpenClaw integration scaffold described in [docs/openclaw_ros2_integration.md](/home/wyabz/research/FreeAskWorld/docs/openclaw_ros2_integration.md) and implemented under [integrations/openclaw_ros2](/home/wyabz/research/FreeAskWorld/integrations/openclaw_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
 
 For the additive OpenClaw compatibility bridge on top of the existing `closed_loop` websocket stack, see [closed_loop/README.md](/home/wyabz/research/FreeAskWorld/closed_loop/README.md). It adds HTTP, CLI, and MCP-friendly access without replacing the current Unity-facing protocol or baseline behavior.
 

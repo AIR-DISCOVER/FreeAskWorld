@@ -36,17 +36,46 @@ scripts/openclaw_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
 scripts/openclaw_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-json
 ```
 
-## Runtime note
-
-If no transport is attached, the CLI and Python bridge return explicit scaffold responses instead of claiming live simulator delivery.
+## ROS2 Python environment
 
 For `--ros2-live`, prefer the repo wrapper script:
 
 ```bash
-scripts/openclaw_ros2_cli.sh --ros2-live ...
+scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
 ```
 
-It sources `/opt/ros/humble/setup.bash` and `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash` first so users do not have to remember that setup when launching from a plain shell. This avoids the common `rclpy`/Python ABI mismatch seen from unsourced conda or base environments.
+The wrapper now activates repo-local `.ros2_venv` first if it exists, then sources:
+
+- `/opt/ros/humble/setup.bash`
+- `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash`
+
+Why this may be needed:
+
+- ROS Humble `rclpy` commonly expects the system Python ABI
+- launching from conda `(base)` or another mismatched environment can break `rclpy._rclpy_pybind11`
+
+Minimal setup:
+
+```bash
+cd ~/research/FreeAskWorld
+python3.10 -m venv .ros2_venv
+source .ros2_venv/bin/activate
+source /opt/ros/humble/setup.bash
+source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash
+python -c "import rclpy, std_msgs.msg, sensor_msgs.msg, nav_msgs.msg"
+```
+
+If `.ros2_venv` is not present, the wrapper does not fail early. It continues and lets the live ROS2 path report the actual import/init failure if the active Python environment is incompatible.
+
+Validate the wrapper path:
+
+```bash
+scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
+```
+
+## Runtime note
+
+If no transport is attached, the CLI and Python bridge return explicit scaffold responses instead of claiming live simulator delivery.
 
 If `--ros2-live` is used and `rclpy` plus the standard ROS2 message packages are importable, the bridge will:
 
@@ -59,6 +88,7 @@ If `--ros2-live` is used and `rclpy` plus the standard ROS2 message packages are
 External prerequisites still apply:
 
 - a sourced ROS2 environment with `rclpy`
+- a ROS-compatible Python environment such as repo-local `.ros2_venv` when the current shell Python is incompatible
 - standard message packages (`std_msgs`, `sensor_msgs`, `nav_msgs`)
 - the simulator-side ROS2 graph or ROS TCP endpoint already running for the local Unity configuration on `127.0.0.1:10000`
 - topic/message compatibility on the Unity side for the JSON `String` command/task payloads used here
