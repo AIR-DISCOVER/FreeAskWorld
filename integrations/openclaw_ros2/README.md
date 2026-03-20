@@ -22,22 +22,31 @@ This directory defines the ROS2-first OpenClaw integration surface for the curre
 
 ```bash
 python -m integrations.openclaw_ros2.cli status --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live status --output-json
 python -m integrations.openclaw_ros2.cli observe --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live observe --wait-seconds 3 --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live observe --output-json
 python -m integrations.openclaw_ros2.cli move-forward --distance-m 1.0 --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live move-forward --distance-m 1.0 --output-json
 python -m integrations.openclaw_ros2.cli turn-left --degrees 30 --output-json
 python -m integrations.openclaw_ros2.cli turn-around --output-json
 python -m integrations.openclaw_ros2.cli stop --output-json
 python -m integrations.openclaw_ros2.cli ask-human "Where is the target?" --output-json
 python -m integrations.openclaw_ros2.cli action --json '{"action":"move_forward","parameters":{"distance_m":1.0}}' --output-json
+
+# Recommended for live ROS2 commands from shells that have not already sourced ROS.
+scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
+scripts/openclaw_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
+scripts/openclaw_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-json
 ```
 
 ## Runtime note
 
 If no transport is attached, the CLI and Python bridge return explicit scaffold responses instead of claiming live simulator delivery.
+
+For `--ros2-live`, prefer the repo wrapper script:
+
+```bash
+scripts/openclaw_ros2_cli.sh --ros2-live ...
+```
+
+It sources `/opt/ros/humble/setup.bash` and `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash` first so users do not have to remember that setup when launching from a plain shell. This avoids the common `rclpy`/Python ABI mismatch seen from unsourced conda or base environments.
 
 If `--ros2-live` is used and `rclpy` plus the standard ROS2 message packages are importable, the bridge will:
 
@@ -57,7 +66,7 @@ External prerequisites still apply:
 For short-lived live CLI processes, `observe` can optionally pause before reading subscriptions:
 
 ```bash
-python -m integrations.openclaw_ros2.cli --ros2-live observe --wait-seconds 3 --output-json
+scripts/openclaw_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
 ```
 
 Attach a transport that publishes to:

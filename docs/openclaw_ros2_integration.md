@@ -108,11 +108,18 @@ CLI examples:
 
 ```bash
 python -m integrations.openclaw_ros2.cli status --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live status --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live observe --wait-seconds 3 --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live move-forward --distance-m 1.0 --output-json
-python -m integrations.openclaw_ros2.cli --ros2-live ask-human "Where is the target?" --output-json
+scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
+scripts/openclaw_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
+scripts/openclaw_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-json
+scripts/openclaw_ros2_cli.sh --ros2-live ask-human "Where is the target?" --output-json
 ```
+
+For live mode, the wrapper script is the recommended entrypoint because it sources:
+
+- `/opt/ros/humble/setup.bash`
+- `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash`
+
+That avoids the common failure mode where `python3 -m integrations.openclaw_ros2.cli --ros2-live ...` is launched from an unsourced conda or base shell and `rclpy` fails due to Python ABI/environment mismatch.
 
 The `--wait-seconds` option is intended for short-lived live processes where ROS2 subscription callbacks need a moment to populate RGB, depth, and odometry before printing the observation snapshot.
 
