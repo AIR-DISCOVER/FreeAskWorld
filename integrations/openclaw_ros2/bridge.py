@@ -103,19 +103,18 @@ class OpenClawRos2Bridge:
 
     def get_status(self) -> Dict[str, Any]:
         transport_status = self.transport.get_status() if self.transport else {}
-        if transport_status.get("last_ack") is not None:
-            self.last_ack = transport_status["last_ack"]
-            self.last_ack_at = utc_now_iso()
+        self._refresh_last_ack(transport_status.get("last_ack"))
+        transport_ready = bool(self.transport and self.transport.is_ready())
 
         status = BridgeStatus(
-            mode="ros2_live" if bool(self.transport and self.transport.is_ready()) else "ros2_scaffold",
+            mode="ros2_live" if transport_ready else "ros2_scaffold",
             ros2_host=self.ros2_host,
             ros2_port=self.ros2_port,
             command_topic=TOPIC_SIMULATOR_COMMAND,
             task_topic=TOPIC_TASK,
             ack_topic=TOPIC_ACK,
             observation_topics=list(OBSERVATION_TOPICS),
-            transport_ready=bool(self.transport and self.transport.is_ready()),
+            transport_ready=transport_ready,
             last_command=self.last_command,
             last_task=self.last_task,
             last_ack=self.last_ack,
@@ -228,13 +227,14 @@ class OpenClawRos2Bridge:
         )
         payload = envelope.to_dict()
         published = bool(self.transport and self.transport.publish(topic, payload))
+        published_at = utc_now_iso()
 
         if topic == TOPIC_TASK:
             self.last_task = payload
-            self.last_task_at = utc_now_iso()
+            self.last_task_at = published_at
         else:
             self.last_command = payload
-            self.last_command_at = utc_now_iso()
+            self.last_command_at = published_at
 
         detail = (
             f"Published to {topic}"
@@ -253,6 +253,12 @@ class OpenClawRos2Bridge:
 
     def run_wait(self, seconds: float) -> None:
         time.sleep(seconds)
+
+    def _refresh_last_ack(self, last_ack: Optional[Dict[str, Any]]) -> None:
+        if last_ack is None:
+            return
+        self.last_ack = last_ack
+        self.last_ack_at = utc_now_iso()
 
     def _status_detail(self, transport_status: Dict[str, Any]) -> Optional[str]:
         if not self.transport:

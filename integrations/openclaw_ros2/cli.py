@@ -16,6 +16,10 @@ def _emit(result: Dict[str, Any], output_json: bool) -> None:
     print(result)
 
 
+def _result_exit_code(result: Dict[str, Any]) -> int:
+    return 0 if result["ok"] else 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="ROS2-first OpenClaw CLI scaffold for FreeAskWorld"
@@ -111,27 +115,24 @@ def main(argv: Any = None) -> int:
             payload = json.loads(args.action_json)
             result = local_bridge.perform_action(OpenClawAction.from_dict(payload))
             _emit(result, args.output_json)
-            return 0 if result["ok"] else 1
+            return _result_exit_code(result)
 
-        if args.command == "move-forward":
-            result = local_bridge.move_forward(args.distance_m)
-        elif args.command == "turn-left":
-            result = local_bridge.turn_left(args.degrees)
-        elif args.command == "turn-right":
-            result = local_bridge.turn_right(args.degrees)
-        elif args.command == "turn-around":
-            result = local_bridge.turn_around()
-        elif args.command == "stop":
-            result = local_bridge.stop()
-        elif args.command == "ask-human":
-            result = local_bridge.ask_human(args.prompt)
-        elif args.command == "wait":
-            result = local_bridge.wait(args.seconds)
-        else:  # pragma: no cover
+        command_handlers = {
+            "move-forward": lambda: local_bridge.move_forward(args.distance_m),
+            "turn-left": lambda: local_bridge.turn_left(args.degrees),
+            "turn-right": lambda: local_bridge.turn_right(args.degrees),
+            "turn-around": local_bridge.turn_around,
+            "stop": local_bridge.stop,
+            "ask-human": lambda: local_bridge.ask_human(args.prompt),
+            "wait": lambda: local_bridge.wait(args.seconds),
+        }
+        handler = command_handlers.get(args.command)
+        if handler is None:  # pragma: no cover
             parser.error(f"Unsupported command: {args.command}")
+        result = handler()
 
         _emit(result, args.output_json)
-        return 0 if result["ok"] else 1
+        return _result_exit_code(result)
     finally:
         if local_bridge.transport and hasattr(local_bridge.transport, "close"):
             local_bridge.transport.close()

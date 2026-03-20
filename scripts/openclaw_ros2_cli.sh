@@ -3,8 +3,8 @@
 set -euo pipefail
 
 # Wrapper for the ROS2-first OpenClaw CLI.
-# Live mode depends on the ROS Humble environment; launching from an unsourced
-# conda/base shell can load the wrong Python ABI and break rclpy imports.
+# Live mode depends on the ROS Humble environment; unsourced shells can load
+# the wrong Python ABI and break rclpy imports.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
@@ -32,17 +32,23 @@ if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   exit 0
 fi
 
-if [[ ! -f "${ROS_SETUP}" ]]; then
-  echo "Error: missing ROS Humble setup: ${ROS_SETUP}" >&2
-  echo "This wrapper is intended to prevent unsourced-shell ROS2/rclpy ABI issues." >&2
-  exit 1
-fi
+require_file() {
+  local path="$1"
+  local message="$2"
 
-if [[ ! -f "${PROJECT_ROS_SETUP}" ]]; then
-  echo "Error: missing project ROS2 setup: ${PROJECT_ROS_SETUP}" >&2
-  echo "Build or install the FreeAskClaw ROS2 runtime before using live OpenClaw commands." >&2
+  if [[ -f "${path}" ]]; then
+    return
+  fi
+
+  echo "Error: missing required setup: ${path}" >&2
+  echo "${message}" >&2
   exit 1
-fi
+}
+
+require_file "${ROS_SETUP}" \
+  "This wrapper is intended to prevent unsourced-shell ROS2/rclpy ABI issues."
+require_file "${PROJECT_ROS_SETUP}" \
+  "Build or install the FreeAskClaw ROS2 runtime before using live OpenClaw commands."
 
 if [[ -f "${ROS2_VENV_ACTIVATE}" ]]; then
   # shellcheck disable=SC1091

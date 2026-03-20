@@ -232,22 +232,31 @@ class RclpyRos2Transport:
         self.last_observation_at = payload["received_at"]
 
     def _on_rgb(self, msg: Any) -> None:
-        observed_at = utc_now_iso()
-        self.rgb_available = True
-        self.last_rgb_at = observed_at
-        self.last_observation_at = observed_at
-        self._warnings = [warning for warning in self._warnings if "rgb" not in warning]
-        if not hasattr(msg, "height") or not hasattr(msg, "width"):
-            self._warnings.append("RGB topic callback received an unexpected message shape")
+        self._mark_image_observed(
+            channel="rgb",
+            warning_text="RGB topic callback received an unexpected message shape",
+            msg=msg,
+        )
 
     def _on_depth(self, msg: Any) -> None:
+        self._mark_image_observed(
+            channel="depth",
+            warning_text="Depth topic callback received an unexpected message shape",
+            msg=msg,
+        )
+
+    def _mark_image_observed(self, channel: str, warning_text: str, msg: Any) -> None:
         observed_at = utc_now_iso()
-        self.depth_available = True
-        self.last_depth_at = observed_at
+        if channel == "rgb":
+            self.rgb_available = True
+            self.last_rgb_at = observed_at
+        else:
+            self.depth_available = True
+            self.last_depth_at = observed_at
         self.last_observation_at = observed_at
-        self._warnings = [warning for warning in self._warnings if "depth" not in warning]
+        self._warnings = [warning for warning in self._warnings if channel not in warning.lower()]
         if not hasattr(msg, "height") or not hasattr(msg, "width"):
-            self._warnings.append("Depth topic callback received an unexpected message shape")
+            self._warnings.append(warning_text)
 
     def _on_odom(self, msg: Any) -> None:
         observed_at = utc_now_iso()
