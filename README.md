@@ -170,6 +170,8 @@ The figures below illustrate occupancy map generation and sample synthetic data:
 
 ## 🚀 Getting Started
 
+For the additive OpenClaw compatibility bridge on top of the existing `closed_loop` websocket stack, see [closed_loop/README.md](/home/wyabz/research/FreeAskWorld/closed_loop/README.md). It adds HTTP, CLI, and MCP-friendly access without replacing the current Unity-facing protocol or baseline behavior.
+
 <!-- ### 1. Clone & Install
 
 ```bash
@@ -274,4 +276,3 @@ Closed-Loop Navigation Performance (Table 4 from Paper)
 
 ## Licence
 FreeAskWorld is licensed under the [Apache 2.0 License](LICENSE).
-
