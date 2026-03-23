@@ -26,7 +26,7 @@ class RclpyRos2Transport:
 
     ros2_host: str = DEFAULT_ROS2_HOST
     ros2_port: int = DEFAULT_ROS2_PORT
-    node_name: str = "openclaw_ros2_bridge"
+    node_name: str = "agent_ros2_bridge"
     qos_depth: int = 10
     spin_timeout_sec: float = 0.1
     _modules: Optional[Dict[str, Any]] = None

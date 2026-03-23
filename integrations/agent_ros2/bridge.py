@@ -82,7 +82,7 @@ class InMemoryRos2ScaffoldTransport:
         }
 
 
-class OpenClawRos2Bridge:
+class AgentRos2Bridge:
     """Compatibility-first OpenClaw surface aligned to Unity's ROS2 runtime path."""
 
     def __init__(
@@ -281,4 +281,4 @@ class OpenClawRos2Bridge:
         return f"ROS2 transport was unable to publish to topic {topic}"
 
 
-bridge = OpenClawRos2Bridge()
+bridge = AgentRos2Bridge()

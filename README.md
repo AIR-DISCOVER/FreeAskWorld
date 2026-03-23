@@ -172,7 +172,7 @@ The figures below illustrate occupancy map generation and sample synthetic data:
 
 ## 🚀 Getting Started
 
-For the current local Unity configuration, use the ROS2-first OpenClaw integration scaffold described in [docs/agent_ros2_integration.md](/home/wyabz/research/FreeAskWorld/docs/agent_ros2_integration.md) and implemented under [integrations/openclaw_ros2](/home/wyabz/research/FreeAskWorld/integrations/openclaw_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
+For the current local Unity configuration, use the ROS2-first OpenClaw integration scaffold described in [docs/agent_ros2_integration.md](/home/wyabz/research/FreeAskWorld/docs/agent_ros2_integration.md) and implemented under [integrations/agent_ros2](/home/wyabz/research/FreeAskWorld/integrations/agent_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
 
 For the additive OpenClaw compatibility bridge on top of the existing `closed_loop` websocket stack, see [closed_loop/README.md](/home/wyabz/research/FreeAskWorld/closed_loop/README.md). It adds HTTP, CLI, and MCP-friendly access without replacing the current Unity-facing protocol or baseline behavior.
 

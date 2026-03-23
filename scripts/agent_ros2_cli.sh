@@ -20,7 +20,7 @@ Recommended wrapper for live ROS2 commands. It sources the ROS Humble and
 project ROS2 setup files before running. If a repo-local `.ros2_venv` exists,
 it activates that first:
 
-  python3 -m integrations.openclaw_ros2.cli "$@"
+  python3 -m integrations.agent_ros2.cli "$@"
 
 Example:
   scripts/agent_ros2_cli.sh --ros2-live status --output-json
@@ -64,4 +64,4 @@ source "${PROJECT_ROS_SETUP}"
 set -u
 
 cd "${REPO_ROOT}"
-exec python3 -m integrations.openclaw_ros2.cli "$@"
+exec python3 -m integrations.agent_ros2.cli "$@"

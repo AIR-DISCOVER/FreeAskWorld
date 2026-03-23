@@ -9,10 +9,10 @@ PACKAGE_ROOT = os.path.abspath(os.path.join(TESTS_DIR, "..", "..", ".."))
 if PACKAGE_ROOT not in sys.path:
     sys.path.insert(0, PACKAGE_ROOT)
 
-from integrations.openclaw_ros2.bridge import InMemoryRos2ScaffoldTransport, OpenClawRos2Bridge
-from integrations.openclaw_ros2 import cli
-from integrations.openclaw_ros2.messages import ACTION_TOPIC_MAP, TOPIC_SIMULATOR_COMMAND, TOPIC_TASK, OpenClawAction
-from integrations.openclaw_ros2.transport_rclpy import RclpyRos2Transport
+from integrations.agent_ros2.bridge import InMemoryRos2ScaffoldTransport, AgentRos2Bridge
+from integrations.agent_ros2 import cli
+from integrations.agent_ros2.messages import ACTION_TOPIC_MAP, TOPIC_SIMULATOR_COMMAND, TOPIC_TASK, OpenClawAction
+from integrations.agent_ros2.transport_rclpy import RclpyRos2Transport
 
 
 def test_action_topic_map_matches_expected_surface():
@@ -26,7 +26,7 @@ def test_action_topic_map_matches_expected_surface():
 
 
 def test_scaffold_bridge_reports_not_ready_without_transport():
-    bridge = OpenClawRos2Bridge()
+    bridge = AgentRos2Bridge()
 
     status = bridge.get_status()
     result = bridge.move_forward(1.0)
@@ -41,7 +41,7 @@ def test_scaffold_bridge_reports_not_ready_without_transport():
 
 def test_ready_transport_publishes_and_updates_state():
     transport = InMemoryRos2ScaffoldTransport(ready=True)
-    bridge = OpenClawRos2Bridge(transport=transport)
+    bridge = AgentRos2Bridge(transport=transport)
 
     result = bridge.perform_action(
         OpenClawAction(action="ask_human", parameters={"prompt": "Need directions"})
@@ -56,7 +56,7 @@ def test_ready_transport_publishes_and_updates_state():
 
 
 def test_rclpy_transport_falls_back_cleanly_when_ros2_runtime_is_missing():
-    with patch("integrations.openclaw_ros2.transport_rclpy.importlib.import_module", side_effect=ImportError("no rclpy")):
+    with patch("integrations.agent_ros2.transport_rclpy.importlib.import_module", side_effect=ImportError("no rclpy")):
         transport = RclpyRos2Transport()
 
     status = transport.get_status()
@@ -190,7 +190,7 @@ def test_cli_observe_waits_before_reading_observation():
     fake_bridge = FakeBridge()
     stdout = StringIO()
 
-    with patch("integrations.openclaw_ros2.cli._build_bridge", return_value=fake_bridge):
+    with patch("integrations.agent_ros2.cli._build_bridge", return_value=fake_bridge):
         with patch("sys.stdout", stdout):
             exit_code = cli.main(["observe", "--wait-seconds", "3", "--output-json"])
 

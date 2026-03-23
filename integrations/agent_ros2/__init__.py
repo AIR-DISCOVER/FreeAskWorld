@@ -1,4 +1,4 @@
-from .bridge import OpenClawRos2Bridge, Ros2BridgeTransport, bridge
+from .bridge import AgentRos2Bridge, Ros2BridgeTransport, bridge
 from .messages import (
     DEFAULT_ROS2_HOST,
     DEFAULT_ROS2_PORT,
@@ -24,7 +24,7 @@ __all__ = [
     "TOPIC_SIMULATOR_COMMAND",
     "TOPIC_TASK",
     "OpenClawAction",
-    "OpenClawRos2Bridge",
+    "AgentRos2Bridge",
     "RclpyRos2Transport",
     "Ros2BridgeTransport",
     "bridge",

@@ -4,7 +4,7 @@ import argparse
 import json
 from typing import Any, Dict
 
-from .bridge import OpenClawRos2Bridge
+from .bridge import AgentRos2Bridge
 from .messages import DEFAULT_ROS2_HOST, DEFAULT_ROS2_PORT, OpenClawAction
 from .transport_rclpy import RclpyRos2Transport
 
@@ -83,12 +83,12 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _build_bridge(args: argparse.Namespace) -> OpenClawRos2Bridge:
+def _build_bridge(args: argparse.Namespace) -> AgentRos2Bridge:
     if not args.ros2_live:
-        return OpenClawRos2Bridge(ros2_host=args.ros2_host, ros2_port=args.ros2_port)
+        return AgentRos2Bridge(ros2_host=args.ros2_host, ros2_port=args.ros2_port)
 
     transport = RclpyRos2Transport(ros2_host=args.ros2_host, ros2_port=args.ros2_port)
-    return OpenClawRos2Bridge(
+    return AgentRos2Bridge(
         transport=transport,
         ros2_host=args.ros2_host,
         ros2_port=args.ros2_port,

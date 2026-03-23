@@ -21,14 +21,14 @@ This directory defines the ROS2-first OpenClaw integration surface for the curre
 ## Example commands
 
 ```bash
-python -m integrations.openclaw_ros2.cli status --output-json
-python -m integrations.openclaw_ros2.cli observe --output-json
-python -m integrations.openclaw_ros2.cli move-forward --distance-m 1.0 --output-json
-python -m integrations.openclaw_ros2.cli turn-left --degrees 30 --output-json
-python -m integrations.openclaw_ros2.cli turn-around --output-json
-python -m integrations.openclaw_ros2.cli stop --output-json
-python -m integrations.openclaw_ros2.cli ask-human "Where is the target?" --output-json
-python -m integrations.openclaw_ros2.cli action --json '{"action":"move_forward","parameters":{"distance_m":1.0}}' --output-json
+python -m integrations.agent_ros2.cli status --output-json
+python -m integrations.agent_ros2.cli observe --output-json
+python -m integrations.agent_ros2.cli move-forward --distance-m 1.0 --output-json
+python -m integrations.agent_ros2.cli turn-left --degrees 30 --output-json
+python -m integrations.agent_ros2.cli turn-around --output-json
+python -m integrations.agent_ros2.cli stop --output-json
+python -m integrations.agent_ros2.cli ask-human "Where is the target?" --output-json
+python -m integrations.agent_ros2.cli action --json '{"action":"move_forward","parameters":{"distance_m":1.0}}' --output-json
 
 # Recommended for live ROS2 commands from shells that have not already sourced ROS.
 scripts/agent_ros2_cli.sh --ros2-live status --output-json
