@@ -42,7 +42,7 @@ def list_tools() -> List[Dict[str, Any]]:
     return [
         {
             "name": "freeaskworld_status",
-            "description": "Return current OpenClaw bridge connectivity and runtime status.",
+            "description": "Return current Agent bridge connectivity and runtime status.",
             "callable": freeaskworld_status,
         },
         {

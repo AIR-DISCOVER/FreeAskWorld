@@ -129,7 +129,7 @@ class RclpyRos2Transport:
         self._string_cls = string_cls
         self._executor = executor_cls()
         self._executor.add_node(self._node)
-        self._executor_thread = threading.Thread(target=self._spin_loop, name="openclaw-ros2-spin", daemon=True)
+        self._executor_thread = threading.Thread(target=self._spin_loop, name="agent-ros2-spin", daemon=True)
         self._executor_thread.start()
 
         self._ready = True

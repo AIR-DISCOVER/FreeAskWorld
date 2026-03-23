@@ -3,10 +3,10 @@ from typing import Any, Dict, Optional
 from pydantic import BaseModel
 
 try:
-    from .messages import OpenClawAction
+    from .messages import AgentAction
     from .agent_bridge import bridge
 except ImportError:  # pragma: no cover - script import fallback
-    from messages import OpenClawAction
+    from messages import AgentAction
     from agent_bridge import bridge
 
 
@@ -21,10 +21,10 @@ def create_app():
         from fastapi import FastAPI, HTTPException
     except ImportError as exc:  # pragma: no cover - depends on optional install
         raise RuntimeError(
-            "fastapi is required to run the OpenClaw HTTP bridge. Install closed_loop/requirements.txt first."
+            "fastapi is required to run the agent HTTP bridge. Install closed_loop/requirements.txt first."
         ) from exc
 
-    app = FastAPI(title="FreeAskWorld OpenClaw Bridge", version="0.1.0")
+    app = FastAPI(title="FreeAskWorld Agent Bridge", version="0.1.0")
 
     @app.get("/healthz")
     def healthz():
@@ -41,7 +41,7 @@ def create_app():
     @app.post("/v1/action")
     def post_action(action_request: ActionRequest):
         result = bridge.perform_action(
-            OpenClawAction(
+            AgentAction(
                 action=action_request.action,
                 parameters=action_request.parameters or {},
                 request_id=action_request.request_id,

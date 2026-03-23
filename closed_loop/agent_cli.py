@@ -8,11 +8,11 @@ except ImportError:  # pragma: no cover - optional dependency
     uvicorn = None
 
 try:
-    from .messages import OpenClawAction
+    from .messages import AgentAction
     from .agent_bridge import bridge
     from .agent_server import create_app
 except ImportError:  # pragma: no cover - script import fallback
-    from messages import OpenClawAction
+    from messages import AgentAction
     from agent_bridge import bridge
     from agent_server import create_app
 
@@ -25,7 +25,7 @@ def _print_result(result: Dict[str, Any], as_json: bool):
 
 
 def build_parser():
-    parser = argparse.ArgumentParser(description="OpenClaw-facing CLI for FreeAskWorld closed_loop bridge")
+    parser = argparse.ArgumentParser(description="Agent-facing CLI for FreeAskWorld closed_loop bridge")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     serve_parser = subparsers.add_parser("serve", help="Run the HTTP bridge server")
@@ -86,7 +86,7 @@ def main(argv=None):
 
     if args.command == "action":
         result = bridge.perform_action(
-            OpenClawAction(action=args.action_name, parameters=json.loads(args.params))
+            AgentAction(action=args.action_name, parameters=json.loads(args.params))
         )
         _print_result(result, args.as_json)
         return 0 if result["ok"] else 1

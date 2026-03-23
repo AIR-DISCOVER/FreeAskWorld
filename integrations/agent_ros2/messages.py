@@ -36,7 +36,7 @@ def utc_now_iso() -> str:
 
 
 @dataclass
-class OpenClawAction:
+class AgentAction:
     action: str
     parameters: Dict[str, Any] = field(default_factory=dict)
     request_id: Optional[str] = None
@@ -49,7 +49,7 @@ class OpenClawAction:
         }
 
     @classmethod
-    def from_dict(cls, payload: Dict[str, Any]) -> "OpenClawAction":
+    def from_dict(cls, payload: Dict[str, Any]) -> "AgentAction":
         return cls(
             action=payload["action"],
             parameters=payload.get("parameters", {}) or {},

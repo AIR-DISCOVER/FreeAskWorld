@@ -116,7 +116,7 @@ class BridgeStatus:
 
 
 @dataclass
-class OpenClawAction:
+class AgentAction:
     action: str
     parameters: Dict[str, Any] = field(default_factory=dict)
     request_id: Optional[str] = None

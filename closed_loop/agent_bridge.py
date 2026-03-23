@@ -4,15 +4,15 @@ from typing import Any, Dict, Optional
 import numpy as np
 
 try:
-    from messages import ActionResult, OpenClawAction, NavigationCommand, Step
+    from messages import ActionResult, AgentAction, NavigationCommand, Step
     import shared_state
     import ws_handlers
 except ImportError:  # pragma: no cover - package import fallback
-    from .messages import ActionResult, OpenClawAction, NavigationCommand, Step
+    from .messages import ActionResult, AgentAction, NavigationCommand, Step
     from . import shared_state, ws_handlers
 
 
-class OpenClawBridge:
+class AgentBridge:
     """Compatibility-first bridge into the existing Unity websocket protocol."""
 
     def get_status(self) -> Dict[str, Any]:
@@ -97,7 +97,7 @@ class OpenClawBridge:
             request_id=request_id,
         ).to_dict()
 
-    def perform_action(self, action: OpenClawAction) -> Dict[str, Any]:
+    def perform_action(self, action: AgentAction) -> Dict[str, Any]:
         request_id = action.request_id or str(uuid.uuid4())
         parameters = action.parameters or {}
         action_name = action.action
@@ -122,7 +122,7 @@ class OpenClawBridge:
                 request_id=request_id,
             )
 
-        shared_state.record_error(f"Unsupported OpenClaw action: {action_name}")
+        shared_state.record_error(f"Unsupported agent action: {action_name}")
         return ActionResult(
             ok=False,
             action=action_name,
@@ -156,4 +156,4 @@ class OpenClawBridge:
         ).to_dict()
 
 
-bridge = OpenClawBridge()
+bridge = AgentBridge()

@@ -17,7 +17,7 @@ from .messages import (
     BridgeStatus,
     CommandEnvelope,
     ObservationSnapshot,
-    OpenClawAction,
+    AgentAction,
     utc_now_iso,
 )
 from .transport_rclpy import RclpyRos2Transport
@@ -83,7 +83,7 @@ class InMemoryRos2ScaffoldTransport:
 
 
 class AgentRos2Bridge:
-    """Compatibility-first OpenClaw surface aligned to Unity's ROS2 runtime path."""
+    """Compatibility-first agent surface aligned to Unity's ROS2 runtime path."""
 
     def __init__(
         self,
@@ -187,7 +187,7 @@ class AgentRos2Bridge:
             request_id=request_id,
         )
 
-    def perform_action(self, action: OpenClawAction) -> Dict[str, Any]:
+    def perform_action(self, action: AgentAction) -> Dict[str, Any]:
         action_name = action.action
         request_id = action.request_id or str(uuid.uuid4())
         parameters = action.parameters or {}

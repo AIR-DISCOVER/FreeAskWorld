@@ -9,9 +9,9 @@ The local Unity FreeAskWorld simulator is currently configured to run in ROS2 mo
 
 For this local configuration, the recommended agent integration path is:
 
-`Agent (OpenClaw/Codex/Claude/custom) -> ROS2-compatible bridge -> ROS TCP Endpoint / ROS2 backend -> Unity FreeAskWorld simulator`
+`Agent (OpenClaw / Codex / Claude / custom) -> ROS2-compatible bridge -> ROS TCP Endpoint / ROS2 backend -> Unity FreeAskWorld simulator`
 
-The previously added `closed_loop` websocket OpenClaw bridge remains in the repo, but it is not the active runtime path for the current Unity ROS2 configuration. Treat that websocket path as additive, experimental, and future-facing for this setup.
+The previously added `closed_loop` websocket Agent bridge remains in the repo, but it is not the active runtime path for the current Unity ROS2 configuration. Treat that websocket path as additive, experimental, and future-facing for this setup.
 
 ## Agent compatibility
 
@@ -28,7 +28,7 @@ Only the upstream adapter changes (prompting/tool wrapper/request formatting). T
 
 The practical repo-side design is:
 
-1. OpenClaw issues a small set of high-level navigation and interaction actions.
+1. The upstream agent issues a small set of high-level navigation and interaction actions.
 2. A ROS2-oriented bridge translates those actions into the simulator's ROS2-facing command/task channels.
 3. Unity receives commands through its existing ROS2 communication path without changing the simulator-side ROS2 contract.
 
@@ -47,7 +47,7 @@ Optional utility action:
 
 ## Recommended observation/state surface
 
-The OpenClaw-facing bridge should expose a narrow status and observation surface:
+The Agent-facing bridge should expose a narrow status and observation surface:
 
 - `pose`
 - RGB availability
@@ -79,11 +79,11 @@ Notes:
 - `/simulator_msg/simulator_command` is the primary command publication target for motion-control actions.
 - `/simulator_msg/task` is the recommended publication target for `ask_human` or other explicit task/instruction handoff.
 - `/simulator_msg/simulator_command/untiy` is treated here as the simulator-side acknowledgement/status channel name as currently validated externally, even though the segment spelling appears unusual.
-- Camera and odometry topics are observation inputs for bridge status and downstream OpenClaw logic.
+- Camera and odometry topics are observation inputs for bridge status and downstream agent logic.
 
 ## Action mapping
 
-| OpenClaw action | ROS2 target | Bridge method | Command payload intent |
+| Agent action | ROS2 target | Bridge method | Command payload intent |
 |---|---|---|---|
 | `move_forward(distance_m)` | `/simulator_msg/simulator_command` | `move_forward()` | forward translation request |
 | `turn_left(degrees)` | `/simulator_msg/simulator_command` | `turn_left()` | left rotation request |

@@ -1,6 +1,6 @@
-# OpenClaw ROS2 Scaffold
+# Agent ROS2 Scaffold
 
-This directory defines the ROS2-first OpenClaw integration surface for the current local FreeAskWorld Unity setup.
+This directory defines the ROS2-first Agent integration surface for the current local FreeAskWorld Unity setup.
 
 ## Scope
 
@@ -12,7 +12,7 @@ This directory defines the ROS2-first OpenClaw integration surface for the curre
 
 ## Files
 
-- `bridge.py`: OpenClaw-facing bridge API with transport abstraction
+- `bridge.py`: Agent-facing bridge API with transport abstraction
 - `transport_rclpy.py`: optional live ROS2 transport backed by `rclpy`
 - `messages.py`: constants, action schema, command envelope, status/observation dataclasses
 - `cli.py`: lightweight CLI scaffold

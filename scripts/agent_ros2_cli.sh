@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-# Wrapper for the ROS2-first agent CLI (Codex/Claude/custom/OpenClaw).
+# Wrapper for the ROS2-first agent CLI (OpenClaw/Codex/Claude/custom).
 # Live mode depends on the ROS Humble environment; unsourced shells can load
 # the wrong Python ABI and break rclpy imports.
 

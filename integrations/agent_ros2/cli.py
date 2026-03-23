@@ -5,7 +5,7 @@ import json
 from typing import Any, Dict
 
 from .bridge import AgentRos2Bridge
-from .messages import DEFAULT_ROS2_HOST, DEFAULT_ROS2_PORT, OpenClawAction
+from .messages import DEFAULT_ROS2_HOST, DEFAULT_ROS2_PORT, AgentAction
 from .transport_rclpy import RclpyRos2Transport
 
 
@@ -22,7 +22,7 @@ def _result_exit_code(result: Dict[str, Any]) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="ROS2-first OpenClaw CLI scaffold for FreeAskWorld"
+        description="ROS2-first agent CLI scaffold for FreeAskWorld"
     )
     parser.add_argument(
         "--ros2-live",
@@ -45,7 +45,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     observe_parser.add_argument("--output-json", action="store_true")
 
-    action_parser = subparsers.add_parser("action", help="Run a generic OpenClaw action from a JSON blob")
+    action_parser = subparsers.add_parser("action", help="Run a generic agent action from a JSON blob")
     action_parser.add_argument(
         "--json",
         required=True,
@@ -113,7 +113,7 @@ def main(argv: Any = None) -> int:
 
         if args.command == "action":
             payload = json.loads(args.action_json)
-            result = local_bridge.perform_action(OpenClawAction.from_dict(payload))
+            result = local_bridge.perform_action(AgentAction.from_dict(payload))
             _emit(result, args.output_json)
             return _result_exit_code(result)
 

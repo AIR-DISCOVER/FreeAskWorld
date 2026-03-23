@@ -11,7 +11,7 @@ if PACKAGE_ROOT not in sys.path:
 
 from integrations.agent_ros2.bridge import InMemoryRos2ScaffoldTransport, AgentRos2Bridge
 from integrations.agent_ros2 import cli
-from integrations.agent_ros2.messages import ACTION_TOPIC_MAP, TOPIC_SIMULATOR_COMMAND, TOPIC_TASK, OpenClawAction
+from integrations.agent_ros2.messages import ACTION_TOPIC_MAP, TOPIC_SIMULATOR_COMMAND, TOPIC_TASK, AgentAction
 from integrations.agent_ros2.transport_rclpy import RclpyRos2Transport
 
 
@@ -44,7 +44,7 @@ def test_ready_transport_publishes_and_updates_state():
     bridge = AgentRos2Bridge(transport=transport)
 
     result = bridge.perform_action(
-        OpenClawAction(action="ask_human", parameters={"prompt": "Need directions"})
+        AgentAction(action="ask_human", parameters={"prompt": "Need directions"})
     )
     observation = bridge.get_observation()
 

@@ -9,8 +9,8 @@ if CLOSED_LOOP_DIR not in sys.path:
     sys.path.insert(0, CLOSED_LOOP_DIR)
 
 import shared_state
-from messages import OpenClawAction, TransformData
-from agent_bridge import OpenClawBridge
+from messages import AgentAction, TransformData
+from agent_bridge import AgentBridge
 
 
 def reset_runtime_state():
@@ -34,7 +34,7 @@ def reset_runtime_state():
 
 def test_disconnected_status_snapshot():
     reset_runtime_state()
-    bridge = OpenClawBridge()
+    bridge = AgentBridge()
 
     status = bridge.get_status()
 
@@ -45,7 +45,7 @@ def test_disconnected_status_snapshot():
 
 def test_action_translation_move_forward(monkeypatch):
     reset_runtime_state()
-    bridge = OpenClawBridge()
+    bridge = AgentBridge()
     captured = {}
 
     def fake_send_navigation_command_via_ws(command, websocket=None, timeout=5.0):
@@ -55,7 +55,7 @@ def test_action_translation_move_forward(monkeypatch):
     monkeypatch.setattr("agent_bridge.ws_handlers.send_navigation_command_via_ws", fake_send_navigation_command_via_ws)
     shared_state.mark_connected("127.0.0.1:8765")
 
-    result = bridge.perform_action(OpenClawAction(action="move_forward", parameters={"distance_m": 2.5}))
+    result = bridge.perform_action(AgentAction(action="move_forward", parameters={"distance_m": 2.5}))
 
     assert result["ok"] is True
     assert result["action"] == "navigation_command"
@@ -65,7 +65,7 @@ def test_action_translation_move_forward(monkeypatch):
 
 def test_move_forward_and_stop_result_structure(monkeypatch):
     reset_runtime_state()
-    bridge = OpenClawBridge()
+    bridge = AgentBridge()
 
     def fake_send_navigation_command_via_ws(command, websocket=None, timeout=5.0):
         return True
@@ -84,7 +84,7 @@ def test_move_forward_and_stop_result_structure(monkeypatch):
 
 def test_observation_snapshot_shape():
     reset_runtime_state()
-    bridge = OpenClawBridge()
+    bridge = AgentBridge()
     shared_state.rgb_array = np.zeros((4, 5, 3), dtype=np.uint8)
     shared_state.depth_array = np.zeros((4, 5), dtype=np.uint8)
     shared_state.transform_data = TransformData(position=(1.0, 2.0, 3.0), rotation=(0.0, 0.0, 0.0, 1.0))

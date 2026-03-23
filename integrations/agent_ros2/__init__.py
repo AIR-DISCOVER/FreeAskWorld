@@ -9,7 +9,7 @@ from .messages import (
     TOPIC_ODOM,
     TOPIC_SIMULATOR_COMMAND,
     TOPIC_TASK,
-    OpenClawAction,
+    AgentAction,
 )
 from .transport_rclpy import RclpyRos2Transport
 
@@ -23,7 +23,7 @@ __all__ = [
     "TOPIC_ODOM",
     "TOPIC_SIMULATOR_COMMAND",
     "TOPIC_TASK",
-    "OpenClawAction",
+    "AgentAction",
     "AgentRos2Bridge",
     "RclpyRos2Transport",
     "Ros2BridgeTransport",
