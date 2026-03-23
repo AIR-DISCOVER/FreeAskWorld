@@ -10,7 +10,7 @@ if CLOSED_LOOP_DIR not in sys.path:
 
 import shared_state
 from messages import OpenClawAction, TransformData
-from openclaw_bridge import OpenClawBridge
+from agent_bridge import OpenClawBridge
 
 
 def reset_runtime_state():
@@ -52,7 +52,7 @@ def test_action_translation_move_forward(monkeypatch):
         captured["payload"] = command.to_dict()
         return True
 
-    monkeypatch.setattr("openclaw_bridge.ws_handlers.send_navigation_command_via_ws", fake_send_navigation_command_via_ws)
+    monkeypatch.setattr("agent_bridge.ws_handlers.send_navigation_command_via_ws", fake_send_navigation_command_via_ws)
     shared_state.mark_connected("127.0.0.1:8765")
 
     result = bridge.perform_action(OpenClawAction(action="move_forward", parameters={"distance_m": 2.5}))
@@ -70,7 +70,7 @@ def test_move_forward_and_stop_result_structure(monkeypatch):
     def fake_send_navigation_command_via_ws(command, websocket=None, timeout=5.0):
         return True
 
-    monkeypatch.setattr("openclaw_bridge.ws_handlers.send_navigation_command_via_ws", fake_send_navigation_command_via_ws)
+    monkeypatch.setattr("agent_bridge.ws_handlers.send_navigation_command_via_ws", fake_send_navigation_command_via_ws)
     shared_state.mark_connected("simulator")
 
     move_result = bridge.move_forward(distance_m=1.0)

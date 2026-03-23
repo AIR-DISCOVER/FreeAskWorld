@@ -1,4 +1,4 @@
-# OpenClaw ROS2 Integration
+# Agent ROS2 Integration (OpenClaw / Claude Code / Codex / custom)
 
 ## Current local runtime path
 
@@ -7,11 +7,22 @@ The local Unity FreeAskWorld simulator is currently configured to run in ROS2 mo
 - ROS 2 IP: `127.0.0.1`
 - ROS 2 Port: `10000`
 
-For this local configuration, the recommended OpenClaw integration path is:
+For this local configuration, the recommended agent integration path is:
 
-`OpenClaw -> ROS2-compatible bridge -> ROS TCP Endpoint / ROS2 backend -> Unity FreeAskWorld simulator`
+`Agent (OpenClaw/Codex/Claude/custom) -> ROS2-compatible bridge -> ROS TCP Endpoint / ROS2 backend -> Unity FreeAskWorld simulator`
 
 The previously added `closed_loop` websocket OpenClaw bridge remains in the repo, but it is not the active runtime path for the current Unity ROS2 configuration. Treat that websocket path as additive, experimental, and future-facing for this setup.
+
+## Agent compatibility
+
+The bridge interface is agent-agnostic. You can keep one simulator-facing contract and swap upstream agents:
+
+- OpenClaw
+- Claude Code
+- Codex
+- Any custom agent runtime
+
+Only the upstream adapter changes (prompting/tool wrapper/request formatting). The bridge action schema and ROS2 topic mapping stay the same.
 
 ## Recommended architecture
 
@@ -108,10 +119,10 @@ CLI examples:
 
 ```bash
 python -m integrations.openclaw_ros2.cli status --output-json
-scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
-scripts/openclaw_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
-scripts/openclaw_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-json
-scripts/openclaw_ros2_cli.sh --ros2-live ask-human "Where is the target?" --output-json
+scripts/agent_ros2_cli.sh --ros2-live status --output-json
+scripts/agent_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
+scripts/agent_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-json
+scripts/agent_ros2_cli.sh --ros2-live ask-human "Where is the target?" --output-json
 ```
 
 For live mode, the wrapper script is the recommended entrypoint because it activates repo-local `.ros2_venv` first if present, then sources:
@@ -128,7 +139,7 @@ ROS Humble Python bindings are often built against the system Python ABI. If you
 Recommended pattern:
 
 - create a repo-local `.ros2_venv`, or use another ROS-compatible Python environment
-- let `scripts/openclaw_ros2_cli.sh` auto-activate `.ros2_venv` when it exists
+- let `scripts/agent_ros2_cli.sh` auto-activate `.ros2_venv` when it exists
 - if `.ros2_venv` is absent, the wrapper still continues, but live ROS2 mode may later fail with a clear `rclpy` import/init error
 
 Example setup:
@@ -145,7 +156,7 @@ python -c "import rclpy, std_msgs.msg, sensor_msgs.msg, nav_msgs.msg"
 Validate the wrapper path:
 
 ```bash
-bash scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
+bash scripts/agent_ros2_cli.sh --ros2-live status --output-json
 ```
 
 Common failure mode:

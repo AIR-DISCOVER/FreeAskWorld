@@ -31,9 +31,9 @@ python -m integrations.openclaw_ros2.cli ask-human "Where is the target?" --outp
 python -m integrations.openclaw_ros2.cli action --json '{"action":"move_forward","parameters":{"distance_m":1.0}}' --output-json
 
 # Recommended for live ROS2 commands from shells that have not already sourced ROS.
-scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
-scripts/openclaw_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
-scripts/openclaw_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-json
+scripts/agent_ros2_cli.sh --ros2-live status --output-json
+scripts/agent_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
+scripts/agent_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-json
 ```
 
 ## ROS2 Python environment
@@ -41,7 +41,7 @@ scripts/openclaw_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --output-
 For `--ros2-live`, prefer the repo wrapper script:
 
 ```bash
-scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
+scripts/agent_ros2_cli.sh --ros2-live status --output-json
 ```
 
 The wrapper now activates repo-local `.ros2_venv` first if it exists, then sources:
@@ -70,7 +70,7 @@ If `.ros2_venv` is not present, the wrapper does not fail early. It continues an
 Validate the wrapper path:
 
 ```bash
-scripts/openclaw_ros2_cli.sh --ros2-live status --output-json
+scripts/agent_ros2_cli.sh --ros2-live status --output-json
 ```
 
 ## Runtime note
@@ -96,7 +96,7 @@ External prerequisites still apply:
 For short-lived live CLI processes, `observe` can optionally pause before reading subscriptions:
 
 ```bash
-scripts/openclaw_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
+scripts/agent_ros2_cli.sh --ros2-live observe --wait-seconds 3 --output-json
 ```
 
 Attach a transport that publishes to:

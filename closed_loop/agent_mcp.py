@@ -1,9 +1,9 @@
 from typing import Any, Dict, List
 
 try:
-    from .openclaw_bridge import bridge
+    from .agent_bridge import bridge
 except ImportError:  # pragma: no cover - script import fallback
-    from openclaw_bridge import bridge
+    from agent_bridge import bridge
 
 
 def freeaskworld_status() -> Dict[str, Any]:

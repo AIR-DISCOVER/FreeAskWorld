@@ -9,12 +9,12 @@ except ImportError:  # pragma: no cover - optional dependency
 
 try:
     from .messages import OpenClawAction
-    from .openclaw_bridge import bridge
-    from .openclaw_server import create_app
+    from .agent_bridge import bridge
+    from .agent_server import create_app
 except ImportError:  # pragma: no cover - script import fallback
     from messages import OpenClawAction
-    from openclaw_bridge import bridge
-    from openclaw_server import create_app
+    from agent_bridge import bridge
+    from agent_server import create_app
 
 
 def _print_result(result: Dict[str, Any], as_json: bool):

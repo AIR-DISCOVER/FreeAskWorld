@@ -38,9 +38,9 @@ cd path/to/your/FreeAskWorld
 sh FreeAskWorldClosedLoopBEVBERT.sh
 sh FreeAskWorldClosedLoopETPNav.sh
 
-## OpenClaw Integration
+## Agent Integration (OpenClaw / Claude Code / Codex / custom)
 
-The OpenClaw bridge is additive. It does not replace the existing Unity-facing websocket protocol, and it does not change the baseline server entrypoint semantics in `server_ETPNav.py` or `server_BEVBERT.py`.
+The agent bridge is additive. It does not replace the existing Unity-facing websocket protocol, and it does not change the baseline server entrypoint semantics in `server_ETPNav.py` or `server_BEVBERT.py`.
 
 ### What stays unchanged
 
@@ -51,10 +51,10 @@ The OpenClaw bridge is additive. It does not replace the existing Unity-facing w
 
 ### New bridge surfaces
 
-- HTTP API: `closed_loop/openclaw_server.py`
-- CLI: `closed_loop/openclaw_cli.py`
-- MCP-friendly tool wrapper: `closed_loop/openclaw_mcp.py`
-- Core bridge service: `closed_loop/openclaw_bridge.py`
+- HTTP API: `closed_loop/agent_server.py`
+- CLI: `closed_loop/agent_cli.py`
+- MCP-friendly tool wrapper: `closed_loop/agent_mcp.py`
+- Core bridge service: `closed_loop/agent_bridge.py`
 
 ### Startup
 
@@ -67,25 +67,44 @@ python server_ETPNav.py
 python server_BEVBERT.py
 ```
 
-Run the additive OpenClaw HTTP bridge in a second process:
+Run the additive agent HTTP bridge in a second process:
 
 ```bash
 cd /home/wyabz/research/FreeAskWorld/closed_loop
-python openclaw_cli.py serve --host 0.0.0.0 --port 8000
+python agent_cli.py serve --host 0.0.0.0 --port 8000
 ```
 
 ### CLI examples
 
 ```bash
-python openclaw_cli.py status --json
-python openclaw_cli.py observe --json
-python openclaw_cli.py move-forward --distance-m 1.0 --json
-python openclaw_cli.py stop --json
-python openclaw_cli.py step --json
-python openclaw_cli.py turn-left --degrees 15 --json
-python openclaw_cli.py turn-right --degrees 15 --json
-python openclaw_cli.py ask-human "Where is the target?" --json
+python agent_cli.py status --json
+python agent_cli.py observe --json
+python agent_cli.py move-forward --distance-m 1.0 --json
+python agent_cli.py stop --json
+python agent_cli.py step --json
+python agent_cli.py turn-left --degrees 15 --json
+python agent_cli.py turn-right --degrees 15 --json
+python agent_cli.py ask-human "Where is the target?" --json
 ```
+
+### Multi-agent usage (same interface)
+
+Any coding/assistant agent can call the same bridge interface. The agent identity changes, but the simulator API does not.
+
+Examples:
+
+```bash
+# Claude Code / Codex / custom script can all call the same HTTP endpoint
+curl -X POST http://127.0.0.1:8000/v1/action \
+  -H "Content-Type: application/json" \
+  -d '{"action":"move_forward","parameters":{"distance_m":1.0}}'
+```
+
+Recommended mapping:
+- OpenClaw: call `agent_cli.py` or HTTP endpoints directly.
+- Claude Code: generate JSON action payloads and post to `/v1/action`.
+- Codex: same as Claude; keep tool wrapper logic outside simulator core.
+- Custom agent: implement a tiny adapter that maps your internal action schema to bridge actions.
 
 ### HTTP API
 

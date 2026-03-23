@@ -4,10 +4,10 @@ from pydantic import BaseModel
 
 try:
     from .messages import OpenClawAction
-    from .openclaw_bridge import bridge
+    from .agent_bridge import bridge
 except ImportError:  # pragma: no cover - script import fallback
     from messages import OpenClawAction
-    from openclaw_bridge import bridge
+    from agent_bridge import bridge
 
 
 class ActionRequest(BaseModel):
@@ -28,7 +28,7 @@ def create_app():
 
     @app.get("/healthz")
     def healthz():
-        return {"ok": True, "service": "freeaskworld-openclaw-bridge"}
+        return {"ok": True, "service": "freeaskworld-agent-bridge"}
 
     @app.get("/v1/status")
     def get_status():
