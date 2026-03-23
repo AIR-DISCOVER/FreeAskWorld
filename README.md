@@ -70,12 +70,20 @@
 - [x] 📊 **Data Processing Code Release**: Released code for preprocessing, data cleaning, and annotation pipelines.
 - [x] 🎥 **Presentation Video**: Released project presentation video.
 - [ ] 🛠️ **Simulator Code Release**: Publish the core simulation code for developers and external collaborators.
-- [ ] 🤖 **Agent Robot Integration**: Integrate agent interfaces (OpenClaw / Codex / Claude / custom) to access and interact with robots inside the FreeAskWorld simulation environment.
+- [x] 🤖 **Agent Robot Integration**: Integrate agent interfaces (OpenClaw / Codex / Claude / custom) to access and interact with robots inside the FreeAskWorld simulation environment.
 - [ ] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
 - [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
 - [ ] 🎮 **Steam Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
 
-Agent integration note: the current recommended local path is ROS2-first, because the local Unity simulator is configured in ROS2 mode on `127.0.0.1:10000`. See [docs/agent_ros2_integration.md](/home/wyabz/research/FreeAskWorld/docs/agent_ros2_integration.md). The ROS2 path now includes a live-capable `rclpy` transport when external ROS2 runtime dependencies are present, while still preserving scaffold-only fallback behavior. For live ROS2 usage, a repo-local `.ros2_venv` or equivalent ROS-compatible Python environment may be needed to avoid ROS Humble `rclpy` ABI mismatch, and the wrapper at `scripts/agent_ros2_cli.sh` now auto-activates `.ros2_venv` when present. The additive `closed_loop` websocket Agent bridge remains available, but for this Unity setup it should be treated as experimental and future-facing rather than the primary runtime path.
+Agent integration note: the current recommended local path is ROS2-first, because the local Unity simulator is configured in ROS2 mode on `127.0.0.1:10000`. See [docs/agent_ros2_integration.md](docs/agent_ros2_integration.md). The ROS2 path now includes a live-capable `rclpy` transport when external ROS2 runtime dependencies are present, while still preserving scaffold-only fallback behavior. For live ROS2 usage, a repo-local `.ros2_venv` or equivalent ROS-compatible Python environment may be needed to avoid ROS Humble `rclpy` ABI mismatch, and the wrapper at `scripts/agent_ros2_cli.sh` now auto-activates `.ros2_venv` when present. The additive `closed_loop` websocket Agent bridge remains available, but for this Unity setup it should be treated as experimental and future-facing rather than the primary runtime path.
+
+Agent config entry paths (for OpenClaw / Claude Code / Codex / custom agent adapters):
+- ROS2 integration doc: `docs/agent_ros2_integration.md`
+- ROS2 package: `integrations/agent_ros2/`
+- ROS2 wrapper CLI: `scripts/agent_ros2_cli.sh`
+- Closed-loop bridge API/CLI: `closed_loop/agent_bridge.py`, `closed_loop/agent_server.py`, `closed_loop/agent_cli.py`, `closed_loop/agent_mcp.py`
+
+**Help auto install Agent ROS2 Integration.** Other AI agents can discover these paths and install/configure automatically.
 
 ---
 
