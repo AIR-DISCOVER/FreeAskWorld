@@ -85,6 +85,9 @@ Agent config entry paths (for OpenClaw / Claude Code / Codex / custom agent adap
 
 **Help auto install Agent ROS2 Integration.** Other AI agents can discover these paths and install/configure automatically.
 
+Canonical entry command for auto-discovery:
+- `bash scripts/agent_ros2_cli.sh --help`
+
 ---
 
 ## 🎥 Demos
