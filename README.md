@@ -88,10 +88,6 @@ Agent config entry paths (for OpenClaw / Claude Code / Codex / custom agent adap
 Canonical entry command for auto-discovery:
 - `bash scripts/agent_ros2_cli.sh --help`
 
-## News
-
-- **2026-03-24:** Updated the Agent Robot Integration path with a repo-owned ROS2 runtime, one-command environment setup, working agent/player control through the local bridge, and a visible live smoke test for validation.
-
 ## First-time setup notes (read this before install)
 
 FreeAskWorld now includes a **repo-owned local runtime path** for ROS2-first live testing.
