@@ -4,6 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 CLI=(bash "$REPO_ROOT/scripts/agent_ros2_cli.sh" --ros2-live)
+BASE_URL="${FREEASKWORLD_BRIDGE_URL:-http://127.0.0.1:8787}"
 
 usage() {
   cat <<'EOF'
@@ -17,8 +18,20 @@ Usage:
   scripts/player_cmd.sh stop
   scripts/player_cmd.sh wait [seconds]
   scripts/player_cmd.sh ask "your prompt"
-  scripts/player_cmd.sh action '{"action":"move_forward","parameters":{"distance_m":1.0}}'
+  scripts/player_cmd.sh action '{"action":"move_forward","distance_m":1.0}'
 EOF
+}
+
+require_curl() {
+  command -v curl >/dev/null 2>&1 || { echo "curl not found" >&2; exit 1; }
+}
+
+http_action() {
+  local payload="$1"
+  require_curl
+  curl -fsS -X POST "${BASE_URL}/v1/openclaw/action" \
+    -H 'content-type: application/json' \
+    -d "$payload"
 }
 
 cmd="${1:-}"
@@ -38,29 +51,29 @@ case "$cmd" in
     ;;
   forward)
     distance="${1:-1.0}"
-    exec "${CLI[@]}" move-forward --distance-m "$distance" --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' "{\"action\":\"move_forward\",\"distance_m\":${distance}}")"
     ;;
   left)
     degrees="${1:-30}"
-    exec "${CLI[@]}" turn-left --degrees "$degrees" --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' "{\"action\":\"turn_left\",\"degrees\":${degrees}}")"
     ;;
   right)
     degrees="${1:-30}"
-    exec "${CLI[@]}" turn-right --degrees "$degrees" --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' "{\"action\":\"turn_right\",\"degrees\":${degrees}}")"
     ;;
   around)
-    exec "${CLI[@]}" turn-around --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' '{"action":"turn_around"}')"
     ;;
   stop)
-    exec "${CLI[@]}" stop --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' '{"action":"stop"}')"
     ;;
   wait)
     seconds="${1:-1}"
-    exec "${CLI[@]}" wait --seconds "$seconds" --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' "{\"action\":\"wait\",\"wait_seconds\":${seconds}}")"
     ;;
   ask)
     prompt="${*:-Where is the target?}"
-    exec "${CLI[@]}" ask-human "$prompt" --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' "{\"action\":\"ask_human\",\"prompt\":\"${prompt}\"}")"
     ;;
   action)
     json_payload="${1:-}"
@@ -68,7 +81,7 @@ case "$cmd" in
       echo "Error: action requires a JSON payload." >&2
       exit 1
     fi
-    exec "${CLI[@]}" action --json "$json_payload" --output-json
+    exec bash -lc "$(printf 'curl -fsS -X POST %q -H %q -d %q' "${BASE_URL}/v1/openclaw/action" 'content-type: application/json' "$json_payload")"
     ;;
   -h|--help|help)
     usage
