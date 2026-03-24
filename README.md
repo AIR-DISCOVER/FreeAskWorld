@@ -265,6 +265,7 @@ If you only want to verify that the repo-level agent interface is wired correctl
 If you want full live interaction with the Unity simulator, continue with the ROS2 runtime notes below.
 
 For a setup guide matching the currently working local ROS2 environment, see [docs/ros2_setup.md](docs/ros2_setup.md).
+A shorter player-control wrapper is also available at `scripts/player_cmd.sh`.
 
 For the current local Unity configuration, use the ROS2-first Agent integration scaffold described in [docs/agent_ros2_integration.md](docs/agent_ros2_integration.md) and implemented under [integrations/agent_ros2](integrations/agent_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
 
