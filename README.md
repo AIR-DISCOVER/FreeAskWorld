@@ -93,6 +93,7 @@ Canonical entry command for auto-discovery:
 For external users, the current repo now includes a **repo-owned local runtime path** for ROS2-first live testing. You can bring up the local bridge/backend directly from this repo, but the full Unity + ROS2 live path still depends on machine permissions and a working Unity-side ROS2 connection.
 
 Common first-time blockers:
+- **Use Python 3.10.** The current local ROS2/runtime flow is validated against Python 3.10.
 - **Python dependencies require network access.** `pip install -r requirements.txt` may fail in restricted environments, behind an unavailable proxy, or without a reachable package index.
 - **The main local runtime path is ROS2-first.** The recommended entry is the ROS2 scaffold in `integrations/agent_ros2/`, not the older websocket bridge in `closed_loop/`.
 - **This repo now ships a repo-owned local runtime path.** Use `scripts/start_local_runtime.sh` to start the local ROS2 backend and bridge from FreeAskWorld itself.
