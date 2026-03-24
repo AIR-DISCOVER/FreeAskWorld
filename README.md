@@ -242,9 +242,9 @@ bash scripts/agent_ros2_cli.sh --help
 If you only want to verify that the repo-level agent interface is wired correctly, the smoke checks above are the fastest starting point.
 If you want full live interaction with the Unity simulator, continue with the ROS2 runtime notes below.
 
-For the current local Unity configuration, use the ROS2-first Agent integration scaffold described in [docs/agent_ros2_integration.md](/home/wyabz/research/FreeAskWorld/docs/agent_ros2_integration.md) and implemented under [integrations/agent_ros2](/home/wyabz/research/FreeAskWorld/integrations/agent_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
+For the current local Unity configuration, use the ROS2-first Agent integration scaffold described in [docs/agent_ros2_integration.md](docs/agent_ros2_integration.md) and implemented under [integrations/agent_ros2](integrations/agent_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
 
-For the additive agent compatibility bridge on top of the existing `closed_loop` websocket stack, see [closed_loop/README.md](/home/wyabz/research/FreeAskWorld/closed_loop/README.md). It adds HTTP, CLI, and MCP-friendly access without replacing the current Unity-facing protocol or baseline behavior.
+For the additive agent compatibility bridge on top of the existing `closed_loop` websocket stack, see [closed_loop/README.md](closed_loop/README.md). It adds HTTP, CLI, and MCP-friendly access without replacing the current Unity-facing protocol or baseline behavior.
 
 <!-- ### 1. Clone & Install
 
