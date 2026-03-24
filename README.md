@@ -120,6 +120,14 @@ Expected behavior for the minimal checks above:
 - In scaffold-only mode, `transport_ready` may be `false`; this does **not** by itself mean the repo is broken.
 - Full live control requires the external Unity + ROS2 runtime path to be available.
 
+After the ROS2 live environment is ready, you can also run the sequential command smoke test:
+
+```bash
+python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1
+```
+
+This sends the main agent actions (`move_forward`, `turn_left`, `turn_right`, `turn_around`, `stop`, `ask_human`, `wait`) and writes a JSON report for quick integration validation.
+
 If `--ros2-live` fails immediately on a fresh machine, check these first:
 - ROS2 environment is installed and sourced correctly.
 - The Unity/ROS2 backend is actually running and reachable.
