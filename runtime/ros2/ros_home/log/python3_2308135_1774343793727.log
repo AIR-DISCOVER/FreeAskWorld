@@ -1,0 +1,13 @@
+[INFO] [1774343793.746364304] [UnityEndpoint]: Starting server on 0.0.0.0:10000
+[INFO] [1774343793.762651589] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774343793.782124158] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774343793.783566040] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774343793.784783427] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774343793.785921078] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774343793.880484286] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774343793.881566921] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774343793.898051931] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774343793.899221254] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774343793.900296570] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774343793.901400100] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774343793.906154150] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK

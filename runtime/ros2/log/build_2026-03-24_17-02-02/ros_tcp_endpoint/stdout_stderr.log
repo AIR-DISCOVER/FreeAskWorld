@@ -1,0 +1,26 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running develop
+running egg_info
+creating ros_tcp_endpoint.egg-info
+writing ros_tcp_endpoint.egg-info/PKG-INFO
+writing dependency_links to ros_tcp_endpoint.egg-info/dependency_links.txt
+writing entry points to ros_tcp_endpoint.egg-info/entry_points.txt
+writing requirements to ros_tcp_endpoint.egg-info/requires.txt
+writing top-level names to ros_tcp_endpoint.egg-info/top_level.txt
+writing manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+reading manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+writing manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros-tcp-endpoint.egg-link (link to .)
+Installing default_server_endpoint script to /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/ros_tcp_endpoint
+
+Installed /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint
+running symlink_data
+creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index
+creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index/resource_index
+creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index/resource_index/packages
+symbolically linking /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/resource/ros_tcp_endpoint -> /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index/resource_index/packages
+symbolically linking /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/package.xml -> /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint
+creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/launch
+symbolically linking /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/launch/endpoint.py -> /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/launch

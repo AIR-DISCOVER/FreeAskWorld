@@ -1,0 +1,4 @@
+source;share/simulator_messages/local_setup.bash
+source;share/simulator_messages/local_setup.dsv
+source;share/simulator_messages/local_setup.sh
+source;share/simulator_messages/local_setup.zsh

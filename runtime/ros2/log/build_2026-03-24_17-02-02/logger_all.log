@@ -1,0 +1,199 @@
+[0.052s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'simulator_messages', 'ros_tcp_endpoint']
+[0.052s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['simulator_messages', 'ros_tcp_endpoint'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7a4edba3f2b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a4edba3ed70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a4edba3ed70>>)
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.146s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/wyabz/research/FreeAskWorld/runtime/ros2'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tcp_endpoint) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_tcp_endpoint' with type 'ros.ament_python' and name 'ros_tcp_endpoint'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulator_messages) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulator_messages' with type 'ros.catkin' and name 'simulator_messages'
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.160s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.170s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 349 installed packages in /opt/ros/humble
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'cmake_target' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'cmake_clean_cache' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'cmake_clean_first' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'cmake_force_configure' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'ament_cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'catkin_cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'ros_tcp_endpoint' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.188s] DEBUG:colcon.colcon_core.verb:Building package 'ros_tcp_endpoint' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint', 'merge_install': False, 'path': '/home/wyabz/research/FreeAskWorld/runtime/ros2/src/ros_tcp_endpoint', 'symlink_install': True, 'test_result_base': None}
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'cmake_args' from command line to 'None'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'cmake_target' from command line to 'None'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'cmake_clean_cache' from command line to 'False'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'cmake_clean_first' from command line to 'False'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'cmake_force_configure' from command line to 'False'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'ament_cmake_args' from command line to 'None'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'catkin_cmake_args' from command line to 'None'
+[0.189s] Level 5:colcon.colcon_core.verb:set package 'simulator_messages' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.189s] DEBUG:colcon.colcon_core.verb:Building package 'simulator_messages' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages', 'merge_install': False, 'path': '/home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages', 'symlink_install': True, 'test_result_base': None}
+[0.189s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.189s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.189s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/wyabz/research/FreeAskWorld/runtime/ros2/src/ros_tcp_endpoint' with build type 'ament_python'
+[0.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_tcp_endpoint', 'ament_prefix_path')
+[0.191s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/ament_prefix_path.ps1'
+[0.191s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/ament_prefix_path.dsv'
+[0.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/ament_prefix_path.sh'
+[0.192s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.192s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.193s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages' with build type 'catkin'
+[0.193s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages'
+[0.193s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.193s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.312s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/wyabz/research/FreeAskWorld/runtime/ros2/src/ros_tcp_endpoint'
+[0.312s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.312s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages': /usr/bin/cmake /home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages
+[0.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint': PYTHONPATH=/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/build --no-deps symlink_data
+[0.702s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_tcp_endpoint', 'pythonpath_develop')
+[0.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath_develop.ps1'
+[0.702s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint' returned '0': PYTHONPATH=/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/build --no-deps symlink_data
+[0.703s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath_develop.dsv'
+[0.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath_develop.sh'
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint' for CMake module files
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint' for CMake config files
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib'
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/bin'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/pkgconfig/ros_tcp_endpoint.pc'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/python3.10/site-packages'
+[0.706s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros_tcp_endpoint', 'pythonpath')
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath.ps1'
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath.dsv'
+[0.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath.sh'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/bin'
+[0.706s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros_tcp_endpoint)
+[0.706s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/package.ps1'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/package.dsv'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/package.sh'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/package.bash'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/package.zsh'
+[0.708s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/colcon-core/packages/ros_tcp_endpoint)
+[1.168s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages' returned '0': /usr/bin/cmake /home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages
+[1.168s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages': /usr/bin/cmake --build /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages -- -j32 -l32
+[2.080s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages' returned '0': /usr/bin/cmake --build /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages -- -j32 -l32
+[2.085s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages': /usr/bin/cmake --install /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages
+[2.115s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages' returned '0': /usr/bin/cmake --install /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages
+[2.116s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_messages', 'ros_package_path')
+[2.116s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/ros_package_path.ps1'
+[2.116s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/ros_package_path.dsv'
+[2.117s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/ros_package_path.sh'
+[2.118s] Level 1:colcon.colcon_ros.task.catkin:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages'
+[2.118s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_messages', 'catkin_pythonpath')
+[2.118s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/catkin_pythonpath.ps1'
+[2.118s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/catkin_pythonpath.dsv'
+[2.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/catkin_pythonpath.sh'
+[2.119s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_messages', 'pkg_config_path')
+[2.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/pkg_config_path.ps1'
+[2.120s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/pkg_config_path.dsv'
+[2.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/pkg_config_path.sh'
+[2.123s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_messages', 'pkg_config_path_multiarch')
+[2.123s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/pkg_config_path_multiarch.ps1'
+[2.123s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/pkg_config_path_multiarch.dsv'
+[2.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/pkg_config_path_multiarch.sh'
+[2.125s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulator_messages)
+[2.125s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages' for CMake module files
+[2.126s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages' for CMake config files
+[2.126s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_messages', 'cmake_prefix_path')
+[2.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/cmake_prefix_path.ps1'
+[2.127s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/cmake_prefix_path.dsv'
+[2.127s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/cmake_prefix_path.sh'
+[2.127s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib'
+[2.128s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulator_messages', 'ld_library_path_lib')
+[2.128s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/ld_library_path_lib.ps1'
+[2.128s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/ld_library_path_lib.dsv'
+[2.128s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/hook/ld_library_path_lib.sh'
+[2.128s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/bin'
+[2.128s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/pkgconfig/simulator_messages.pc'
+[2.129s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/python3.10/site-packages'
+[2.129s] Level 1:colcon.colcon_core.environment:checking '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/bin'
+[2.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/package.ps1'
+[2.130s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/package.dsv'
+[2.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/package.sh'
+[2.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/package.bash'
+[2.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/package.zsh'
+[2.131s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/colcon-core/packages/simulator_messages)
+[2.131s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.131s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.131s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.132s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.138s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.138s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.138s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.154s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.154s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/local_setup.ps1'
+[2.154s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/_local_setup_util_ps1.py'
+[2.155s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/setup.ps1'
+[2.155s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/local_setup.sh'
+[2.155s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/_local_setup_util_sh.py'
+[2.155s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/setup.sh'
+[2.156s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/local_setup.bash'
+[2.156s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/setup.bash'
+[2.156s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/local_setup.zsh'
+[2.156s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/setup.zsh'

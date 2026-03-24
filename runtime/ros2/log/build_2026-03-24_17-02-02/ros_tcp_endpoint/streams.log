@@ -1,0 +1,28 @@
+[0.301s] Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint': PYTHONPATH=/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/build --no-deps symlink_data
+[0.404s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.404s]   warnings.warn(
+[0.418s] running develop
+[0.497s] running egg_info
+[0.497s] creating ros_tcp_endpoint.egg-info
+[0.497s] writing ros_tcp_endpoint.egg-info/PKG-INFO
+[0.497s] writing dependency_links to ros_tcp_endpoint.egg-info/dependency_links.txt
+[0.497s] writing entry points to ros_tcp_endpoint.egg-info/entry_points.txt
+[0.497s] writing requirements to ros_tcp_endpoint.egg-info/requires.txt
+[0.497s] writing top-level names to ros_tcp_endpoint.egg-info/top_level.txt
+[0.497s] writing manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+[0.498s] reading manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+[0.498s] writing manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+[0.499s] running build_ext
+[0.499s] Creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros-tcp-endpoint.egg-link (link to .)
+[0.499s] Installing default_server_endpoint script to /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/ros_tcp_endpoint
+[0.500s] 
+[0.500s] Installed /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint
+[0.500s] running symlink_data
+[0.500s] creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index
+[0.500s] creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index/resource_index
+[0.500s] creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index/resource_index/packages
+[0.500s] symbolically linking /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/resource/ros_tcp_endpoint -> /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ament_index/resource_index/packages
+[0.500s] symbolically linking /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/package.xml -> /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint
+[0.500s] creating /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/launch
+[0.500s] symbolically linking /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/launch/endpoint.py -> /home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/share/ros_tcp_endpoint/launch
+[0.513s] Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint' returned '0': PYTHONPATH=/home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wyabz/research/FreeAskWorld/runtime/ros2/install/ros_tcp_endpoint/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/wyabz/research/FreeAskWorld/runtime/ros2/build/ros_tcp_endpoint/build --no-deps symlink_data

@@ -1,0 +1,9 @@
+source;share/ros_tcp_endpoint/hook/pythonpath.ps1
+source;share/ros_tcp_endpoint/hook/pythonpath.dsv
+source;share/ros_tcp_endpoint/hook/pythonpath.sh
+source;share/ros_tcp_endpoint/hook/ament_prefix_path.ps1
+source;share/ros_tcp_endpoint/hook/ament_prefix_path.dsv
+source;share/ros_tcp_endpoint/hook/ament_prefix_path.sh
+source;../../build/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath_develop.ps1
+source;../../build/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath_develop.dsv
+source;../../build/ros_tcp_endpoint/share/ros_tcp_endpoint/hook/pythonpath_develop.sh

@@ -20,7 +20,7 @@ This guide matches the currently validated local setup:
 - **Repo path example**: `~/research/FreeAskWorld`
 - **ROS2 runtime setup sourced by wrapper**:
   - `/opt/ros/humble/setup.bash`
-  - `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash`
+  - `runtime/ros2/install/setup.bash`
 - **Recommended repo-local Python env for ROS live mode**:
   - `~/research/FreeAskWorld/.ros2_venv`
 
@@ -43,22 +43,20 @@ If `ros2 --help` fails, do **not** continue yet.
 
 ---
 
-## 2. Make sure the external FreeAskClaw ROS2 runtime exists
+## 2. Make sure the repo-owned ROS2 runtime can be built
 
-The recommended wrapper used by this repo expects this setup file to exist:
+The recommended wrapper used by this repo expects this setup file to exist after the local runtime is built:
 
 ```bash
-/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash
+runtime/ros2/install/setup.bash
 ```
-
-On your own machine, that means you need the equivalent **FreeAskClaw ROS2 runtime** built or installed already.
 
 The wrapper script will fail early if either of these is missing:
 
 - `/opt/ros/humble/setup.bash`
-- `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash`
+- `runtime/ros2/install/setup.bash`
 
-So before debugging Python, first confirm the runtime setup files are actually present.
+So before debugging Python, first confirm the runtime setup files are actually present. If `runtime/ros2/install/setup.bash` does not exist yet, start by bringing up the repo-owned local runtime with `scripts/start_local_runtime.sh`.
 
 ---
 
@@ -86,7 +84,7 @@ After activating `.ros2_venv`, source both setup files:
 
 ```bash
 source /opt/ros/humble/setup.bash
-source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash
+source runtime/ros2/install/setup.bash
 ```
 
 Then do a Python import check:
@@ -138,14 +136,14 @@ For a sequential command smoke test that sends the main agent actions and record
 ```bash
 source .ros2_venv/bin/activate
 source /opt/ros/humble/setup.bash
-source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash
+source runtime/ros2/install/setup.bash
 python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1
 ```
 
 If you are not already in a ROS2-sourced shell, prefer:
 
 ```bash
-bash -lc 'source .ros2_venv/bin/activate && source /opt/ros/humble/setup.bash && source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash && python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1'
+bash -lc 'source .ros2_venv/bin/activate && source /opt/ros/humble/setup.bash && source runtime/ros2/install/setup.bash && python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1'
 ```
 
 This writes `integration_command_smoke.json` in the repo root and helps verify that the agent command surface can actually publish and observe updates in a live ROS2 environment.

@@ -1,0 +1,6 @@
+{
+  "package_name": "simulator_messages",
+  "non_idl_tuples": [
+    "/home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages:msg/SimulatorCommand.msg"
+  ]
+}

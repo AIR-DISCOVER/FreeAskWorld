@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from simulator_messages/msg/SimulatorCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module simulator_messages {
+  module msg {
+    @verbatim (language="comment", text=
+      "Header")
+    struct SimulatorCommand {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "调用接收端的函数方法名")
+      string method;
+
+      string method_params;
+    };
+  };
+};

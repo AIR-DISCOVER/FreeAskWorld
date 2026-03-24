@@ -1,0 +1,232 @@
+[0.121s] Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages': /usr/bin/cmake /home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages
+[0.164s] -- The C compiler identification is GNU 11.4.0
+[0.196s] -- The CXX compiler identification is GNU 11.4.0
+[0.205s] -- Detecting C compiler ABI info
+[0.244s] -- Detecting C compiler ABI info - done
+[0.248s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.248s] -- Detecting C compile features
+[0.249s] -- Detecting C compile features - done
+[0.252s] -- Detecting CXX compiler ABI info
+[0.293s] -- Detecting CXX compiler ABI info - done
+[0.296s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.296s] -- Detecting CXX compile features
+[0.297s] -- Detecting CXX compile features - done
+[0.298s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.372s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.423s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.424s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.428s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.453s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.481s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[0.632s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.743s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.890s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.900s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.901s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.916s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.916s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.916s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.916s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.927s] -- Found PythonExtra: .so  
+[0.953s] -- Configuring done
+[0.965s] -- Generating done
+[0.966s] CMake Warning:
+[0.966s]   Manually-specified variables were not used by the project:
+[0.966s] 
+[0.966s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[0.966s]     CATKIN_SYMLINK_INSTALL
+[0.966s] 
+[0.966s] 
+[0.970s] -- Build files have been written to: /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages
+[0.974s] Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages' returned '0': /usr/bin/cmake /home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages
+[0.975s] Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages': /usr/bin/cmake --build /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages -- -j32 -l32
+[1.000s] [  3%] Generating C code for ROS interfaces
+[1.006s] [  6%] Generating C++ code for ROS interfaces
+[1.010s] [  6%] Built target ament_cmake_python_copy_simulator_messages
+[1.121s] running egg_info
+[1.122s] creating simulator_messages.egg-info
+[1.122s] writing simulator_messages.egg-info/PKG-INFO
+[1.122s] writing dependency_links to simulator_messages.egg-info/dependency_links.txt
+[1.122s] writing top-level names to simulator_messages.egg-info/top_level.txt
+[1.122s] writing manifest file 'simulator_messages.egg-info/SOURCES.txt'
+[1.122s] [  6%] Built target simulator_messages__cpp
+[1.122s] reading manifest file 'simulator_messages.egg-info/SOURCES.txt'
+[1.123s] writing manifest file 'simulator_messages.egg-info/SOURCES.txt'
+[1.127s] [  9%] Generating C++ introspection for ROS interfaces
+[1.128s] [ 12%] Generating C++ type support for eProsima Fast-RTPS
+[1.128s] [ 16%] Generating C++ type support dispatch for ROS interfaces
+[1.137s] [ 16%] Built target ament_cmake_python_build_simulator_messages_egg
+[1.139s] [ 19%] Building C object CMakeFiles/simulator_messages__rosidl_generator_c.dir/rosidl_generator_c/simulator_messages/msg/detail/simulator_command__functions.c.o
+[1.165s] [ 22%] Linking C shared library libsimulator_messages__rosidl_generator_c.so
+[1.185s] [ 22%] Built target simulator_messages__rosidl_generator_c
+[1.192s] [ 29%] Generating C type support dispatch for ROS interfaces
+[1.192s] [ 29%] Generating C type support for eProsima Fast-RTPS
+[1.192s] [ 32%] Generating C introspection for ROS interfaces
+[1.238s] [ 35%] Building CXX object CMakeFiles/simulator_messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/simulator_messages/msg/simulator_command__type_support.cpp.o
+[1.242s] [ 38%] Building CXX object CMakeFiles/simulator_messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/simulator_messages/msg/detail/simulator_command__type_support.cpp.o
+[1.253s] [ 41%] Building CXX object CMakeFiles/simulator_messages__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/simulator_messages/msg/detail/dds_fastrtps/simulator_command__type_support.cpp.o
+[1.305s] [ 45%] Building CXX object CMakeFiles/simulator_messages__rosidl_typesupport_c.dir/rosidl_typesupport_c/simulator_messages/msg/simulator_command__type_support.cpp.o
+[1.312s] [ 48%] Building CXX object CMakeFiles/simulator_messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/simulator_messages/msg/detail/simulator_command__type_support_c.cpp.o
+[1.314s] [ 51%] Building C object CMakeFiles/simulator_messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/simulator_messages/msg/detail/simulator_command__type_support.c.o
+[1.325s] [ 54%] Linking CXX shared library libsimulator_messages__rosidl_typesupport_c.so
+[1.335s] [ 58%] Linking C shared library libsimulator_messages__rosidl_typesupport_introspection_c.so
+[1.347s] [ 58%] Built target simulator_messages__rosidl_typesupport_c
+[1.353s] [ 58%] Built target simulator_messages__rosidl_typesupport_introspection_c
+[1.362s] [ 61%] Linking CXX shared library libsimulator_messages__rosidl_typesupport_cpp.so
+[1.388s] [ 61%] Built target simulator_messages__rosidl_typesupport_cpp
+[1.409s] [ 64%] Linking CXX shared library libsimulator_messages__rosidl_typesupport_introspection_cpp.so
+[1.420s] [ 67%] Linking CXX shared library libsimulator_messages__rosidl_typesupport_fastrtps_cpp.so
+[1.440s] [ 67%] Built target simulator_messages__rosidl_typesupport_introspection_cpp
+[1.460s] [ 70%] Linking CXX shared library libsimulator_messages__rosidl_typesupport_fastrtps_c.so
+[1.461s] [ 70%] Built target simulator_messages__rosidl_typesupport_fastrtps_cpp
+[1.496s] [ 70%] Built target simulator_messages__rosidl_typesupport_fastrtps_c
+[1.506s] [ 70%] Built target simulator_messages
+[1.523s] [ 74%] Generating Python code for ROS interfaces
+[1.677s] [ 74%] Built target simulator_messages__py
+[1.686s] [ 77%] Building C object CMakeFiles/simulator_messages__rosidl_generator_py.dir/rosidl_generator_py/simulator_messages/msg/_simulator_command_s.c.o
+[1.759s] [ 80%] Linking C shared library rosidl_generator_py/simulator_messages/libsimulator_messages__rosidl_generator_py.so
+[1.791s] [ 80%] Built target simulator_messages__rosidl_generator_py
+[1.808s] [ 83%] Building C object CMakeFiles/simulator_messages__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/simulator_messages/_simulator_messages_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[1.809s] [ 87%] Building C object CMakeFiles/simulator_messages__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/simulator_messages/_simulator_messages_s.ep.rosidl_typesupport_c.c.o
+[1.811s] [ 90%] Building C object CMakeFiles/simulator_messages__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/simulator_messages/_simulator_messages_s.ep.rosidl_typesupport_introspection_c.c.o
+[1.857s] [ 93%] Linking C shared library rosidl_generator_py/simulator_messages/simulator_messages_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.858s] [ 96%] Linking C shared library rosidl_generator_py/simulator_messages/simulator_messages_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.858s] [100%] Linking C shared library rosidl_generator_py/simulator_messages/simulator_messages_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.878s] [100%] Built target simulator_messages__rosidl_typesupport_introspection_c__pyext
+[1.878s] [100%] Built target simulator_messages__rosidl_typesupport_fastrtps_c__pyext
+[1.882s] [100%] Built target simulator_messages__rosidl_typesupport_c__pyext
+[1.887s] Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages' returned '0': /usr/bin/cmake --build /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages -- -j32 -l32
+[1.892s] Invoking command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages': /usr/bin/cmake --install /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages
+[1.897s] -- Install configuration: ""
+[1.897s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/ament_index/resource_index/rosidl_interfaces/simulator_messages
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/simulator_command.h
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__functions.h
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__functions.c
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__struct.h
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__type_support.h
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/rosidl_generator_c__visibility_control.h
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/library_path.sh
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/library_path.dsv
+[1.898s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_generator_c.so
+[1.898s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_generator_c.so" to ""
+[1.899s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages
+[1.899s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg
+[1.899s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail
+[1.899s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__rosidl_typesupport_fastrtps_c.h
+[1.899s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.899s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_fastrtps_c.so
+[1.899s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_fastrtps_c.so" to ""
+[1.899s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages
+[1.899s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg
+[1.899s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.899s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail
+[1.899s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__type_support.c
+[1.899s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__rosidl_typesupport_introspection_c.h
+[1.899s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_introspection_c.so
+[1.900s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_introspection_c.so" to ""
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_c.so
+[1.900s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_c.so" to ""
+[1.900s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages
+[1.900s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/simulator_command.hpp
+[1.900s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__type_support.hpp
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__traits.hpp
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__builder.hpp
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__struct.hpp
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.900s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages
+[1.900s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg
+[1.900s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/dds_fastrtps
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__rosidl_typesupport_fastrtps_cpp.hpp
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.900s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_fastrtps_cpp.so
+[1.900s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_fastrtps_cpp.so" to ""
+[1.901s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages
+[1.901s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg
+[1.901s] -- Up-to-date: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__type_support.cpp
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/include/simulator_messages/simulator_messages/msg/detail/simulator_command__rosidl_typesupport_introspection_cpp.hpp
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_introspection_cpp.so
+[1.901s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_introspection_cpp.so" to ""
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_cpp.so
+[1.901s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_typesupport_cpp.so" to ""
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/pythonpath.sh
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/pythonpath.dsv
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages-0.0.0-py3.10.egg-info
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages-0.0.0-py3.10.egg-info/PKG-INFO
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages-0.0.0-py3.10.egg-info/top_level.txt
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/_simulator_messages_s.ep.rosidl_typesupport_introspection_c.c
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/msg
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/msg/__init__.py
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/msg/_simulator_command_s.c
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/msg/_simulator_command.py
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/__init__.py
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.901s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.902s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/_simulator_messages_s.ep.rosidl_typesupport_c.c
+[1.902s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.902s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/_simulator_messages_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.902s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/libsimulator_messages__rosidl_generator_py.so
+[1.916s] Listing '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages'...
+[1.916s] Compiling '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/__init__.py'...
+[1.916s] Listing '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/msg'...
+[1.916s] Compiling '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/msg/__init__.py'...
+[1.916s] Compiling '/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/msg/_simulator_command.py'...
+[1.918s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.918s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.918s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.919s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.919s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/local/lib/python3.10/dist-packages/simulator_messages/simulator_messages_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_generator_py.so
+[1.919s] -- Set runtime path of "/home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/lib/libsimulator_messages__rosidl_generator_py.so" to ""
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/msg/SimulatorCommand.idl
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/msg/SimulatorCommand.msg
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/ament_index/resource_index/package_run_dependencies/simulator_messages
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/ament_index/resource_index/parent_prefix_path/simulator_messages
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/ament_prefix_path.sh
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/ament_prefix_path.dsv
+[1.919s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/path.sh
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/environment/path.dsv
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/local_setup.bash
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/local_setup.sh
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/local_setup.zsh
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/local_setup.dsv
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/package.dsv
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/ament_index/resource_index/packages/simulator_messages
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_generator_cExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_generator_cExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_typesupport_fastrtps_cExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_introspection_cExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_cExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_cExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_generator_cppExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_introspection_cppExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_cppExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messages__rosidl_typesupport_cppExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_generator_pyExport.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/export_simulator_messages__rosidl_generator_pyExport-noconfig.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/rosidl_cmake-extras.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.920s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/ament_cmake_export_libraries-extras.cmake
+[1.921s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/ament_cmake_export_targets-extras.cmake
+[1.921s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.921s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.921s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messagesConfig.cmake
+[1.921s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/cmake/simulator_messagesConfig-version.cmake
+[1.921s] -- Installing: /home/wyabz/research/FreeAskWorld/runtime/ros2/install/simulator_messages/share/simulator_messages/package.xml
+[1.922s] Invoked command in '/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages' returned '0': /usr/bin/cmake --install /home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages

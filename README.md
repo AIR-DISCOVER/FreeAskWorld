@@ -123,6 +123,7 @@ Expected behavior for the minimal checks above:
 After the ROS2 live environment is ready, you can also run the sequential command smoke test:
 
 ```bash
+scripts/start_local_runtime.sh
 scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 ```
 

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "simulator_messages__py",
+		"source" : "/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages/simulator_messages__py"
+	}
+}

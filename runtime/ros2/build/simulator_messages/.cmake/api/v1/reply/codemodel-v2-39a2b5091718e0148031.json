@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-4d802d04e46902aa6622.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "simulator_messages__py",
+					"jsonFile" : "directory-simulator_messages__py-735c384f0b72a0b7adab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages/simulator_messages__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "simulator_messages",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_simulator_messages_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_simulator_messages_egg-7be101e01c13db58a5e2.json",
+					"name" : "ament_cmake_python_build_simulator_messages_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_simulator_messages::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_simulator_messages-f5eeb6c89517c5118fbd.json",
+					"name" : "ament_cmake_python_copy_simulator_messages",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages-e6f3d622a47f90457ef9.json",
+					"name" : "simulator_messages",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__cpp-397b2162feffe50fb67a.json",
+					"name" : "simulator_messages__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "simulator_messages__py::@b3f3a96ab26f42bee916",
+					"jsonFile" : "target-simulator_messages__py-c6a61c5e840857cd7f6e.json",
+					"name" : "simulator_messages__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_generator_c-07743bcd810caf70f40b.json",
+					"name" : "simulator_messages__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_generator_py-e910f9217e197b0dd3e6.json",
+					"name" : "simulator_messages__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_c-aac145e7d8960c7d39cc.json",
+					"name" : "simulator_messages__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_c__pyext-e0aae62e6323bf7cf398.json",
+					"name" : "simulator_messages__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_cpp-e4ec4cca79527fa13529.json",
+					"name" : "simulator_messages__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_fastrtps_c-65ead947c33552caceb7.json",
+					"name" : "simulator_messages__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_fastrtps_c__pyext-4b969879b3e9e4fc6d90.json",
+					"name" : "simulator_messages__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_fastrtps_cpp-4f569f24fa5448e1dc87.json",
+					"name" : "simulator_messages__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_introspection_c-6d95e1c97121a6138cc5.json",
+					"name" : "simulator_messages__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_introspection_c__pyext-33e287ed398ae347e27b.json",
+					"name" : "simulator_messages__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages__rosidl_typesupport_introspection_cpp-8bbdf92e60b40c3bc4c2.json",
+					"name" : "simulator_messages__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simulator_messages_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simulator_messages_uninstall-48799bf87e196f8a23ed.json",
+					"name" : "simulator_messages_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-7256344181e927f903f6.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/wyabz/research/FreeAskWorld/runtime/ros2/build/simulator_messages",
+		"source" : "/home/wyabz/research/FreeAskWorld/runtime/ros2/src/simulator_messages"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

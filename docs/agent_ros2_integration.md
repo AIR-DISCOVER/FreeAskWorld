@@ -130,7 +130,7 @@ scripts/agent_ros2_cli.sh --ros2-live ask-human "Where is the target?" --output-
 For live mode, the wrapper script is the recommended entrypoint because it activates repo-local `.ros2_venv` first if present, then sources:
 
 - `/opt/ros/humble/setup.bash`
-- `/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash`
+- `runtime/ros2/install/setup.bash`
 
 That avoids the common failure mode where `python3 -m integrations.agent_ros2.cli --ros2-live ...` is launched from `(base)` or another mismatched Python environment and `rclpy` fails due to Python ABI mismatch.
 
@@ -151,7 +151,7 @@ cd ~/research/FreeAskWorld
 python3.10 -m venv .ros2_venv
 source .ros2_venv/bin/activate
 source /opt/ros/humble/setup.bash
-source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash
+source runtime/ros2/install/setup.bash
 python -c "import rclpy, std_msgs.msg, sensor_msgs.msg, nav_msgs.msg"
 ```
 

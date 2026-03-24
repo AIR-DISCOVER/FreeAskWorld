@@ -5,7 +5,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 ROS_SETUP="/opt/ros/humble/setup.bash"
-PROJECT_ROS_SETUP="/home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash"
+PROJECT_ROS_SETUP="${REPO_ROOT}/runtime/ros2/install/setup.bash"
 ROS2_VENV_ACTIVATE="${REPO_ROOT}/.ros2_venv/bin/activate"
 DEFAULT_ROS_LOG_DIR="/tmp/roslog"
 
