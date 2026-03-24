@@ -142,6 +142,12 @@ source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash
 python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1
 ```
 
+If you are not already in a ROS2-sourced shell, prefer:
+
+```bash
+bash -lc 'source .ros2_venv/bin/activate && source /opt/ros/humble/setup.bash && source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash && python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1'
+```
+
 This writes `integration_command_smoke.json` in the repo root and helps verify that the agent command surface can actually publish and observe updates in a live ROS2 environment.
 
 Notes:
