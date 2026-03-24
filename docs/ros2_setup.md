@@ -6,7 +6,7 @@ It is intended for users who want to run the **ROS2-first live integration path*
 
 `integrations/agent_ros2` + `scripts/agent_ros2_cli.sh`
 
-If you only want a lightweight repo-level smoke check, you can stop at the scaffold commands in the main `README.md` and skip this file.
+If you only want a lightweight repo-level smoke check, you can stop at the scaffold commands in the main [`README.md`](../README.md) and skip this file.
 
 ---
 

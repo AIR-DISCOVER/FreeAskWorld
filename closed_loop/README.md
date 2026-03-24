@@ -1,5 +1,9 @@
 # Communication with FreeAskWorld Simulator
 
+For the current recommended local runtime path, start from the main [README.md](../README.md) and the ROS2-first integration notes in [docs/agent_ros2_integration.md](../docs/agent_ros2_integration.md).
+
+If you need the currently validated ROS2 environment setup, see [docs/ros2_setup.md](../docs/ros2_setup.md).
+
 ## Start
 
 conda create -n FreeAskWorld python=3.10
