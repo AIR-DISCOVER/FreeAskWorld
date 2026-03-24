@@ -18,6 +18,12 @@ if ! have_cmd "$PYTHON_BIN"; then
   exit 1
 fi
 
+if [[ ! -f "/opt/ros/humble/setup.bash" ]]; then
+  echo "Warning: ROS2 Humble is not installed at /opt/ros/humble/setup.bash." >&2
+  echo "This script can still prepare the repo-local Python environment, but live ROS2 mode will not work until ROS2 Humble is installed manually." >&2
+  echo "See: ${ROS2_SETUP_HINT}" >&2
+fi
+
 cd "$REPO_ROOT"
 
 if [[ -f "$ROS2_ACTIVATE" ]]; then

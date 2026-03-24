@@ -116,6 +116,7 @@ What `scripts/setup_envs.sh` does:
 - reuses it if present instead of blindly creating a new one
 - otherwise creates `.ros2_venv` with Python 3.10
 - installs the minimal Python packages needed for live testing
+- warns clearly if ROS2 Humble is not installed yet
 - points you to the manual ROS2 setup guide if system ROS2 is missing
 
 After setup:
