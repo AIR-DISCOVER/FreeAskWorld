@@ -100,24 +100,31 @@ If this import check fails, live ROS2 mode will not work yet.
 
 ## 5. Verify the FreeAskWorld ROS2 wrapper path
 
-This repo provides a wrapper that activates `.ros2_venv` first (if present), then sources the ROS2 setup files before launching the CLI:
+This repo provides two command entrypoints:
+
+1. Low-level wrapper:
 
 ```bash
 cd ~/research/FreeAskWorld
 bash scripts/agent_ros2_cli.sh --help
+bash scripts/agent_ros2_cli.sh --ros2-live status --output-json
 ```
 
-Then test live status:
+2. Short player wrapper:
 
 ```bash
-bash scripts/agent_ros2_cli.sh --ros2-live status --output-json
+scripts/player_cmd.sh status
+scripts/player_cmd.sh observe 1
+scripts/player_cmd.sh forward 0.5
+scripts/player_cmd.sh left 30
+scripts/player_cmd.sh stop
 ```
 
 Expected outcomes:
 
-- If everything is ready, you should see live-mode status output.
-- If ROS2 initializes but the simulator/backend is not available, you may still get a structured error or partial status.
-- If Python/ROS setup is wrong, the wrapper or `rclpy` path will fail clearly.
+- `status` should report `transport_ready: true` after the local runtime is up.
+- `observe` should show pose / RGB / depth once Unity-side ROS2 data is flowing.
+- Action commands should return `ok: true` and `Published ...` when live ROS2 transport is attached.
 
 ---
 
@@ -132,19 +139,20 @@ bash scripts/agent_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --outpu
 bash scripts/agent_ros2_cli.sh --ros2-live ask-human "Where is the target?" --output-json
 ```
 
-For a sequential command smoke test that sends the main agent actions and records a JSON report, run:
+For a sequential command smoke test that sends the main agent actions and records a JSON report, use the wrapper:
 
 ```bash
-source .ros2_venv/bin/activate
-source /opt/ros/humble/setup.bash
-source runtime/ros2/install/setup.bash
-python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1
+scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 ```
 
-If you are not already in a ROS2-sourced shell, prefer:
+For shorter manual checks, use:
 
 ```bash
-bash -lc 'source .ros2_venv/bin/activate && source /opt/ros/humble/setup.bash && source runtime/ros2/install/setup.bash && python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1'
+scripts/player_cmd.sh forward 0.5
+scripts/player_cmd.sh left 30
+scripts/player_cmd.sh right 30
+scripts/player_cmd.sh around
+scripts/player_cmd.sh stop
 ```
 
 This writes `integration_command_smoke.json` in the repo root and helps verify that the agent command surface can actually publish and observe updates in a live ROS2 environment.

@@ -104,7 +104,7 @@ The additive ROS2 path under [`integrations/agent_ros2`](../integrations/agent_r
 - a lightweight CLI
 - a transport abstraction that still supports the in-memory scaffold transport for tests
 - an optional `RclpyRos2Transport` that publishes action/task envelopes and tracks ack/image/odometry observations through `rclpy`
-- smoke tests for action schema, scaffold behavior, and live-transport fallback behavior
+- smoke tests for action schema, scaffold behavior, and live command validation via `scripts/run_live_smoke.sh`
 
 ## Live transport mode
 
@@ -118,6 +118,21 @@ When `rclpy` is available, the live transport currently does the following:
 - reports `pose`, `rgb_available`, `depth_available`, `last_rgb_at`, `last_depth_at`, `last_odom_at`, and `last_observation_at`
 
 CLI examples:
+
+Short wrapper examples:
+
+```bash
+scripts/player_cmd.sh status
+scripts/player_cmd.sh observe 1
+scripts/player_cmd.sh forward 0.5
+scripts/player_cmd.sh left 30
+scripts/player_cmd.sh right 30
+scripts/player_cmd.sh around
+scripts/player_cmd.sh stop
+scripts/player_cmd.sh ask "Where is the target?"
+```
+
+Low-level wrapper examples:
 
 ```bash
 python -m integrations.agent_ros2.cli status --output-json

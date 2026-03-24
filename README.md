@@ -128,6 +128,21 @@ scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 scripts/stop_local_runtime.sh
 ```
 
+Shortest interactive player-control examples:
+
+```bash
+scripts/player_cmd.sh status
+scripts/player_cmd.sh observe 1
+scripts/player_cmd.sh forward 0.5
+scripts/player_cmd.sh left 30
+scripts/player_cmd.sh right 30
+scripts/player_cmd.sh around
+scripts/player_cmd.sh stop
+scripts/player_cmd.sh wait 1
+scripts/player_cmd.sh ask "Where is the target?"
+scripts/player_cmd.sh action '{"action":"move_forward","parameters":{"distance_m":0.5}}'
+```
+
 Expected behavior for the minimal checks above:
 - `--help` prints CLI usage.
 - `status --output-json` runs even without Unity connected.
