@@ -48,7 +48,7 @@ require_file() {
 require_file "${ROS_SETUP}" \
   "This wrapper is intended to prevent unsourced-shell ROS2/rclpy ABI issues."
 require_file "${PROJECT_ROS_SETUP}" \
-  "Build or install the FreeAskClaw ROS2 runtime before using live agent commands."
+  "Build or start the FreeAskWorld local ROS2 runtime before using live agent commands."
 
 if [[ -f "${ROS2_VENV_ACTIVATE}" ]]; then
   # shellcheck disable=SC1091

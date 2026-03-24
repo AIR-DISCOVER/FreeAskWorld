@@ -129,19 +129,18 @@ scripts/stop_local_runtime.sh
 ```
 
 Expected behavior for the minimal checks above:
-- `--help` should print CLI usage.
-- `status --output-json` should run even without Unity connected.
-- In scaffold-only mode, `transport_ready` may be `false`; this does **not** by itself mean the repo is broken.
-- Full live control requires the external Unity + ROS2 runtime path to be available.
+- `--help` prints CLI usage.
+- `status --output-json` runs even without Unity connected.
+- In scaffold-only mode, `transport_ready: false` does **not** by itself mean the repo is broken.
 
-After the ROS2 live environment is ready, you can also run the sequential command smoke test:
+For live validation, use:
 
 ```bash
 scripts/start_local_runtime.sh
 scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 ```
 
-This sends the main agent actions (`move_forward`, `turn_left`, `turn_right`, `turn_around`, `stop`, `ask_human`, `wait`) and writes a JSON report for quick integration validation.
+This sends the main agent actions (`move_forward`, `turn_left`, `turn_right`, `turn_around`, `stop`, `ask_human`, `wait`) and writes a JSON report.
 
 If `--ros2-live` fails immediately on a fresh machine, check these first:
 - ROS2 environment is installed and sourced correctly.

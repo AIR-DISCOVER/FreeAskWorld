@@ -21,7 +21,7 @@ require_file() {
 }
 
 require_file "${ROS_SETUP}" "Install/source ROS2 Humble before running live smoke tests."
-require_file "${PROJECT_ROS_SETUP}" "Build or install the FreeAskClaw ROS2 runtime before running live smoke tests."
+require_file "${PROJECT_ROS_SETUP}" "Build or start the FreeAskWorld local ROS2 runtime before running live smoke tests."
 require_file "${ROS2_VENV_ACTIVATE}" "Create or move a repo-local .ros2_venv into FreeAskWorld before running live smoke tests."
 
 if [[ -z "${ROS_LOG_DIR:-}" ]]; then

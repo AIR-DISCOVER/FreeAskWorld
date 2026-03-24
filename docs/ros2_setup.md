@@ -6,25 +6,24 @@ It is intended for users who want to run the **ROS2-first live integration path*
 
 `integrations/agent_ros2` + `scripts/agent_ros2_cli.sh`
 
-If you only want a lightweight repo-level smoke check, you can stop at the scaffold commands in the main [`README.md`](../README.md) and skip this file.
+If you only want a lightweight repo-level smoke check, stop at the scaffold commands in [`README.md`](../README.md) and skip this file.
 
 ---
 
 ## What this guide assumes
 
-This guide matches the currently validated local setup:
+This guide assumes:
 
-- **OS**: Ubuntu Linux
-- **ROS2 distro**: **Humble**
-- **Python**: **Python 3.10**
-- **Repo path example**: `~/research/FreeAskWorld`
-- **ROS2 runtime setup sourced by wrapper**:
+- Ubuntu Linux
+- ROS2 **Humble**
+- Python **3.10**
+- repo path like `~/research/FreeAskWorld`
+- repo-local ROS env: `.ros2_venv`
+- setup files:
   - `/opt/ros/humble/setup.bash`
   - `runtime/ros2/install/setup.bash`
-- **Recommended repo-local Python env for ROS live mode**:
-  - `~/research/FreeAskWorld/.ros2_venv`
 
-Important: this repo now includes a **repo-owned local runtime path** for the ROS2 bridge/backend used in local testing. However, live operation still depends on system ROS2 support and a working Unity-side ROS2 connection.
+FreeAskWorld now includes a repo-owned local runtime for ROS2 bridge/backend testing. Live operation still depends on system ROS2 support and a working Unity-side ROS2 connection.
 
 ---
 
@@ -39,7 +38,7 @@ source /opt/ros/humble/setup.bash
 ros2 --help
 ```
 
-If `ros2 --help` fails, do **not** continue yet.
+If `ros2 --help` fails, stop here and fix ROS2 first.
 
 ---
 
@@ -58,12 +57,7 @@ After the local runtime has been built and started at least once, this setup fil
 runtime/ros2/install/setup.bash
 ```
 
-The wrapper script will fail early if either of these is missing:
-
-- `/opt/ros/humble/setup.bash`
-- `runtime/ros2/install/setup.bash`
-
-So before debugging Python, first confirm the runtime setup files are actually present. If `runtime/ros2/install/setup.bash` does not exist yet, start by bringing up the repo-owned local runtime with `scripts/start_local_runtime.sh`.
+If either `/opt/ros/humble/setup.bash` or `runtime/ros2/install/setup.bash` is missing, fix that first. If `runtime/ros2/install/setup.bash` does not exist yet, start by running `scripts/start_local_runtime.sh`.
 
 ---
 
@@ -79,9 +73,9 @@ source .ros2_venv/bin/activate
 
 Why this matters:
 
-- `rclpy` is often sensitive to the active Python ABI.
-- Running from conda `base` or another mismatched Python environment can break ROS2 Python imports.
-- The wrapper script in this repo automatically activates `.ros2_venv` first if it exists.
+- `rclpy` is sensitive to the active Python ABI.
+- A mismatched conda/base environment can break ROS2 imports.
+- The wrapper auto-activates `.ros2_venv` when present.
 
 ---
 
@@ -175,7 +169,7 @@ What to check:
 - Are you accidentally in conda `base`?
 - Did you activate `.ros2_venv`?
 - Did you source `/opt/ros/humble/setup.bash`?
-- Did you source the FreeAskClaw runtime setup?
+- Did you source `runtime/ros2/install/setup.bash`?
 
 Recommended fix:
 - leave the mismatched environment
@@ -189,11 +183,11 @@ Typical symptom:
 
 What to check:
 - Does `/opt/ros/humble/setup.bash` exist?
-- Does the FreeAskClaw runtime setup file exist at the configured path?
+- Does `runtime/ros2/install/setup.bash` exist?
 
 Recommended fix:
 - install ROS2 Humble correctly
-- build or install the required FreeAskClaw ROS2 runtime first
+- run `scripts/start_local_runtime.sh` first so the repo-owned runtime is built
 
 ### C. ROS log directory permission error
 
@@ -240,12 +234,12 @@ What to check:
 If you are new to this repo, use this order:
 
 1. Run the repo-level smoke checks from `README.md`
-2. Confirm the wrapper exists and prints help
-3. Install/configure ROS2 Humble
-4. Confirm the external FreeAskClaw runtime setup file exists
-5. Create `.ros2_venv`
+2. Install/configure ROS2 Humble
+3. Create `.ros2_venv`
+4. Run `scripts/start_local_runtime.sh`
+5. Confirm `scripts/status_local_runtime.sh` and `/healthz` work
 6. Run the live status command through `scripts/agent_ros2_cli.sh`
-7. Only then move on to Unity-side live control and observation debugging
+7. Then move on to Unity-side live control and observation debugging
 
 ---
 
