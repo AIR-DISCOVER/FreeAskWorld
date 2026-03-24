@@ -7,8 +7,10 @@ ROS_SETUP="/opt/ros/humble/setup.bash"
 PROJECT_ROS_SETUP="${REPO_ROOT}/runtime/ros2/install/setup.bash"
 ROS2_VENV_ACTIVATE="${REPO_ROOT}/.ros2_venv/bin/activate"
 DEFAULT_ROS_LOG_DIR="/tmp/roslog"
-STEP_SECONDS="${STEP_SECONDS:-2}"
+STEP_SECONDS="${STEP_SECONDS:-3}"
 OBSERVE_SECONDS="${OBSERVE_SECONDS:-1}"
+FORWARD_DISTANCE="${FORWARD_DISTANCE:-1.5}"
+TURN_DEGREES="${TURN_DEGREES:-45}"
 REPORT_PATH="${REPORT_PATH:-integration_command_smoke.json}"
 ASK_PROMPT="${ASK_PROMPT:-Where is the target?}"
 
@@ -99,17 +101,17 @@ sleep_step() {
 run_and_capture "status_before" bash scripts/player_cmd.sh status
 capture_observe "before"
 
-run_and_capture "forward" bash scripts/player_cmd.sh forward 1.0
+run_and_capture "forward" bash scripts/player_cmd.sh forward "${FORWARD_DISTANCE}"
 summarize_step "forward"
 sleep_step "$STEP_SECONDS"
 capture_observe "after_forward"
 
-run_and_capture "left" bash scripts/player_cmd.sh left 30
+run_and_capture "left" bash scripts/player_cmd.sh left "${TURN_DEGREES}"
 summarize_step "left"
 sleep_step "$STEP_SECONDS"
 capture_observe "after_left"
 
-run_and_capture "right" bash scripts/player_cmd.sh right 30
+run_and_capture "right" bash scripts/player_cmd.sh right "${TURN_DEGREES}"
 summarize_step "right"
 sleep_step "$STEP_SECONDS"
 capture_observe "after_right"
@@ -143,6 +145,8 @@ for name in ["forward", "left", "right", "around", "wait", "ask", "stop"]:
 report = {
     "step_seconds": float(${STEP_SECONDS@Q}),
     "observe_seconds": float(${OBSERVE_SECONDS@Q}),
+    "forward_distance": float(${FORWARD_DISTANCE@Q}),
+    "turn_degrees": float(${TURN_DEGREES@Q}),
     "steps": steps,
     "summary": {
         "total_steps": len(steps),
