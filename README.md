@@ -81,7 +81,7 @@ Agent config entry paths (for OpenClaw / Claude Code / Codex / custom agent adap
 - ROS2 integration doc: `docs/agent_ros2_integration.md`
 - ROS2 package: `integrations/agent_ros2/`
 - ROS2 wrapper CLI: `scripts/agent_ros2_cli.sh`
-- Closed-loop bridge API/CLI: `closed_loop/agent_bridge.py`, `closed_loop/agent_server.py`, `closed_loop/agent_cli.py`, `closed_loop/agent_mcp.py`
+- Legacy closed-loop agent bridge prototypes are archived under `archived/closed_loop-agent/` and are not part of the current recommended control path.
 
 **Help auto install Agent ROS2 Integration.** Other AI agents can discover these paths and install/configure automatically.
 

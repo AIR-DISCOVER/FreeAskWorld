@@ -11,7 +11,7 @@ For this local configuration, the recommended agent integration path is:
 
 `Agent (OpenClaw / Codex / Claude / custom) -> ROS2-compatible bridge -> ROS TCP Endpoint / ROS2 backend -> Unity FreeAskWorld simulator`
 
-The previously added `closed_loop` websocket Agent bridge remains in the repo, but it is not the active runtime path for the current Unity ROS2 configuration. Treat that websocket path as additive, experimental, and future-facing for this setup.
+The previously added `closed_loop` websocket path remains in the repo, but it is not the active runtime path for the current Unity ROS2 configuration. Treat that websocket path as additive and legacy for this setup. Older experimental closed-loop agent bridge prototypes are archived under `archived/closed_loop-agent/`.
 
 ## Agent compatibility
 

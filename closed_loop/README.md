@@ -4,7 +4,7 @@ For the current recommended local runtime path, start from the main [README.md](
 
 If you need the currently validated ROS2 environment setup, see [docs/ros2_setup.md](../docs/ros2_setup.md).
 
-> Note: this `closed_loop` path is the legacy/additive websocket compatibility path. For the current local Unity setup, external users should treat the ROS2-first path as the primary starting point.
+> Note: this `closed_loop` path is the legacy/additive websocket compatibility path. For the current local Unity setup, external users should treat the ROS2-first path as the primary starting point. Older experimental closed-loop agent bridge prototypes have been moved to `archived/closed_loop-agent/`.
 
 ## Start
 
