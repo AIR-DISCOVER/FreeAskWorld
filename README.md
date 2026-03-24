@@ -123,7 +123,7 @@ Expected behavior for the minimal checks above:
 After the ROS2 live environment is ready, you can also run the sequential command smoke test:
 
 ```bash
-bash -lc 'source .ros2_venv/bin/activate && source /opt/ros/humble/setup.bash && source /home/wyabz/Project/FreeAskClaw/runtime/ros2/install/setup.bash && python -m integrations.agent_ros2.live_command_smoke --step-seconds 2 --observe-seconds 1'
+scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 ```
 
 This sends the main agent actions (`move_forward`, `turn_left`, `turn_right`, `turn_around`, `stop`, `ask_human`, `wait`) and writes a JSON report for quick integration validation.
