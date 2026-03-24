@@ -90,7 +90,7 @@ Canonical entry command for auto-discovery:
 
 ## News
 
-- **2026-03-24:** Added a repo-owned local runtime, one-command environment setup, working player control via the HTTP bridge, and a visible live smoke test for agent-driven validation.
+- **2026-03-24:** Updated the Agent Robot Integration path with a repo-owned ROS2 runtime, one-command environment setup, working agent/player control through the local bridge, and a visible live smoke test for validation.
 
 ## First-time setup notes (read this before install)
 
