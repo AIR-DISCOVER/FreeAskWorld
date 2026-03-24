@@ -103,7 +103,8 @@ Common first-time blockers:
 Recommended minimal verification sequence after cloning:
 
 ```bash
-python3 -m venv .venv
+# General repo environment for scaffold/basic checks
+python3.10 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
@@ -116,11 +117,20 @@ python -m integrations.agent_ros2.cli observe --output-json
 bash scripts/agent_ros2_cli.sh --help
 ```
 
+Important:
+- `.venv` is enough for scaffold/basic checks.
+- **Live ROS2 mode should use `.ros2_venv`**, not just `.venv`.
+- If an agent is asked to “set up a new .env according to README.md”, it should create **both** `.venv` and `.ros2_venv` when live testing is expected.
+
 Recommended independent local runtime flow:
 
 ```bash
+# ROS2-compatible environment for live mode
 python3.10 -m venv .ros2_venv
 source .ros2_venv/bin/activate
+
+# Install the minimal Python dependencies needed by the local runtime and live wrappers
+python -m pip install fastapi uvicorn 'pydantic>=2.8,<3' numpy
 
 scripts/start_local_runtime.sh
 scripts/status_local_runtime.sh
@@ -128,6 +138,8 @@ curl http://127.0.0.1:8787/healthz
 scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 scripts/stop_local_runtime.sh
 ```
+
+Before this step, install ROS2 Humble manually by following [`docs/ros2_setup.md`](docs/ros2_setup.md).
 
 Shortest interactive player-control examples:
 
@@ -159,7 +171,8 @@ scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 This sends the main agent actions (`move_forward`, `turn_left`, `turn_right`, `turn_around`, `stop`, `ask_human`, `wait`) and writes a JSON report.
 
 If `--ros2-live` fails immediately on a fresh machine, check these first:
-- ROS2 environment is installed and sourced correctly.
+- ROS2 Humble is installed manually; use [`docs/ros2_setup.md`](docs/ros2_setup.md).
+- `.ros2_venv` exists and includes at least `numpy` plus the local runtime Python deps.
 - The Unity/ROS2 backend is actually running and reachable.
 - The machine allows DDS/UDP/shared-memory transport required by ROS2 middleware.
 - The ROS log directory is writable (for example, set `ROS_LOG_DIR=/tmp/roslog` if needed).

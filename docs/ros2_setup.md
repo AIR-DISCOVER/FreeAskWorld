@@ -69,6 +69,7 @@ For live ROS2 mode, use a repo-local virtual environment:
 cd ~/research/FreeAskWorld
 python3.10 -m venv .ros2_venv
 source .ros2_venv/bin/activate
+python -m pip install fastapi uvicorn 'pydantic>=2.8,<3' numpy
 ```
 
 Why this matters:
@@ -95,6 +96,8 @@ python -c "import rclpy, std_msgs.msg, sensor_msgs.msg, nav_msgs.msg"
 ```
 
 If this import check fails, live ROS2 mode will not work yet.
+
+For agent automation: if an agent is asked to "set up a new .env according to README.md", it should create `.venv` for general repo checks and `.ros2_venv` for live ROS2 mode.
 
 ---
 
