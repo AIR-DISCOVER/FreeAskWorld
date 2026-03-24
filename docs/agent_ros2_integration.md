@@ -104,7 +104,7 @@ The additive ROS2 path under [`integrations/agent_ros2`](../integrations/agent_r
 - a lightweight CLI
 - a transport abstraction that still supports the in-memory scaffold transport for tests
 - an optional `RclpyRos2Transport` that publishes action/task envelopes and tracks ack/image/odometry observations through `rclpy`
-- smoke tests for action schema, scaffold behavior, and live command validation via `scripts/run_live_smoke.sh`
+- smoke tests for action schema, scaffold behavior, and visible live command validation via `scripts/run_live_smoke.sh`
 
 ## Live transport mode
 
@@ -130,6 +130,12 @@ scripts/player_cmd.sh right 30
 scripts/player_cmd.sh around
 scripts/player_cmd.sh stop
 scripts/player_cmd.sh ask "Where is the target?"
+```
+
+Visible end-to-end smoke test:
+
+```bash
+STEP_SECONDS=2 OBSERVE_SECONDS=1 scripts/run_live_smoke.sh
 ```
 
 Low-level wrapper examples:

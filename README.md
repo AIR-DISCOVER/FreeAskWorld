@@ -126,9 +126,11 @@ source .ros2_venv/bin/activate
 scripts/start_local_runtime.sh
 scripts/status_local_runtime.sh
 curl http://127.0.0.1:8787/healthz
-scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
+STEP_SECONDS=2 OBSERVE_SECONDS=1 scripts/run_live_smoke.sh
 scripts/stop_local_runtime.sh
 ```
+
+`run_live_smoke.sh` now visibly executes all major player actions for a few seconds each and prints step-by-step results plus observation summaries.
 
 Shortest interactive player-control examples:
 
@@ -154,10 +156,10 @@ For live validation, use:
 
 ```bash
 scripts/start_local_runtime.sh
-scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
+STEP_SECONDS=2 OBSERVE_SECONDS=1 scripts/run_live_smoke.sh
 ```
 
-This sends the main agent actions (`move_forward`, `turn_left`, `turn_right`, `turn_around`, `stop`, `ask_human`, `wait`) and writes a JSON report.
+This visibly runs the main player actions (`forward`, `left`, `right`, `around`, `wait`, `ask`, `stop`), prints each step result, captures observations between steps, and writes a JSON report.
 
 If `--ros2-live` fails immediately on a fresh machine, check these first:
 - ROS2 Humble is installed manually; use [`docs/ros2_setup.md`](docs/ros2_setup.md).

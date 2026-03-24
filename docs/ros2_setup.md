@@ -152,11 +152,13 @@ bash scripts/agent_ros2_cli.sh --ros2-live move-forward --distance-m 1.0 --outpu
 bash scripts/agent_ros2_cli.sh --ros2-live ask-human "Where is the target?" --output-json
 ```
 
-For a sequential command smoke test that sends the main agent actions and records a JSON report, use the wrapper:
+For a sequential live smoke test that visibly exercises the main player actions and records a JSON report, use:
 
 ```bash
-scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
+STEP_SECONDS=2 OBSERVE_SECONDS=1 scripts/run_live_smoke.sh
 ```
+
+This prints each action result, waits long enough to see motion in simulation, and captures observation summaries between steps.
 
 For shorter manual checks, use:
 
