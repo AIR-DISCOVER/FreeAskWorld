@@ -88,6 +88,44 @@ Agent config entry paths (for OpenClaw / Claude Code / Codex / custom agent adap
 Canonical entry command for auto-discovery:
 - `bash scripts/agent_ros2_cli.sh --help`
 
+## First-time setup notes (read this before install)
+
+For external users, the current repo is **partially runnable** out of the box, but the full Unity + ROS2 live path depends on external runtime setup and machine permissions.
+
+Common first-time blockers:
+- **Python dependencies require network access.** `pip install -r requirements.txt` may fail in restricted environments, behind an unavailable proxy, or without a reachable package index.
+- **The main local runtime path is ROS2-first.** The recommended entry is the ROS2 scaffold in `integrations/agent_ros2/`, not the older websocket bridge in `closed_loop/`.
+- **Live ROS2 mode needs external runtime support.** `--ros2-live` requires a valid ROS2 environment, ROS2/DDS permissions, and access to the Unity-side ROS2 backend (current local config: `127.0.0.1:10000`).
+- **The websocket `closed_loop` path is additive, not the primary local path** for the current Unity configuration.
+
+Recommended minimal verification sequence after cloning:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# Minimal repo-level smoke checks
+python -m integrations.agent_ros2.cli --help
+python -m integrations.agent_ros2.cli status --output-json
+python -m integrations.agent_ros2.cli observe --output-json
+
+# Recommended wrapper for ROS2 live mode
+bash scripts/agent_ros2_cli.sh --help
+```
+
+Expected behavior for the minimal checks above:
+- `--help` should print CLI usage.
+- `status --output-json` should run even without Unity connected.
+- In scaffold-only mode, `transport_ready` may be `false`; this does **not** by itself mean the repo is broken.
+- Full live control requires the external Unity + ROS2 runtime path to be available.
+
+If `--ros2-live` fails immediately on a fresh machine, check these first:
+- ROS2 environment is installed and sourced correctly.
+- The Unity/ROS2 backend is actually running and reachable.
+- The machine allows DDS/UDP/shared-memory transport required by ROS2 middleware.
+- The ROS log directory is writable (for example, set `ROS_LOG_DIR=/tmp/roslog` if needed).
+
 ---
 
 ## 🎥 Demos
