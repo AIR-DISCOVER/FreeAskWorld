@@ -61,7 +61,7 @@ The agent bridge is additive. It does not replace the existing Unity-facing webs
 Run the existing websocket/baseline server first so Unity can connect as before:
 
 ```bash
-cd /home/wyabz/research/FreeAskWorld/closed_loop
+cd closed_loop
 python server_ETPNav.py
 # or
 python server_BEVBERT.py
@@ -70,7 +70,7 @@ python server_BEVBERT.py
 Run the additive agent HTTP bridge in a second process:
 
 ```bash
-cd /home/wyabz/research/FreeAskWorld/closed_loop
+cd closed_loop
 python agent_cli.py serve --host 0.0.0.0 --port 8000
 ```
 

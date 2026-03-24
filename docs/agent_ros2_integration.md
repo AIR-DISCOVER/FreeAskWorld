@@ -95,7 +95,9 @@ Notes:
 
 ## What is implemented in-repo
 
-The additive ROS2 path under [`integrations/agent_ros2`](/home/wyabz/research/FreeAskWorld/integrations/agent_ros2) provides:
+For environment setup that matches the currently working local ROS2 runtime path, see [`docs/ros2_setup.md`](ros2_setup.md).
+
+The additive ROS2 path under [`integrations/agent_ros2`](../integrations/agent_ros2) provides:
 
 - a documented action and topic contract
 - a stable Python bridge interface
