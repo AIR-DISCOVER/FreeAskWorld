@@ -1,13 +1,333 @@
-[INFO] [1774343793.746364304] [UnityEndpoint]: Starting server on 0.0.0.0:10000
-[INFO] [1774343793.762651589] [UnityEndpoint]: Connection from 127.0.0.1
-[INFO] [1774343793.782124158] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
-[INFO] [1774343793.783566040] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
-[INFO] [1774343793.784783427] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
-[INFO] [1774343793.785921078] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
-[INFO] [1774343793.880484286] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
-[INFO] [1774343793.881566921] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
-[INFO] [1774343793.898051931] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
-[INFO] [1774343793.899221254] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
-[INFO] [1774343793.900296570] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
-[INFO] [1774343793.901400100] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
-[INFO] [1774343793.906154150] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[INFO] [1774357186.347373311] [UnityEndpoint]: Starting server on 0.0.0.0:10000
+[INFO] [1774357187.043626672] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774357187.059226497] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774357187.060568347] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774357187.061551839] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357187.062545104] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357187.166373585] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357187.167605048] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357187.184946074] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774357187.186328566] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357187.187389103] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357187.188511854] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774357187.193856941] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774357264.004064781] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774357264.004700641] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774357264.607173667] [UnityEndpoint]: Connection from 127.0.0.1
+[WARN] [1774357264.722872886] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.726013520] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[WARN] [1774357264.726135078] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.729719456] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[WARN] [1774357264.729819169] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.733820731] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[WARN] [1774357264.733930483] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.739866698] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[WARN] [1774357264.739970301] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.743749435] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[WARN] [1774357264.743911310] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.747177220] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[WARN] [1774357264.747279816] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.749480200] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[WARN] [1774357264.749591341] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.752221731] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[WARN] [1774357264.752376544] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.754995596] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[WARN] [1774357264.755156892] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.758662556] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[WARN] [1774357264.758863329] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[INFO] [1774357264.764475367] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774357468.715741444] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774357468.717388896] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774357469.335813798] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774357469.454001203] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774357469.455692910] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774357469.457306537] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357469.458987972] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357469.460615976] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357469.462289021] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357469.463848670] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774357469.466436791] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357469.471160690] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357469.472809475] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774357469.475488160] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774357671.972357409] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774357671.973234447] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774357672.559508736] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774357672.676223035] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774357672.682049168] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774357672.683847615] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357672.685437776] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357672.688683949] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357672.690826126] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357672.694519361] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774357672.698573316] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357672.702909464] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357672.706941104] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774357672.709703601] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774357874.760110874] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774357874.760532112] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774357875.356836079] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774357875.483653472] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774357875.494371708] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774357875.506890627] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357875.518285737] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774357875.530724860] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357875.542743775] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774357875.555315715] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774357875.568065945] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357875.585229064] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774357875.599218340] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774357875.608765617] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774357998.030408060] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774357998.030661567] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774358052.260441892] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774358052.673444528] [UnityEndpoint]: RegisterSubscriber(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774358052.683904647] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774358052.694168387] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774358052.707697130] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358052.718272322] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358053.034689902] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358053.047251321] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358053.061661618] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774358053.072915083] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358053.085903144] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358053.097217560] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774358053.107349002] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774358264.474331640] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[ERROR] [1774358264.474591165] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774358264.474945827] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774358265.071206684] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774358265.189338559] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774358265.202673994] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774358265.216141649] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358265.229907661] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358265.319898892] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358265.335235379] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358265.351956850] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774358265.369327524] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358265.386359414] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358265.400940322] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774358265.415233325] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774358469.474831336] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774358469.474934108] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774358469.475316447] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774358470.105516971] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774358470.210298293] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774358470.219679430] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774358470.231091518] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358470.243629353] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358470.256768753] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358470.267575556] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358470.285046103] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774358470.301169881] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358470.315866145] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358470.330528533] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774358470.345748421] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774358672.393825578] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[ERROR] [1774358672.394679647] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774358672.395121837] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774358673.020777948] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774358673.128510738] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774358673.136746766] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774358673.147952718] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358673.156971469] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358673.173116864] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358673.185091288] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358673.201428638] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774358673.215310479] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358673.230263231] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358673.248004420] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774358673.260859738] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774358875.265580147] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774358875.265988487] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774358875.884986124] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774358875.999803928] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774358876.009399595] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774358876.022060386] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358876.034686807] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774358876.048346199] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358876.063033653] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774358876.079056393] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774358876.093588668] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358876.111203475] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774358876.127572007] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774358876.141805968] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774359078.549412349] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774359078.549848244] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774359078.550034131] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774359079.166765380] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774359079.273748570] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774359079.284136184] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774359079.294364040] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359079.307807067] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359079.322661940] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359079.337712727] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359079.355085245] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774359079.371179106] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359079.388487534] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359079.399143399] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774359079.412761804] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774359239.849643459] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774359239.850319390] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774359239.850451922] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774359240.487253536] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774359240.602537742] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774359240.612879061] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774359240.629221495] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359240.645476914] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359240.755038150] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359240.768259962] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359240.782510751] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774359240.793514675] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359240.804866255] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359240.816406603] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774359240.828933792] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774359442.911807760] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774359442.912634013] [UnityEndpoint]: Disconnected from 127.0.0.1
+[ERROR] [1774359442.912804210] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774359443.530967736] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774359443.644978907] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774359443.662833348] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774359443.678156087] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359443.695407464] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359443.709222771] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359443.726757887] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359443.745542903] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774359443.761511316] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359443.775447724] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359443.790697452] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774359443.805985333] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774359470.935767279] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774359470.935991004] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774359470.936588323] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774359471.585910203] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774359471.695882813] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774359471.711531892] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774359471.724249531] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359471.741157389] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359471.753895829] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359471.766445264] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359471.781769067] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774359471.796571317] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359471.808695414] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359471.823794910] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774359471.839571792] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774359673.885554349] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[ERROR] [1774359673.885753107] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774359673.886204021] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774359674.494705182] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774359674.602904503] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774359674.615041236] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774359674.629476944] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359674.644826728] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359674.661645836] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359674.680656091] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359674.695586348] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774359674.713554248] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359674.731874852] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359674.750402359] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774359674.766230429] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774359876.787955483] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774359876.789693130] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774359876.789856712] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774359877.388810211] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774359877.501069696] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774359877.515949241] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774359877.528985556] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359877.540536916] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774359877.554449288] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359877.566507742] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774359877.578395149] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774359877.594229814] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359877.609409932] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774359877.624746651] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774359877.637653405] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774360079.560660303] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774360079.561061321] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774360079.561216255] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774360080.190876805] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774360080.307372297] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774360080.321632474] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774360080.335962531] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360080.351023914] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360080.363678648] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360080.375219256] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360080.392546472] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774360080.407548627] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360080.422474209] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360080.434983539] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774360080.449565098] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774360282.457390353] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774360282.458094495] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774360283.082219569] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774360283.195904991] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774360283.211720045] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774360283.224280410] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360283.238214326] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360283.249177540] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360283.261748470] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360283.276903087] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774360283.290848709] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360283.303222703] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360283.316909324] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774360283.328484503] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774360485.350317427] [UnityEndpoint]: Exception: No more data available
+[INFO] [1774360485.350664937] [UnityEndpoint]: Disconnected from 127.0.0.1
+[ERROR] [1774360485.350777064] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774360485.950529639] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774360486.061942212] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774360486.077983153] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774360486.087835091] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360486.102017511] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360486.115041177] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360486.131854410] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360486.148351584] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774360486.163057437] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360486.178016889] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360486.192976351] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774360486.209831230] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774360688.157555762] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774360688.158229812] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774360688.158615451] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774360688.771683636] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774360688.877474323] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774360688.894606306] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774360688.911337530] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360688.928929644] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360688.944047871] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360688.957520794] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360688.969155099] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774360688.981735911] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360688.993492292] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360689.000721101] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774360689.011887528] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774360890.990845402] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774360890.990929622] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774360890.991131946] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774360891.607876522] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774360891.725086928] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774360891.741301994] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774360891.756172886] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360891.769819019] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360891.783681253] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360891.797406081] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360891.813944975] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774360891.828753811] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360891.844692486] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360891.855673890] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774360891.867539418] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK
+[ERROR] [1774360923.042229167] [UnityEndpoint]: Exception: No more data available
+[ERROR] [1774360923.042432802] [UnityEndpoint]: Exception [Errno 32] Broken pipe
+[INFO] [1774360923.042574748] [UnityEndpoint]: Disconnected from 127.0.0.1
+[INFO] [1774360923.648863645] [UnityEndpoint]: Connection from 127.0.0.1
+[INFO] [1774360923.756320521] [UnityEndpoint]: RegisterPublisher(/clock, <class 'rosgraph_msgs.msg._clock.Clock'>) OK
+[INFO] [1774360923.758393240] [UnityEndpoint]: RegisterSubscriber(/simulator_msg/simulator_command, <class 'simulator_messages.msg._simulator_command.SimulatorCommand'>) OK
+[INFO] [1774360923.760480518] [UnityEndpoint]: RegisterPublisher(/simulator_msg/simulator_command/untiy, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360923.762395813] [UnityEndpoint]: RegisterPublisher(/simulator_msg/task, <class 'std_msgs.msg._string.String'>) OK
+[INFO] [1774360923.764235994] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360923.765981111] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/image_raw, <class 'sensor_msgs.msg._image.Image'>) OK
+[INFO] [1774360923.768066813] [UnityEndpoint]: RegisterPublisher(/tf, <class 'tf2_msgs.msg._tf_message.TFMessage'>) OK
+[INFO] [1774360923.769690369] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/color/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360923.771818392] [UnityEndpoint]: RegisterPublisher(/simulator_msg/camera/depth/camera_info, <class 'sensor_msgs.msg._camera_info.CameraInfo'>) OK
+[INFO] [1774360923.773953035] [UnityEndpoint]: RegisterPublisher(/simulator_msg/imu, <class 'sensor_msgs.msg._imu.Imu'>) OK
+[INFO] [1774360923.776176948] [UnityEndpoint]: RegisterPublisher(/simulator_msg/odom, <class 'nav_msgs.msg._odometry.Odometry'>) OK

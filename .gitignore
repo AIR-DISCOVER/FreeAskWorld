@@ -1,3 +1,14 @@
 *.mp4
 /*.mp4
 /archived/closed_loop-agent/
+/.ros2_venv/
+/.venv-fresh-install/
+/.venv-openclaw-smoke/
+**/__pycache__/
+*.pyc
+/integration_command_smoke.json
+/runtime/*.log
+/runtime/ros2/*.log
+/runtime/ros2/*.pid
+/runtime/ros2/ros_home/
+/src/freeaskworld_local_runtime.egg-info/
