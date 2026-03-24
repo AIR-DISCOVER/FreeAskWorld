@@ -24,7 +24,7 @@ This guide matches the currently validated local setup:
 - **Recommended repo-local Python env for ROS live mode**:
   - `~/research/FreeAskWorld/.ros2_venv`
 
-Important: this repo does **not** by itself install or bundle the full Unity-side ROS2 runtime. The live path still depends on external runtime pieces being present.
+Important: this repo now includes a **repo-owned local runtime path** for the ROS2 bridge/backend used in local testing. However, live operation still depends on system ROS2 support and a working Unity-side ROS2 connection.
 
 ---
 
@@ -43,9 +43,16 @@ If `ros2 --help` fails, do **not** continue yet.
 
 ---
 
-## 2. Make sure the repo-owned ROS2 runtime can be built
+## 2. Start with the repo-owned local runtime
 
-The recommended wrapper used by this repo expects this setup file to exist after the local runtime is built:
+The recommended path is to let FreeAskWorld bring up its own local runtime first:
+
+```bash
+scripts/start_local_runtime.sh
+scripts/status_local_runtime.sh
+```
+
+After the local runtime has been built and started at least once, this setup file should exist:
 
 ```bash
 runtime/ros2/install/setup.bash

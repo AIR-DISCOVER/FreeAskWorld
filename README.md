@@ -90,12 +90,13 @@ Canonical entry command for auto-discovery:
 
 ## First-time setup notes (read this before install)
 
-For external users, the current repo is **partially runnable** out of the box, but the full Unity + ROS2 live path depends on external runtime setup and machine permissions.
+For external users, the current repo now includes a **repo-owned local runtime path** for ROS2-first live testing. You can bring up the local bridge/backend directly from this repo, but the full Unity + ROS2 live path still depends on machine permissions and a working Unity-side ROS2 connection.
 
 Common first-time blockers:
 - **Python dependencies require network access.** `pip install -r requirements.txt` may fail in restricted environments, behind an unavailable proxy, or without a reachable package index.
 - **The main local runtime path is ROS2-first.** The recommended entry is the ROS2 scaffold in `integrations/agent_ros2/`, not the older websocket bridge in `closed_loop/`.
-- **Live ROS2 mode needs external runtime support.** `--ros2-live` requires a valid ROS2 environment, ROS2/DDS permissions, and access to the Unity-side ROS2 backend (current local config: `127.0.0.1:10000`).
+- **This repo now ships a repo-owned local runtime path.** Use `scripts/start_local_runtime.sh` to start the local ROS2 backend and bridge from FreeAskWorld itself.
+- **Live ROS2 mode still needs system/runtime support.** `--ros2-live` requires a valid ROS2 environment, ROS2/DDS permissions, and access to the Unity-side ROS2 backend (current local config: `127.0.0.1:10000`).
 - **The websocket `closed_loop` path is additive, not the primary local path** for the current Unity configuration.
 
 Recommended minimal verification sequence after cloning:
@@ -112,6 +113,19 @@ python -m integrations.agent_ros2.cli observe --output-json
 
 # Recommended wrapper for ROS2 live mode
 bash scripts/agent_ros2_cli.sh --help
+```
+
+Recommended independent local runtime flow:
+
+```bash
+python3.10 -m venv .ros2_venv
+source .ros2_venv/bin/activate
+
+scripts/start_local_runtime.sh
+scripts/status_local_runtime.sh
+curl http://127.0.0.1:8787/healthz
+scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
+scripts/stop_local_runtime.sh
 ```
 
 Expected behavior for the minimal checks above:

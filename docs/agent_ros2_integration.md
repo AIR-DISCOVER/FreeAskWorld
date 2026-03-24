@@ -59,9 +59,9 @@ The Agent-facing bridge should expose a narrow status and observation surface:
 This repo currently provides that surface in two modes:
 
 - scaffold mode: stable CLI/Python contract without live ROS2 delivery
-- live transport mode: an optional `rclpy` transport that publishes/subscribes on the simulator-facing ROS2 topics when external ROS2 runtime pieces are present
+- live transport mode: an optional `rclpy` transport that publishes/subscribes on the simulator-facing ROS2 topics when the repo-owned local runtime or another compatible ROS2 runtime is available
 
-It still does not claim full standalone ROS2 runtime support from this repository alone.
+The repository now includes a minimal local runtime path for standalone FreeAskWorld testing, centered around `scripts/start_local_runtime.sh`, `runtime/ros2/`, and `src/freeaskclaw/`.
 
 ## ROS2-facing channels
 
@@ -95,7 +95,7 @@ Notes:
 
 ## What is implemented in-repo
 
-For environment setup that matches the currently working local ROS2 runtime path, see [`docs/ros2_setup.md`](ros2_setup.md).
+For environment setup that matches the currently working local ROS2 runtime path, see [`docs/ros2_setup.md`](ros2_setup.md). For the standalone local runtime entrypoint, start with `scripts/start_local_runtime.sh` from the repo root.
 
 The additive ROS2 path under [`integrations/agent_ros2`](../integrations/agent_ros2) provides:
 
