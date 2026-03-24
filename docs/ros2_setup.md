@@ -42,9 +42,15 @@ If `ros2 --help` fails, stop here and fix ROS2 first.
 
 ---
 
-## 2. Start with the repo-owned local runtime
+## 2. Set up the repo-local environment
 
-The recommended path is to let FreeAskWorld bring up its own local runtime first:
+The recommended path is to let FreeAskWorld set up and reuse its own repo-local environment first:
+
+```bash
+bash scripts/setup_envs.sh
+```
+
+Then bring up the local runtime:
 
 ```bash
 scripts/start_local_runtime.sh
@@ -97,7 +103,11 @@ python -c "import rclpy, std_msgs.msg, sensor_msgs.msg, nav_msgs.msg"
 
 If this import check fails, live ROS2 mode will not work yet.
 
-For agent automation: if an agent is asked to "set up a new .env according to README.md", it should create `.venv` for general repo checks and `.ros2_venv` for live ROS2 mode.
+For agent automation, prefer a single setup instruction:
+
+```text
+Install all envs by scripts/setup_envs.sh
+```
 
 ---
 

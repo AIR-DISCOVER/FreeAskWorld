@@ -90,56 +90,44 @@ Canonical entry command for auto-discovery:
 
 ## First-time setup notes (read this before install)
 
-For external users, the current repo now includes a **repo-owned local runtime path** for ROS2-first live testing. You can bring up the local bridge/backend directly from this repo, but the full Unity + ROS2 live path still depends on machine permissions and a working Unity-side ROS2 connection.
+FreeAskWorld now includes a **repo-owned local runtime path** for ROS2-first live testing.
 
-Common first-time blockers:
-- **Use Python 3.10.** The current local ROS2/runtime flow is validated against Python 3.10.
-- **Python dependencies require network access.** `pip install -r requirements.txt` may fail in restricted environments, behind an unavailable proxy, or without a reachable package index.
-- **The main local runtime path is ROS2-first.** The recommended entry is the ROS2 scaffold in `integrations/agent_ros2/`, not the older websocket bridge in `closed_loop/`.
-- **This repo now ships a repo-owned local runtime path.** Use `scripts/start_local_runtime.sh` to start the local ROS2 backend and bridge from FreeAskWorld itself.
-- **Live ROS2 mode still needs system/runtime support.** `--ros2-live` requires a valid ROS2 environment, ROS2/DDS permissions, and access to the Unity-side ROS2 backend (current local config: `127.0.0.1:10000`).
-- **The websocket `closed_loop` path is additive, not the primary local path** for the current Unity configuration.
+### Requirements
+- **Python 3.10**
+- **ROS2 Humble** installed manually
+- ROS2 manual setup guide: [`docs/ros2_setup.md`](docs/ros2_setup.md)
 
-Recommended minimal verification sequence after cloning:
+### Option 1 — Agent install (recommended)
+In an agent session, use this exact instruction:
 
-```bash
-# General repo environment for scaffold/basic checks
-python3.10 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-# Minimal repo-level smoke checks
-python -m integrations.agent_ros2.cli --help
-python -m integrations.agent_ros2.cli status --output-json
-python -m integrations.agent_ros2.cli observe --output-json
-
-# Recommended wrapper for ROS2 live mode
-bash scripts/agent_ros2_cli.sh --help
+```text
+Install all envs by scripts/setup_envs.sh
 ```
 
-Important:
-- `.venv` is enough for scaffold/basic checks.
-- **Live ROS2 mode should use `.ros2_venv`**, not just `.venv`.
-- If an agent is asked to “set up a new .env according to README.md”, it should create **both** `.venv` and `.ros2_venv` when live testing is expected.
-
-Recommended independent local runtime flow:
+### Option 2 — User command line install
+From the repo root, run:
 
 ```bash
-# ROS2-compatible environment for live mode
-python3.10 -m venv .ros2_venv
+cd ~/research/FreeAskWorld && bash scripts/setup_envs.sh
+```
+
+What `scripts/setup_envs.sh` does:
+- checks whether a repo-local environment already exists
+- reuses it if present instead of blindly creating a new one
+- otherwise creates `.ros2_venv` with Python 3.10
+- installs the minimal Python packages needed for live testing
+- points you to the manual ROS2 setup guide if system ROS2 is missing
+
+After setup:
+
+```bash
 source .ros2_venv/bin/activate
-
-# Install the minimal Python dependencies needed by the local runtime and live wrappers
-python -m pip install fastapi uvicorn 'pydantic>=2.8,<3' numpy
-
 scripts/start_local_runtime.sh
 scripts/status_local_runtime.sh
 curl http://127.0.0.1:8787/healthz
 scripts/run_live_smoke.sh --step-seconds 2 --observe-seconds 1
 scripts/stop_local_runtime.sh
 ```
-
-Before this step, install ROS2 Humble manually by following [`docs/ros2_setup.md`](docs/ros2_setup.md).
 
 Shortest interactive player-control examples:
 
@@ -294,7 +282,7 @@ If you only want to verify that the repo-level agent interface is wired correctl
 If you want full live interaction with the Unity simulator, continue with the ROS2 runtime notes below.
 
 For a setup guide matching the currently working local ROS2 environment, see [docs/ros2_setup.md](docs/ros2_setup.md).
-A shorter player-control wrapper is also available at `scripts/player_cmd.sh`.
+A shorter player-control wrapper is also available at `scripts/player_cmd.sh`. Environment setup is unified under `scripts/setup_envs.sh`.
 
 For the current local Unity configuration, use the ROS2-first Agent integration scaffold described in [docs/agent_ros2_integration.md](docs/agent_ros2_integration.md) and implemented under [integrations/agent_ros2](integrations/agent_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
 
