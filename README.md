@@ -69,7 +69,7 @@
 - [x] 📝 **Paper Publication**: Published the main research paper describing FreeAskWorld.
 - [x] 📊 **Data Processing Code Release**: Released code for preprocessing, data cleaning, and annotation pipelines.
 - [x] 🎥 **Presentation Video**: Released project presentation video.
-- [ ] 🛠️ **Simulator Code Release**: Publish the core simulation code for developers and external collaborators.
+- [x] 🛠️ **Simulator Release**: Publish the core simulation code for developers and external collaborators.
 - [ ] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
 - [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
 - [ ] 🎮 **Steam Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
@@ -168,6 +168,8 @@ The figures below illustrate occupancy map generation and sample synthetic data:
 
 
 ## 🚀 Getting Started
+
+Simulator APP: https://drive.google.com/file/d/1JSe7KhoD2NVAHaUV5Ax6COms-jIFzymD/view?usp=drive_link
 
 <!-- ### 1. Clone & Install
 
