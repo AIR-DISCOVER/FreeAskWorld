@@ -69,10 +69,104 @@
 - [x] 📝 **Paper Publication**: Published the main research paper describing FreeAskWorld.
 - [x] 📊 **Data Processing Code Release**: Released code for preprocessing, data cleaning, and annotation pipelines.
 - [x] 🎥 **Presentation Video**: Released project presentation video.
-- [x] 🛠️ **Simulator Release**: Publish the core simulation code for developers and external collaborators.
+- [ ] 🛠️ **Simulator Code Release**: Publish the core simulation code for developers and external collaborators.
+- [x] 🤖 **Agent Robot Integration**: Integrate agent interfaces (OpenClaw / Codex / Claude / custom) to access and interact with robots inside the FreeAskWorld simulation environment.
 - [ ] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
 - [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
 - [ ] 🎮 **Steam Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
+
+Agent integration note: the current recommended local path is ROS2-first, because the local Unity simulator is configured in ROS2 mode on `127.0.0.1:10000`. See [docs/agent_ros2_integration.md](docs/agent_ros2_integration.md). The ROS2 path now includes a live-capable `rclpy` transport when external ROS2 runtime dependencies are present, while still preserving scaffold-only fallback behavior. For live ROS2 usage, a repo-local `.ros2_venv` or equivalent ROS-compatible Python environment may be needed to avoid ROS Humble `rclpy` ABI mismatch, and the wrapper at `scripts/agent_ros2_cli.sh` now auto-activates `.ros2_venv` when present. The additive `closed_loop` websocket Agent bridge remains available, but for this Unity setup it should be treated as experimental and future-facing rather than the primary runtime path.
+
+Agent config entry paths (for OpenClaw / Claude Code / Codex / custom agent adapters):
+- ROS2 integration doc: `docs/agent_ros2_integration.md`
+- ROS2 package: `integrations/agent_ros2/`
+- ROS2 wrapper CLI: `scripts/agent_ros2_cli.sh`
+- Legacy closed-loop agent bridge prototypes are archived under `archived/closed_loop-agent/` and are not part of the current recommended control path.
+
+**Help auto install Agent ROS2 Integration.** Other AI agents can discover these paths and install/configure automatically.
+
+Canonical entry command for auto-discovery:
+- `bash scripts/agent_ros2_cli.sh --help`
+
+## First-time setup notes (read this before install)
+
+FreeAskWorld now includes a **repo-owned local runtime path** for ROS2-first live testing.
+
+### Requirements
+- **Python 3.10**
+- **ROS2 Humble** installed manually
+- ROS2 manual setup guide: [`docs/ros2_setup.md`](docs/ros2_setup.md)
+
+### Option 1 — Agent install (recommended)
+In an agent session, use this exact instruction:
+
+```text
+Install all envs by scripts/setup_envs.sh
+```
+
+### Option 2 — User command line install
+From the repo root, run:
+
+```bash
+cd ~/research/FreeAskWorld && bash scripts/setup_envs.sh
+```
+
+What `scripts/setup_envs.sh` does:
+- checks whether a repo-local environment already exists
+- reuses it if present instead of blindly creating a new one
+- otherwise creates `.ros2_venv` with Python 3.10
+- installs the minimal Python packages needed for live testing
+- warns clearly if ROS2 Humble is not installed yet
+- points you to the manual ROS2 setup guide if system ROS2 is missing
+
+After setup:
+
+```bash
+source .ros2_venv/bin/activate
+scripts/start_local_runtime.sh
+scripts/status_local_runtime.sh
+curl http://127.0.0.1:8787/healthz
+STEP_SECONDS=2 OBSERVE_SECONDS=1 scripts/run_live_smoke.sh
+scripts/stop_local_runtime.sh
+```
+
+`run_live_smoke.sh` now visibly executes all major player actions for a few seconds each and prints step-by-step results plus observation summaries.
+
+Shortest interactive player-control examples:
+
+```bash
+scripts/player_cmd.sh status
+scripts/player_cmd.sh observe 1
+scripts/player_cmd.sh forward 0.5
+scripts/player_cmd.sh left 30
+scripts/player_cmd.sh right 30
+scripts/player_cmd.sh around
+scripts/player_cmd.sh stop
+scripts/player_cmd.sh wait 1
+scripts/player_cmd.sh ask "Where is the target?"
+scripts/player_cmd.sh action '{"action":"move_forward","parameters":{"distance_m":0.5}}'
+```
+
+Expected behavior for the minimal checks above:
+- `--help` prints CLI usage.
+- `status --output-json` runs even without Unity connected.
+- In scaffold-only mode, `transport_ready: false` does **not** by itself mean the repo is broken.
+
+For live validation, use:
+
+```bash
+scripts/start_local_runtime.sh
+STEP_SECONDS=2 OBSERVE_SECONDS=1 scripts/run_live_smoke.sh
+```
+
+This visibly runs the main player actions (`forward`, `left`, `right`, `around`, `wait`, `ask`, `stop`), prints each step result, captures observations between steps, and writes a JSON report.
+
+If `--ros2-live` fails immediately on a fresh machine, check these first:
+- ROS2 Humble is installed manually; use [`docs/ros2_setup.md`](docs/ros2_setup.md).
+- `.ros2_venv` exists and includes at least `numpy` plus the local runtime Python deps.
+- The Unity/ROS2 backend is actually running and reachable.
+- The machine allows DDS/UDP/shared-memory transport required by ROS2 middleware.
+- The ROS log directory is writable (for example, set `ROS_LOG_DIR=/tmp/roslog` if needed).
 
 ---
 
@@ -169,7 +263,33 @@ The figures below illustrate occupancy map generation and sample synthetic data:
 
 ## 🚀 Getting Started
 
-Simulator APP: https://drive.google.com/file/d/1JSe7KhoD2NVAHaUV5Ax6COms-jIFzymD/view?usp=drive_link
+### Quick Start (recommended for first-time users)
+
+```bash
+git clone https://github.com/AIR-DISCOVER/FreeAskWorld
+cd FreeAskWorld
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# Minimal smoke check
+python -m integrations.agent_ros2.cli --help
+python -m integrations.agent_ros2.cli status --output-json
+
+# Recommended wrapper for ROS2 live mode
+bash scripts/agent_ros2_cli.sh --help
+```
+
+If you only want to verify that the repo-level agent interface is wired correctly, the smoke checks above are the fastest starting point.
+If you want full live interaction with the Unity simulator, continue with the ROS2 runtime notes below.
+
+For a setup guide matching the currently working local ROS2 environment, see [docs/ros2_setup.md](docs/ros2_setup.md).
+A shorter player-control wrapper is also available at `scripts/player_cmd.sh`. Environment setup is unified under `scripts/setup_envs.sh`.
+
+For the current local Unity configuration, use the ROS2-first Agent integration scaffold described in [docs/agent_ros2_integration.md](docs/agent_ros2_integration.md) and implemented under [integrations/agent_ros2](integrations/agent_ros2). This matches the simulator's ROS2 mode on `127.0.0.1:10000`.
+
+For the additive agent compatibility bridge on top of the existing `closed_loop` websocket stack, see [closed_loop/README.md](closed_loop/README.md). It adds HTTP, CLI, and MCP-friendly access without replacing the current Unity-facing protocol or baseline behavior.
 
 <!-- ### 1. Clone & Install
 
@@ -275,4 +395,3 @@ Closed-Loop Navigation Performance (Table 4 from Paper)
 
 ## Licence
 FreeAskWorld is licensed under the [Apache 2.0 License](LICENSE).
-
