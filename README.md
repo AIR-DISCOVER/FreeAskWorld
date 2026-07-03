@@ -212,6 +212,7 @@ Demonstrates the ROS2 RGBD SLAM in our simulator.
 
 
 ## 📌 Introduction
+Simulator APP: https://drive.google.com/file/d/1JSe7KhoD2NVAHaUV5Ax6COms-jIFzymD/view?usp=drive_link
 
 As embodied intelligence progresses, simulation platforms must evolve beyond low-level physics toward **human-centric, socially interactive environments**.  
 **FreeAskWorld** introduces:
