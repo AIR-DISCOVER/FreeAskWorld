@@ -71,9 +71,9 @@
 - [x] 🎥 **Presentation Video**: Released project presentation video.
 - [ ] 🛠️ **Simulator Code Release**: Publish the core simulation code for developers and external collaborators.
 - [x] 🤖 **Agent Robot Integration**: Integrate agent interfaces (OpenClaw / Codex / Claude / custom) to access and interact with robots inside the FreeAskWorld simulation environment.
-- [ ] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
-- [ ] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
-- [ ] 🎮 **Steam Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
+- [x] 📚 **Usage Tutorial**: Create a comprehensive tutorial for using the FreeAskWorld simulator, including setup, configuration, and example workflows.
+- [x] 🧑‍💻 **API Documentation**: Provide thorough documentation of the simulator’s API for seamless integration and extension.
+- [x] 🎮 **Steam / APP Release**: Prepare and publish the FreeAskWorld simulator on Steam for broader accessibility.
 
 Agent integration note: the current recommended local path is ROS2-first, because the local Unity simulator is configured in ROS2 mode on `127.0.0.1:10000`. See [docs/agent_ros2_integration.md](docs/agent_ros2_integration.md). The ROS2 path now includes a live-capable `rclpy` transport when external ROS2 runtime dependencies are present, while still preserving scaffold-only fallback behavior. For live ROS2 usage, a repo-local `.ros2_venv` or equivalent ROS-compatible Python environment may be needed to avoid ROS Humble `rclpy` ABI mismatch, and the wrapper at `scripts/agent_ros2_cli.sh` now auto-activates `.ros2_venv` when present. The additive `closed_loop` websocket Agent bridge remains available, but for this Unity setup it should be treated as experimental and future-facing rather than the primary runtime path.
 
@@ -88,7 +88,7 @@ Agent config entry paths (for OpenClaw / Claude Code / Codex / custom agent adap
 Canonical entry command for auto-discovery:
 - `bash scripts/agent_ros2_cli.sh --help`
 
-## First-time setup notes (read this before install)
+<!-- ## First-time setup notes (read this before install)
 
 FreeAskWorld now includes a **repo-owned local runtime path** for ROS2-first live testing.
 
@@ -168,14 +168,22 @@ If `--ros2-live` fails immediately on a fresh machine, check these first:
 - The machine allows DDS/UDP/shared-memory transport required by ROS2 middleware.
 - The ROS log directory is writable (for example, set `ROS_LOG_DIR=/tmp/roslog` if needed).
 
----
+--- -->
+
+## 🚀 Simulator App
+
+👉 **[Download / Open Simulator App](https://drive.google.com/file/d/1JSe7KhoD2NVAHaUV5Ax6COms-jIFzymD/view?usp=drive_link)**
+
+> Use this app to run the FreeAskWorld simulator locally.
+### Tutorials
+- [Simulator Closed Loop Ros2 Connector](https://github.com/doraemonaaaa/freeaskworld_closed_loop/tree/main/ros2/src/vln_connector)
+- [Simulator README](docs/SimulatorREADEME.docx)
 
 ## 🎥 Demos
 **Simulator Presentation**
 Demonstrates the main functions of this simulator.
 
 <p align="center">
-  <!-- 直接展示视频 + 保留下载链接 -->
   <video width="800" controls>
     <source src="docs/Presentation.mp4" type="video/mp4">
     你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
@@ -188,7 +196,6 @@ Demonstrates the main functions of this simulator.
 Demonstrates the main functions of this simulator.
 
 <p align="center">
-  <!-- 直接展示视频 + 保留下载链接 -->
   <video width="800" controls>
     <source src="docs/APP Presentation.mp4" type="video/mp4">
     你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
@@ -200,7 +207,6 @@ Demonstrates the main functions of this simulator.
 **ROS2 Example**
 Demonstrates the ROS2 RGBD SLAM in our simulator.
 <p align="center">
-  <!-- 直接展示视频 + 保留下载链接 -->
   <video width="800" controls>
     <source src="docs/RGBD SLAM Presentation.mp4" type="video/mp4">
     你的浏览器不支持 HTML5 视频播放，请点击下方链接下载。
